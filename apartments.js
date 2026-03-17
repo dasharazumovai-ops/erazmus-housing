@@ -6,7 +6,7 @@ const apartments = [
   area: "centre",
   price: "€375-€400 / month",
   rooms: "3 bedrooms",
-  image: "images/centre/apt1/coverJPG.jpg",
+  image: "images/centre/apt1/cover.jpg",
   description: "Modern shared student apartment, 90m².",
   roomDetails: [
     "Room 1 – Double Bed – €400/month",
