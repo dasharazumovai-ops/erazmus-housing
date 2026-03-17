@@ -864,4 +864,45 @@ id: 19,
   availableSpots: 4,
   totalSpots: 4
 },
+{
+id: 20,
+    title: "4-Bedroom maisonette in the city centre",
+    area: "centre",
+  price: "€350-€400/month",
+  rooms: "4 bedrooms",
+  image: "images/centre/apt20/cover.jpg",
+  description: "Convinient location.",
+  roomDetails: [
+    "Room 1 – Double Bed – €350/month",
+    "Room 2 – Double Bed – €350/month",
+    "Room 3 – Double Bed – €350/month",
+    "Room 4 – Double Bed – €400/month (€550/month for couples)"
+  ],
+
+  sharedSpaces: "Kitchen, living area,2 bathroom and balconies. Utilities (water and electricity) are shared between tenants.",
+
+  location: "https://maps.app.goo.gl/jMop8vH4mb3QQAPC8?g_st=iw",
+
+  gallery: [
+    "images/centre/apt19/1.jpg",
+    "images/centre/apt19/2.jpg",
+    "images/centre/apt19/3.jpg",
+    "images/centre/apt19/4.jpg",
+    "images/centre/apt19/5.jpg",
+    "images/centre/apt19/6.jpg",
+    "images/centre/apt19/7.jpg",
+    "images/centre/apt19/8.jpg",
+    "images/centre/apt19/9.jpg",
+    "images/centre/apt19/10.jpg",
+    "images/centre/apt19/11.jpg",
+    "images/centre/apt19/12.jpg",
+    "images/centre/apt19/13.jpg",
+    "images/centre/apt19/14.jpg",
+    "images/centre/apt19/15.jpg",
+    "images/centre/apt19/16.jpg",
+    "images/centre/apt19/17.jpg"
+    ],
+  availableSpots: 4,
+  totalSpots: 4
+},
 ]; 
