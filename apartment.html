@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartment Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="logo.png" alt="Logo" class="nav-logo">
+      <span>Erasmus Life Nicosia Housing</span>
+    </a>
+  </nav>
+
+  <main class="details-page">
+    <div class="details-container" id="apartment-details"></div>
+  </main>
+
+  <div id="imageViewer" class="image-viewer" onclick="closeImage()">
+    <img id="viewerImg" alt="Expanded apartment image">
+  </div>
+
+  <script src="apartments.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const apartmentId = Number(params.get("id"));
+    const apartment = apartments.find(item => item.id === apartmentId);
+    const detailsContainer = document.getElementById("apartment-details");
+
+    if (!apartment) {
+      detailsContainer.innerHTML = "<p>Apartment not found.</p>";
+    } else {
+      const availabilityText =
+        apartment.availableSpots === 0
+          ? "Fully booked"
+          : apartment.availableSpots === 1
+          ? "Last room available"
+          : apartment.availableSpots + "/" + apartment.totalSpots + " rooms available";
+
+      const roomList = apartment.roomDetails
+        ? `<ul class="room-list">${apartment.roomDetails.map(room => `<li>${room}</li>`).join("")}</ul>`
+        : "";
+
+      const sharedSpaces = apartment.sharedSpaces
+        ? `<p class="details-text"><strong>Shared spaces:</strong> ${apartment.sharedSpaces}</p>`
+        : "";
+
+      const locationLink = apartment.location
+        ? `<p class="details-text"><strong>Location:</strong> <a href="${apartment.location}" target="_blank">View on map</a></p>`
+        : "";
+
+      const galleryHTML = apartment.gallery
+        ? `
+          <div class="gallery">
+            ${apartment.gallery.map(img => `
+              <img src="${img}" alt="${apartment.title}" class="gallery-img" onclick="openImage('${img}')">
+            `).join("")}
+          </div>
+        `
+        : "";
+
+      detailsContainer.innerHTML = `
+        <div class="details-image-wrap">
+          <img src="${apartment.image}" alt="${apartment.title}" class="details-image">
+        </div>
+
+        ${galleryHTML}
+
+        <div class="details-content">
+          <h1>${apartment.title}</h1>
+          <p class="details-price">${apartment.price}</p>
+          <p class="details-meta">${apartment.rooms} </p>
+          <p class="details-availability">${availabilityText}</p>
+          <p class="details-text">${apartment.description}</p>
+
+          ${roomList}
+          ${sharedSpaces}
+          ${locationLink}
+        </div>
+      `;
+    }
+
+    function openImage(src) {
+      const viewer = document.getElementById("imageViewer");
+      const img = document.getElementById("viewerImg");
+      img.src = src;
+      viewer.style.display = "flex";
+    }
+
+    function closeImage() {
+      document.getElementById("imageViewer").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
