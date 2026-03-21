@@ -16,6 +16,11 @@ if (selectedArea && areaTitle && apartmentList) {
   areaSubtitle.textContent = `Available apartments in ${areaNames[selectedArea] || "this area"}`;
 
   const filteredApartments = apartments.filter(apartment => apartment.area === selectedArea);
+  filteredApartments.sort((a, b) => {
+  if (a.availableSpots === 0 && b.availableSpots > 0) return 1;
+  if (a.availableSpots > 0 && b.availableSpots === 0) return -1;
+  return 0; // keep original order
+});
 
   if (filteredApartments.length === 0) {
     apartmentList.innerHTML = "<p>No apartments found for this area yet.</p>";
@@ -43,6 +48,7 @@ if (selectedArea && areaTitle && apartmentList) {
     </div>
 
     <div class="apartment-card-content">
+     <p class="apartment-code">${apartment.apartmentCode}</p>
       <h3>${apartment.title}</h3>
 
       <p class="price">${apartment.price}</p>
