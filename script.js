@@ -15,7 +15,9 @@ if (selectedArea && areaTitle && apartmentList) {
   areaTitle.textContent = areaNames[selectedArea] || "Apartments";
   areaSubtitle.textContent = `Available apartments in ${areaNames[selectedArea] || "this area"}`;
 
-  const filteredApartments = apartments.filter(apartment => apartment.area === selectedArea);
+  const filteredApartments = apartments.filter(apartment =>
+  apartment.areas && apartment.areas.includes(selectedArea)
+);
   filteredApartments.sort((a, b) => {
   if (a.availableSpots === 0 && b.availableSpots > 0) return 1;
   if (a.availableSpots > 0 && b.availableSpots === 0) return -1;
