@@ -90,3 +90,10 @@ function handleScrollAnimation() {
 
 window.addEventListener('scroll', handleScrollAnimation);
 window.addEventListener('load', handleScrollAnimation);
+
+function toggleMenu() {
+  const menu = document.getElementById("floatingMenu");
+  if (menu) {
+    menu.classList.toggle("open");
+  }
+}

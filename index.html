@@ -7,8 +7,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav class="top-menu">
+<div class="menu-toggle" onclick="toggleMenu()">
+  ☰
+</div>
 
-  <header class="hero">
+
+<nav id="floatingMenu" class="floating-menu">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#areas" onclick="toggleMenu()">Areas & Flats</a>
+  <a href="#about" onclick="toggleMenu()">About Us</a>
+  <a href="#things" onclick="toggleMenu()">Things to Do</a>
+  <a href="#contact" onclick="toggleMenu()">Contact Us</a>
+</nav>
+
+  </div>
+</nav>
+  <header class="hero" id="home">
     <div class="hero-content">
       <img src="logo.png" alt="Logo" class="logo">
       <h1>Erasmus Life Nicosia Housing</h1>
@@ -23,7 +38,7 @@
   </header>
 
   <main>
-    <section class="areas-section">
+    <section class="areas-section" id="areas">
       <h2>Choose an area</h2>
       <div class="areas">
 
@@ -48,7 +63,7 @@
       </div>
     </section>
   </main>
-  <section class="about-section fade-in">
+  <section class="about-section fade-in" id="about">
   <div class="about-wrapper">
 
     <img src="images/about-left.png" class="about-image left" alt="Nicosia">
