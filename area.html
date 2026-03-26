@@ -6,6 +6,42 @@
   <title>Area Apartments</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<div class="faq-floating-btn" onclick="toggleFAQ()">
+  <img src="images/faq-icon.png" alt="FAQ">
+</div>
+
+<div id="faqPopup" class="faq-popup" onclick="closeFAQOutside(event)">
+  <div class="faq-popup-content">
+    <button class="faq-close" onclick="toggleFAQ()" aria-label="Close FAQ">×</button>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>How do I choose an apartment?</summary>
+      <p>Use the area pages to compare listings and open the apartment details for more information.</p>
+    </details>
+
+    <details>
+      <summary>How can I contact you?</summary>
+      <p>You can contact us via phone, WhatsApp, or social media using the contact details provided on the website.</p>
+    </details>
+
+    <details>
+      <summary>Can I book before arriving in Cyprus?</summary>
+      <p>Yes, many students arrange their accommodation before they arrive.</p>
+    </details>
+
+    <details>
+      <summary>Do I need a deposit to secure a room?</summary>
+      <p>A deposit equal to one month’s rent is required to secure a room.</p>
+    </details>
+
+    <details>
+      <summary>Do all apartments include the same features?</summary>
+      <p>No, features vary by apartment, so please check each listing carefully.</p>
+    </details>
+  </div>
+</div>
 <body>
 
   <nav class="navbar">
@@ -26,5 +62,11 @@
 
   <script src="apartments.js"></script>
   <script src="script.js"></script>
+  <a href="https://wa.me/35796928282?text=Hi%20I%20am%20interested%20in%20an%20apartment"
+   class="whatsapp-btn"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+  <img src="images/whatsapp-icon.png" alt="WhatsApp">
+</a>
 </body>
 </html>

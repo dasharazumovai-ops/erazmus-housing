@@ -66,3 +66,27 @@ if (selectedArea && areaTitle && apartmentList) {
 
   }
 }
+function toggleFAQ() {
+  const popup = document.getElementById("faqPopup");
+  popup.style.display = popup.style.display === "flex" ? "none" : "flex";
+}
+
+function closeFAQOutside(event) {
+  const popupContent = document.querySelector(".faq-popup-content");
+  if (!popupContent.contains(event.target)) {
+    document.getElementById("faqPopup").style.display = "none";
+  }
+}
+const fadeElements = document.querySelectorAll('.fade-in');
+
+function handleScrollAnimation() {
+  fadeElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScrollAnimation);
+window.addEventListener('load', handleScrollAnimation);

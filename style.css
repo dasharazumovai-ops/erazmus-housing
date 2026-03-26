@@ -404,3 +404,226 @@ body {
   max-height: 90%;
   border-radius: 10px;
 }
+/* FAQ floating button */
+.faq-floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  z-index: 99999;
+  pointer-events: auto;
+}
+
+.faq-floating-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* FAQ popup background */
+.faq-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* FAQ popup box */
+.faq-popup-content {
+  width: min(90%, 520px);
+  max-height: 80vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 24px;
+  padding: 28px 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  position: relative;
+  animation: fadeIn 0.25s ease;
+}
+
+.faq-popup-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Close button */
+.faq-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: #f1f3f5;
+  color: #333;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.faq-close:hover {
+  background: #2456d3;
+  color: white;
+}
+
+/* Each FAQ item */
+.faq-popup details {
+  margin-bottom: 14px;
+  border-radius: 16px;
+  background: #f7f9ff;
+  border: 1px solid #e6ebf5;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.faq-popup details:hover {
+  border-color: #2456d3;
+}
+
+/* Question row */
+.faq-popup summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 14px 16px;
+  list-style: none;
+  position: relative;
+}
+
+/* Remove default browser arrow */
+.faq-popup summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom + icon */
+.faq-popup summary::after {
+  content: "+";
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  font-size: 1.2rem;
+  color: #2456d3;
+}
+
+/* Open state shows minus */
+.faq-popup details[open] summary::after {
+  content: "–";
+}
+
+/* Answer box */
+.faq-popup details p {
+  padding: 14px 16px;
+  margin: 0;
+  background: white;
+  border-top: 1px solid #e6ebf5;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Popup animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.whatsapp-btn {
+  position: fixed;
+  bottom: 80px; /* sits ABOVE FAQ */
+  right: 20px;
+
+  width: 65px;
+  height: 65px;
+
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.whatsapp-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.about-section {
+  padding: 70px 20px;
+}
+
+/* layout */
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* images */
+.about-image {
+  width: 220px;
+  height: 520px;
+  object-fit: contain;
+
+  backdrop-filter: blur(10px);
+
+  padding: 20px;
+  border-radius: 20px;
+}
+
+
+/* main card */
+.about-card {
+  max-width: 700px;
+  background: white;
+  padding: 45px;
+  border-radius: 28px;
+
+  box-shadow: 0 25px 70px rgba(0,0,0,0.08);
+}
+
+/* text */
+.about-card h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 18px;
+}
+@media (max-width: 900px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
+  .about-card {
+  backdrop-filter: blur(6px);
+}
+  .about-image {
+    width: 100%;
+    height: 200px;
+    transform: none;
+  }
+}
