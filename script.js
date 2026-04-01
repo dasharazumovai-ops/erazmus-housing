@@ -3,17 +3,23 @@ async function loadAvailabilityFromSheet() {
 
   const cacheKey = "eln-availability-cache";
   const cacheTimeKey = "eln-availability-cache-time";
-  const cacheDuration = 5 * 60 * 1000;
+  const cacheDuration = 6 * 60 * 60 * 1000; // 6 hours
+
+  const cachedData = localStorage.getItem(cacheKey);
+  const cachedTime = localStorage.getItem(cacheTimeKey);
+
+  if (cachedData) {
+    applyAvailabilityData(cachedData);
+  }
+
+  const shouldRefresh =
+    !cachedTime || Date.now() - Number(cachedTime) > cacheDuration;
+
+  if (!shouldRefresh) {
+    return;
+  }
 
   try {
-    const cachedData = localStorage.getItem(cacheKey);
-    const cachedTime = localStorage.getItem(cacheTimeKey);
-
-    if (cachedData && cachedTime && Date.now() - Number(cachedTime) < cacheDuration) {
-      applyAvailabilityData(cachedData);
-      return;
-    }
-
     const response = await fetch(csvUrl);
     const csvText = await response.text();
 
@@ -21,16 +27,11 @@ async function loadAvailabilityFromSheet() {
     localStorage.setItem(cacheTimeKey, Date.now().toString());
 
     applyAvailabilityData(csvText);
+    renderAreaPage();
   } catch (error) {
     console.error("Error loading availability from Google Sheets:", error);
-
-    const cachedData = localStorage.getItem(cacheKey);
-    if (cachedData) {
-      applyAvailabilityData(cachedData);
-    }
   }
 }
-
 function applyAvailabilityData(csvText) {
   const rows = csvText.trim().split("\n").slice(1);
 
@@ -156,5 +157,4 @@ function toggleMenu() {
 renderAreaPage();
 
 loadAvailabilityFromSheet().then(() => {
-  renderAreaPage();
 });
