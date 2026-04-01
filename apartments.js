@@ -929,7 +929,7 @@ id: 21,
     title: "Erasmus OXI building",
     areas: ["centre","engomi"],
   price: "€400 / month / per room",
-  rooms: "2 bedrooms",
+  rooms: "5 bedrooms",
   image: "images/centre/apt21/cover.jpg",
   description: "Brand new building featuring two fully new renovated 5 bedroom apartments in the heart of the city centre.Modern spacious flats located on parallel street to the biggest Erasmus buildings hosting around 100 students every semester",
   roomDetails: [
