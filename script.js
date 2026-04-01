@@ -1,41 +1,52 @@
 async function loadAvailabilityFromSheet() {
   const csvUrl = "https://api.allorigins.win/raw?url=https://docs.google.com/spreadsheets/d/e/2PACX-1vRKk4VqVA_zVfwQ7nuh-_DiX_TBGW9sr68TZrt0QDn052ql8eBw93AgbG8QpIBPSIGSiKqaDD7Jxct2/pub?output=csv";
+
+  const cacheKey = "eln-availability-cache";
+  const cacheTimeKey = "eln-availability-cache-time";
+  const cacheDuration = 5 * 60 * 1000;
+
   try {
+    const cachedData = localStorage.getItem(cacheKey);
+    const cachedTime = localStorage.getItem(cacheTimeKey);
+
+    if (cachedData && cachedTime && Date.now() - Number(cachedTime) < cacheDuration) {
+      applyAvailabilityData(cachedData);
+      return;
+    }
+
     const response = await fetch(csvUrl);
     const csvText = await response.text();
 
-    console.log("CSV text:", csvText);
+    localStorage.setItem(cacheKey, csvText);
+    localStorage.setItem(cacheTimeKey, Date.now().toString());
 
-    const rows = csvText.trim().split("\n").slice(1);
-
-    rows.forEach(row => {
-      const columns = row.split(",");
-
-      const sheetCode = columns[0]?.trim().replace(/\r/g, "");
-      const availableSpots = columns[1]?.trim().replace(/\r/g, "");
-      const totalSpots = columns[2]?.trim().replace(/\r/g, "");
-
-      console.log("Sheet row:", sheetCode, availableSpots, totalSpots);
-
-      const apartment = apartments.find(a => a.apartmentCode?.trim() === sheetCode);
-
-      console.log("Matched apartment:", apartment);
-
-      if (apartment) {
-        apartment.availableSpots = Number(availableSpots);
-        apartment.totalSpots = Number(totalSpots);
-      }
-    });
-
-    console.log("Updated apartments:", apartments);
+    applyAvailabilityData(csvText);
   } catch (error) {
     console.error("Error loading availability from Google Sheets:", error);
+
+    const cachedData = localStorage.getItem(cacheKey);
+    if (cachedData) {
+      applyAvailabilityData(cachedData);
+    }
   }
 }
 
-async function initAreaPage() {
-  await loadAvailabilityFromSheet();
+function applyAvailabilityData(csvText) {
+  const rows = csvText.trim().split("\n").slice(1);
 
+  rows.forEach(row => {
+    const [id, availableSpots, totalSpots] = row.split(",");
+
+    const apartment = apartments.find(a => a.apartmentCode === id.trim());
+
+    if (apartment) {
+      apartment.availableSpots = Number(availableSpots);
+      apartment.totalSpots = Number(totalSpots);
+    }
+  });
+}
+
+function renderAreaPage() {
   const params = new URLSearchParams(window.location.search);
   const selectedArea = params.get("area");
 
@@ -59,9 +70,9 @@ async function initAreaPage() {
 
     filteredApartments.sort((a, b) => {
       const getAvailabilityRank = (apartment) => {
-        if (apartment.availableSpots === apartment.totalSpots) return 0; // fully available
-        if (apartment.availableSpots > 0) return 1; // partially available
-        return 2; // fully booked
+        if (apartment.availableSpots === apartment.totalSpots) return 0;
+        if (apartment.availableSpots > 0) return 1;
+        return 2;
       };
 
       return getAvailabilityRank(a) - getAvailabilityRank(b);
@@ -75,18 +86,18 @@ async function initAreaPage() {
           <div class="image-wrapper">
             <img src="${apartment.image}" alt="${apartment.title}">
             <span class="availability-badge ${
-            apartment.availableSpots === 0
-            ? "status-full"
-            : apartment.availableSpots === 1
-            ? "status-last"
-            : "status-available"
-          }">
+              apartment.availableSpots === 0
+                ? "status-full"
+                : apartment.availableSpots === 1
+                ? "status-last"
+                : "status-available"
+            }">
               ${
                 apartment.availableSpots === 0
-                ? "Fully booked"
-                : apartment.availableSpots === 1
-                ? "Last room available"
-                : apartment.availableSpots + "/" + apartment.totalSpots + " rooms available"
+                  ? "Fully booked"
+                  : apartment.availableSpots === 1
+                  ? "Last room available"
+                  : apartment.availableSpots + "/" + apartment.totalSpots + " rooms available"
               }
             </span>
           </div>
@@ -94,13 +105,9 @@ async function initAreaPage() {
           <div class="apartment-card-content">
             <p class="apartment-code">${apartment.apartmentCode}</p>
             <h3>${apartment.title}</h3>
-
             <p class="price">${apartment.price}</p>
-
             <p>${apartment.rooms}</p>
-
             <p>${apartment.description}</p>
-
             <a href="apartment.html?id=${apartment.id}" class="details-btn">View details</a>
           </div>
         </div>
@@ -146,4 +153,8 @@ function toggleMenu() {
   }
 }
 
-initAreaPage();
+renderAreaPage();
+
+loadAvailabilityFromSheet().then(() => {
+  renderAreaPage();
+});
