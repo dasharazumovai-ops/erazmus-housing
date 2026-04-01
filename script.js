@@ -3,7 +3,7 @@ async function loadAvailabilityFromSheet() {
 
   const cacheKey = "eln-availability-cache";
   const cacheTimeKey = "eln-availability-cache-time";
-  const cacheDuration = 6 * 60 * 60 * 1000; // 6 hours
+  const cacheDuration = 3 * 60 * 60 * 1000; // 6 hours
 
   const cachedData = localStorage.getItem(cacheKey);
   const cachedTime = localStorage.getItem(cacheTimeKey);
