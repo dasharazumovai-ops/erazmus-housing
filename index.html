@@ -36,7 +36,17 @@
       </div>
     </div>
   </header>
-
+ <div class="hero-search-wrapper">
+  <div class="search-box">
+    <input
+      type="text"
+      id="global-search"
+      class="hero-search"
+      placeholder="Search apartment code, e.g. ELN-033 or 33"
+    >
+    <div id="search-suggestions" class="search-suggestions"></div>
+  </div>
+</div>
   <main>
     <section class="areas-section" id="areas">
       <h2>Choose an area</h2>
@@ -61,6 +71,7 @@
         </a>
 
       </div>
+     
     </section>
   </main>
   <section class="about-section fade-in" id="about">
@@ -136,7 +147,9 @@
     </div>
   </div>
 
+<script src="apartments.js"></script>
 <script src="script.js"></script>
+
 <a href="https://wa.me/35796928282?text=Hi%20I%20am%20interested%20in%20an%20apartment"
    class="whatsapp-btn"
    target="_blank"

@@ -158,3 +158,89 @@ renderAreaPage();
 
 loadAvailabilityFromSheet().then(() => {
 });
+
+function initGlobalSearch() {
+  const searchInput = document.getElementById("global-search");
+  const suggestionsBox = document.getElementById("search-suggestions");
+
+  if (!searchInput) return;
+
+  function normalizeSearch(value) {
+    const raw = value.trim().toUpperCase();
+
+    if (!raw) return "";
+
+    if (/^\d+$/.test(raw)) {
+      return `ELN-${raw.padStart(3, "0")}`;
+    }
+
+    return raw;
+  }
+
+  function getMatches(value) {
+    const raw = value.trim().toUpperCase();
+    const normalized = normalizeSearch(value);
+
+    if (!raw) return [];
+
+    return apartments.filter(apartment => {
+      const code = apartment.apartmentCode?.toUpperCase() || "";
+      const numericPart = code.replace("ELN-", "");
+
+      return (
+        code.includes(normalized) ||
+        code.includes(raw) ||
+        numericPart.includes(raw.replace(/^0+/, "")) ||
+        apartment.title.toUpperCase().includes(raw)
+      );
+    }).slice(0, 5);
+  }
+
+  function renderSuggestions(matches) {
+    if (!matches.length) {
+      suggestionsBox.innerHTML = "";
+      suggestionsBox.classList.remove("active");
+      return;
+    }
+
+    suggestionsBox.innerHTML = matches.map(apartment => `
+      <div class="search-suggestion-item" data-id="${apartment.id}">
+        <div class="search-suggestion-code">${apartment.apartmentCode}</div>
+        <div class="search-suggestion-title">${apartment.title}</div>
+      </div>
+    `).join("");
+
+    suggestionsBox.classList.add("active");
+
+    const items = suggestionsBox.querySelectorAll(".search-suggestion-item");
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        const apartmentId = item.getAttribute("data-id");
+        window.location.href = `apartment.html?id=${apartmentId}`;
+      });
+    });
+  }
+
+  searchInput.addEventListener("input", function () {
+    const matches = getMatches(searchInput.value);
+    renderSuggestions(matches);
+  });
+
+  searchInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      const matches = getMatches(searchInput.value);
+
+      if (matches.length > 0) {
+        window.location.href = `apartment.html?id=${matches[0].id}`;
+      } else {
+        alert("Apartment not found");
+      }
+    }
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".search-box")) {
+      suggestionsBox.classList.remove("active");
+    }
+  });
+}

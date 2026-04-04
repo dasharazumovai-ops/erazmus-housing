@@ -47,6 +47,74 @@ body {
   border-radius: 50%;
   background: white;
 }
+.hero-search-wrapper {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+.hero-search {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  outline: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.hero-search::placeholder {
+  color: #888;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  overflow: hidden;
+  display: none;
+  z-index: 1000;
+}
+
+.search-suggestions.active {
+  display: block;
+}
+
+.search-suggestion-item {
+  padding: 14px 18px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s ease;
+}
+
+.search-suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.search-suggestion-item:hover {
+  background: #f7f9ff;
+}
+
+.search-suggestion-code {
+  font-weight: 700;
+  color: #2456d3;
+  margin-bottom: 4px;
+}
+
+.search-suggestion-title {
+  font-size: 0.92rem;
+  color: #333;
+}
 
 .hero h1 {
   font-size: 3rem;
