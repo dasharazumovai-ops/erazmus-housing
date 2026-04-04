@@ -163,7 +163,7 @@ function initGlobalSearch() {
   const searchInput = document.getElementById("global-search");
   const suggestionsBox = document.getElementById("search-suggestions");
 
-  if (!searchInput) return;
+  if (!searchInput || !suggestionsBox) return;
 
   function normalizeSearch(value) {
     const raw = value.trim().toUpperCase();
@@ -184,14 +184,14 @@ function initGlobalSearch() {
     if (!raw) return [];
 
     return apartments.filter(apartment => {
-      const code = apartment.apartmentCode?.toUpperCase() || "";
+      const code = (apartment.apartmentCode || "").toUpperCase();
       const numericPart = code.replace("ELN-", "");
 
       return (
         code.includes(normalized) ||
         code.includes(raw) ||
-        numericPart.includes(raw.replace(/^0+/, "")) ||
-        apartment.title.toUpperCase().includes(raw)
+        numericPart === raw ||
+        numericPart === raw.padStart(3, "0")
       );
     }).slice(0, 5);
   }
@@ -212,8 +212,7 @@ function initGlobalSearch() {
 
     suggestionsBox.classList.add("active");
 
-    const items = suggestionsBox.querySelectorAll(".search-suggestion-item");
-    items.forEach(item => {
+    suggestionsBox.querySelectorAll(".search-suggestion-item").forEach(item => {
       item.addEventListener("click", () => {
         const apartmentId = item.getAttribute("data-id");
         window.location.href = `apartment.html?id=${apartmentId}`;
@@ -244,3 +243,4 @@ function initGlobalSearch() {
     }
   });
 }
+initGlobalSearch();
