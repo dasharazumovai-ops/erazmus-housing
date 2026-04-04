@@ -48,9 +48,10 @@ body {
   background: white;
 }
 .hero-search-wrapper {
-  margin-top: 25px;
+  margin: 25px auto 0 auto;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .search-box {
@@ -66,7 +67,9 @@ body {
   border: none;
   font-size: 0.95rem;
   outline: none;
+  background: white;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-sizing: border-box;
 }
 
 .hero-search::placeholder {
