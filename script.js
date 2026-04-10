@@ -155,9 +155,7 @@ function toggleMenu() {
 }
 
 renderAreaPage();
-
-loadAvailabilityFromSheet().then(() => {
-});
+loadAvailabilityFromSheet();
 
 function initGlobalSearch() {
   const searchInput = document.getElementById("global-search");
@@ -243,4 +241,56 @@ function initGlobalSearch() {
     }
   });
 }
-initGlobalSearch();
+
+function initExploreScroll() {
+  const rows = document.querySelectorAll(".explore-row");
+
+  rows.forEach(row => {
+    const cards = row.querySelectorAll(".explore-card");
+
+    function updateActiveCard() {
+      let closestCard = null;
+      let closestDistance = Infinity;
+
+      const rowRect = row.getBoundingClientRect();
+      const center = rowRect.left + rowRect.width / 2;
+
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
+        const distance = Math.abs(center - cardCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestCard = card;
+        }
+      });
+
+      cards.forEach(card => card.classList.remove("active"));
+
+      if (closestCard) {
+        closestCard.classList.add("active");
+      }
+    }
+
+    row.addEventListener("scroll", updateActiveCard);
+    updateActiveCard();
+  });
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  initGlobalSearch();
+  initExploreScroll();
+  initExploreFade();
+
+document.querySelectorAll(".explore-card").forEach(card => {
+  card.addEventListener("click", () => {
+    document.querySelectorAll(".explore-card").forEach(c => {
+      if (c !== card) c.classList.remove("open");
+    });
+    card.classList.toggle("open");
+  });
+});
+
+});
