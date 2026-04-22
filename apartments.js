@@ -2545,14 +2545,14 @@ id: 53,
     apartmentCode: "ELN-053",
     title: "1-Bedroom apartment in the city centre University of Nicosia old campus near the UCY old campus (Flat 13)",
     areas: ["aglantzia"],
-  price: "€450 / month / per room",
+  price: "€550 / month / per room",
   rooms: "1 bedrooms",
   image: "images/aglantzia/apt53/cover.jpg",
   description: "Located in a buildinfg with several Erasmus flats - perfect environment.",
 
   roomDetails: [
     "Room 1 – €550/month (Single occupancy)",
-    "€600/month For a couple)"
+    "(€600/month for a couple)"
   ],
 
   sharedSpaces: "Kitchen, living area and bathroom. (Utilities (water and electricity) are shared between tenants).",
@@ -2575,4 +2575,410 @@ id: 53,
   availableSpots: 1,
   totalSpots: 1
 },
+{
+id: 54,
+    apartmentCode: "ELN-054",
+    title: "Luxury fully furnished 2-Bedroom apartment for rent",
+    areas: ["aglantzia"],
+  price: "€400 - €450 / month / per room",
+  rooms: "2 bedrooms",
+  image: "images/aglantzia/apt54/cover.jpg",
+  description: "Comfortable student apartment with extra appliances included: coffee machine, filter machine, dishmasher.",
+
+  roomDetails: [
+    "Room 1 – Double Bed – Ensuite shower – €450/month",
+    "Room 2 – Single Bed – Ensuite shower – €400/month"
+  ],
+
+  sharedSpaces: "Kitchen, living area and balcony. (Utilities (water and electricity) are shared between tenants).",
+
+  location: "https://maps.app.goo.gl/PUDiQ1uTB5eNSZc7",
+
+  gallery: [
+    "images/aglantzia/apt54/1.jpg",
+    "images/aglantzia/apt54/2.jpg",
+    "images/aglantzia/apt54/3.jpg",
+    "images/aglantzia/apt54/4.jpg",
+    "images/aglantzia/apt54/5.jpg",
+    "images/aglantzia/apt54/6.jpg",
+    "images/aglantzia/apt54/7.jpg",
+    "images/aglantzia/apt54/8.jpg",
+    "images/aglantzia/apt54/9.jpg",
+    "images/aglantzia/apt54/10.jpg",
+    "images/aglantzia/apt54/11.jpg",
+    "images/aglantzia/apt54/12.jpg",
+    "images/aglantzia/apt54/13.jpg",
+    "images/aglantzia/apt54/14.jpg",
+    "images/aglantzia/apt54/15.jpg",
+    "images/aglantzia/apt54/16.jpg",
+    "images/aglantzia/apt54/17.jpg",
+    "images/aglantzia/apt54/18.jpg",
+    "images/aglantzia/apt54/19.jpg",
+    "images/aglantzia/apt54/20.jpg",
+    "images/aglantzia/apt54/21.jpg",
+    "images/aglantzia/apt54/22.jpg",
+    "images/aglantzia/apt54/23.jpg"
+  ],
+  availableSpots: 2,
+  totalSpots: 2
+},
+{
+id: 55,
+    apartmentCode: "ELN-055",
+    title: "3-Bedroom apartment with pool in the city centre",
+    areas: ["aglantzia","centre"],
+  price: "€450 / month / per room",
+  rooms: "3 bedrooms",
+  image: "images/aglantzia/apt55/cover.jpg",
+  description: "Shared student apartment with amazing views from the 7th floor and pool access.",
+
+  roomDetails: [
+    "Room 1 – Double Bed –  €450/month",
+    "Room 2 – Double Bed –  €450/month",
+    "Room 3 – Single Bed –  €450/month"
+  ],
+
+  sharedSpaces: "Kitchen, living area, 2 toilets and 1 bathroom. (Utilities (water and electricity) are shared between tenants).",
+
+  location: "https://maps.app.goo.gl/Cn4CmVJxmJabkYCR9",
+
+  gallery: [
+    "images/aglantzia/apt55/1.jpg",
+    "images/aglantzia/apt55/2.jpg",
+    "images/aglantzia/apt55/3.jpg",
+    "images/aglantzia/apt55/4.jpg",
+    "images/aglantzia/apt55/5.jpg",
+    "images/aglantzia/apt55/6.jpg",
+    "images/aglantzia/apt55/7.jpg",
+    "images/aglantzia/apt55/8.jpg",
+    "images/aglantzia/apt55/9.jpg",
+    "images/aglantzia/apt55/10.jpg",
+    "images/aglantzia/apt55/11.jpg",
+    "images/aglantzia/apt55/12.jpg",
+    "images/aglantzia/apt55/13.jpg",
+    "images/aglantzia/apt55/14.jpg",
+    "images/aglantzia/apt55/15.jpg",
+    "images/aglantzia/apt55/16.jpg",
+    "images/aglantzia/apt55/17.jpg",
+    "images/aglantzia/apt55/18.jpg",
+    "images/aglantzia/apt55/19.jpg",
+    "images/aglantzia/apt55/20.jpg",
+    "images/aglantzia/apt55/21.jpg",
+    "images/aglantzia/apt55/22.jpg",
+    "images/aglantzia/apt55/23.jpg",
+    "images/aglantzia/apt55/24.jpg",
+    "images/aglantzia/apt55/25.jpg",
+    "images/aglantzia/apt55/26.jpg",
+    "images/aglantzia/apt55/27.jpg",
+    "images/aglantzia/apt55/28.jpg",
+    "images/aglantzia/apt55/29.jpg",
+    "images/aglantzia/apt55/30.jpg",
+    "images/aglantzia/apt55/31.jpg",
+    "images/aglantzia/apt55/32.jpg",
+    "images/aglantzia/apt55/33.jpg"
+  ],
+  availableSpots: 3,
+  totalSpots: 3
+},
+{
+id: 56,
+    apartmentCode: "ELN-056",
+    title: "Very nice and big 4-bedroom apartment between University of Cyprus and the city centre",
+    areas: ["aglantzia","centre"],
+  price: "€375 / month / per room",
+  rooms: "4 bedrooms",
+  image: "images/aglantzia/apt56/cover.jpg",
+  description: "Fully furnished student apartment in a convenient location.",
+
+  roomDetails: [
+    "Room 1 – Double Bed –  €375/month",
+    "Room 2 – Double Bed –  €375/month",
+    "Room 3 – Double Bed –  €375/month",
+    "Room 4 – Double Bed –  €375/month"
+  ],
+
+  sharedSpaces: "Kitchen, living area, balconies and 2 bathrooms. (Utilities (water and electricity) are shared between tenants).",
+
+  location: "https://maps.app.goo.gl/GGfFa4yWp4y8ifXs6",
+
+  gallery: [
+    "images/aglantzia/apt56/1.jpg",
+    "images/aglantzia/apt56/2.jpg",
+    "images/aglantzia/apt56/3.jpg",
+    "images/aglantzia/apt56/4.jpg",
+    "images/aglantzia/apt56/5.jpg",
+    "images/aglantzia/apt56/6.jpg",
+    "images/aglantzia/apt56/7.jpg",
+    "images/aglantzia/apt56/8.jpg",
+    "images/aglantzia/apt56/9.jpg",
+    "images/aglantzia/apt56/10.jpg",
+    "images/aglantzia/apt56/11.jpg",
+    "images/aglantzia/apt56/12.jpg",
+    "images/aglantzia/apt56/13.jpg",
+    "images/aglantzia/apt56/14.jpg",
+    "images/aglantzia/apt56/15.jpg",
+    "images/aglantzia/apt56/16.jpg",
+    "images/aglantzia/apt56/17.jpg",
+    "images/aglantzia/apt56/18.jpg",
+    "images/aglantzia/apt56/19.jpg",
+    "images/aglantzia/apt56/20.jpg"
+  ],
+  availableSpots: 4,
+  totalSpots: 4
+},
+{
+id: 57,
+    apartmentCode: "ELN-057",
+    title: "3-Bedroom apartment in the city centre",
+    areas: ["aglantzia","centre"],
+  price: "€300 / month / per room",
+  rooms: "3 bedrooms",
+  image: "images/aglantzia/apt57/cover.jpg",
+  description: "Comfortable student shared apartment.",
+
+  roomDetails: [
+    "Room 1 – Double Bed –  €300/month",
+    "Room 2 – Double Bed –  €300/month",
+    "Room 3 – Double Bed –  €300/month"
+  ],
+
+  sharedSpaces: "Kitchen, living area, balconies, bathroom and 2 toilets. (Utilities (water and electricity) are shared between tenants).",
+
+  location: "https://goo.gl/maps/vHebYj7F6vtmbtmv9",
+
+  gallery: [
+    "images/aglantzia/apt57/1.jpg",
+    "images/aglantzia/apt57/2.jpg",
+    "images/aglantzia/apt57/3.jpg",
+    "images/aglantzia/apt57/4.jpg",
+    "images/aglantzia/apt57/5.jpg",
+    "images/aglantzia/apt57/6.jpg",
+    "images/aglantzia/apt57/7.jpg",
+    "images/aglantzia/apt57/8.jpg",
+    "images/aglantzia/apt57/9.jpg",
+    "images/aglantzia/apt57/10.jpg",
+    "images/aglantzia/apt57/11.jpg",
+    "images/aglantzia/apt57/12.jpg",
+    "images/aglantzia/apt57/13.jpg",
+    "images/aglantzia/apt57/14.jpg",
+    "images/aglantzia/apt57/15.jpg",
+    "images/aglantzia/apt57/16.jpg",
+    "images/aglantzia/apt57/17.jpg",
+    "images/aglantzia/apt57/18.jpg",
+    "images/aglantzia/apt57/19.jpg",
+    "images/aglantzia/apt57/20.jpg"
+  ],
+  availableSpots: 3,
+  totalSpots: 3
+},
+{
+id: 58,
+    apartmentCode: "ELN-058",
+    title: "3-Bedroom apartment near the University of Cuprus",
+    areas: ["aglantzia"],
+  price: "€375 - €425 / month / per room",
+  rooms: "3 bedrooms",
+  image: "images/aglantzia/apt58/cover.jpg",
+  description: "Located close to the university which is perfect for erasmus students.",
+
+  roomDetails: [
+    "Room 1 – Double Bed –  €375/month",
+    "Room 2 – Double Bed – Private balcony – €375/month",
+    "Room 3 – Double Bed – Ensuite shower – €425/month"
+  ],
+
+  sharedSpaces: "Kitchen, living area, balconies and bathroom. (Utilities (water and electricity) are shared between tenants).",
+
+  location: "https://maps.app.goo.gl/4ywk3ptiitFoQsAA",
+
+  gallery: [
+    "images/aglantzia/apt58/1.jpg",
+    "images/aglantzia/apt58/2.jpg",
+    "images/aglantzia/apt58/3.jpg",
+    "images/aglantzia/apt58/4.jpg",
+    "images/aglantzia/apt58/5.jpg",
+    "images/aglantzia/apt58/6.jpg",
+    "images/aglantzia/apt58/7.jpg",
+    "images/aglantzia/apt58/8.jpg",
+    "images/aglantzia/apt58/9.jpg",
+    "images/aglantzia/apt58/10.jpg",
+    "images/aglantzia/apt58/11.jpg",
+    "images/aglantzia/apt58/12.jpg",
+    "images/aglantzia/apt58/13.jpg",
+    "images/aglantzia/apt58/14.jpg",
+    "images/aglantzia/apt58/15.jpg",
+    "images/aglantzia/apt58/16.jpg",
+    "images/aglantzia/apt58/17.jpg",
+    "images/aglantzia/apt58/18.jpg",
+    "images/aglantzia/apt58/19.jpg",
+    "images/aglantzia/apt58/20.jpg"
+  ],
+  availableSpots: 3,
+  totalSpots: 3
+},
+{
+id: 59,
+    apartmentCode: "ELN-059",
+    title: "1-Bedroom apartment in the city centre University of Nicosia old campus near the UCY old campus (Flat 12)",
+    areas: ["aglantzia"],
+  price: "€450 / month / per room",
+  rooms: "1 bedrooms",
+  image: "images/aglantzia/apt59/cover.jpg",
+  description: "Located in a buildinfg with several Erasmus flats - perfect environment.",
+
+  roomDetails: [
+    "Room 1 – €550/month (Single occupancy)",
+    "(€600/month for a couple)"
+  ],
+
+ sharedSpaces: "Kitchen, living area and bathroom. (Utilities (water and electricity) are shared between tenants).",
+
+  location: "https://maps.app.goo.gl/RtX1aA2N4dg6BKK78",
+
+  gallery: [
+    "images/aglantzia/apt59/1.jpg",
+    "images/aglantzia/apt59/2.jpg",
+    "images/aglantzia/apt59/3.jpg",
+    "images/aglantzia/apt59/4.jpg",
+    "images/aglantzia/apt59/5.jpg",
+    "images/aglantzia/apt59/6.jpg",
+    "images/aglantzia/apt59/7.jpg",
+    "images/aglantzia/apt59/8.jpg",
+    "images/aglantzia/apt59/9.jpg",
+    "images/aglantzia/apt59/10.jpg",
+    "images/aglantzia/apt59/11.jpg",
+    "images/aglantzia/apt59/12.jpg",
+    "images/aglantzia/apt59/13.jpg",
+    "images/aglantzia/apt59/14.jpg",
+    "images/aglantzia/apt59/15.jpg",
+    "images/aglantzia/apt59/16.jpg",
+    "images/aglantzia/apt59/17.jpg",
+    "images/aglantzia/apt59/18.jpg",
+    "images/aglantzia/apt59/19.jpg",
+    "images/aglantzia/apt59/20.jpg",
+    "images/aglantzia/apt59/21.jpg",
+    "images/aglantzia/apt59/22.jpg",
+    "images/aglantzia/apt59/23.jpg",
+    "images/aglantzia/apt59/24.jpg",
+    "images/aglantzia/apt59/25.jpg",
+    "images/aglantzia/apt59/26.jpg",
+    "images/aglantzia/apt59/27.jpg",
+    "images/aglantzia/apt59/28.jpg",
+    "images/aglantzia/apt59/29.jpg"
+  ],
+  availableSpots: 1,
+  totalSpots: 1
+},
+{
+id: 60,
+    apartmentCode: "ELN-060",
+    title: "Fully equipped 3-Bedroom apartment",
+    areas: ["aglantzia"],
+  price: "€350 - €375 / month / per room",
+  rooms: "3 bedrooms",
+  image: "images/aglantzia/apt60/cover.jpg",
+  description: "Spacious student apartment with a lovely furnished balcony.",
+
+  roomDetails: [
+    "Room 1 – Single Bed – €350/month",
+    "Room 2 – Single Bed – €350/month",
+    "Room 3 – Double Bed – €375/month",
+    "(€450/month for two people sharing a room)"
+  ],
+
+ sharedSpaces: "Kitchen, living area, balcony and 2 bathrooms. (Utilities (water and electricity) are shared between tenants).",
+
+  location: "https://goo.gl/maps/hyRRQean3tQ28Giu7",
+
+  gallery: [
+    "images/aglantzia/apt60/1.jpg",
+    "images/aglantzia/apt60/2.jpg",
+    "images/aglantzia/apt60/3.jpg",
+    "images/aglantzia/apt60/4.jpg",
+    "images/aglantzia/apt60/5.jpg",
+    "images/aglantzia/apt60/6.jpg",
+    "images/aglantzia/apt60/7.jpg",
+    "images/aglantzia/apt60/8.jpg",
+    "images/aglantzia/apt60/9.jpg",
+    "images/aglantzia/apt60/10.jpg",
+    "images/aglantzia/apt60/11.jpg",
+    "images/aglantzia/apt60/12.jpg",
+    "images/aglantzia/apt60/13.jpg",
+    "images/aglantzia/apt60/14.jpg",
+    "images/aglantzia/apt60/15.jpg",
+    "images/aglantzia/apt60/16.jpg",
+    "images/aglantzia/apt60/17.jpg",
+    "images/aglantzia/apt60/18.jpg"
+  ],
+  availableSpots: 3,
+  totalSpots: 3
+},
+{
+id: 61,
+    apartmentCode: "ELN-061",
+    title: "1-Bedroom apartment in the city centre University of Nicosia old campus near the UCY old campus (Flat 11)",
+    areas: ["aglantzia"],
+  price: "€550 / month / per room",
+  rooms: "1 bedrooms",
+  image: "images/aglantzia/apt61/cover.jpg",
+  description: "Located in a buildinfg with several Erasmus flats - perfect environment.",
+
+  roomDetails: [
+    "Room 1 – €550/month (Single occupancy)",
+    "(€600/month for a couple)"
+  ],
+
+  sharedSpaces: "Kitchen, living area and bathroom. (Utilities (water and electricity) are shared between tenants).",
+
+  location: "https://maps.app.goo.gl/RtX1aA2N4dg6BKK78",
+
+  gallery: [
+    "images/aglantzia/apt53/1.jpg",
+    "images/aglantzia/apt53/2.jpg",
+    "images/aglantzia/apt53/3.jpg",
+    "images/aglantzia/apt53/4.jpg",
+    "images/aglantzia/apt53/5.jpg",
+    "images/aglantzia/apt53/6.jpg",
+    "images/aglantzia/apt53/7.jpg",
+    "images/aglantzia/apt53/8.jpg",
+    "images/aglantzia/apt53/9.jpg",
+    "images/aglantzia/apt53/10.jpg",
+    "images/aglantzia/apt53/11.jpg",
+    "images/aglantzia/apt53/12.jpg",
+    "images/aglantzia/apt53/13.jpg",
+    "images/aglantzia/apt53/14.jpg"
+  ],
+  availableSpots: 1,
+  totalSpots: 1
+},
+{
+id: 62,
+    apartmentCode: "ELN-062",
+    title: "1-Bedroom apartment in the city centre University of Nicosia old campus near the UCY old campus (Flat 14)",
+    areas: ["aglantzia"],
+  price: "€550 / month / per room",
+  rooms: "1 bedrooms",
+  image: "images/aglantzia/apt62/cover.jpg",
+  description: "Located in a buildinfg with several Erasmus flats - perfect environment.",
+
+  roomDetails: [
+    "Room 1 – €550/month (Single occupancy)",
+    "(€600/month for a couple)"
+  ],
+
+  sharedSpaces: "Kitchen, living area and bathroom. (Utilities (water and electricity) are shared between tenants).",
+
+  location: "https://maps.app.goo.gl/RtX1aA2N4dg6BKK78",
+
+  gallery: [
+    "images/aglantzia/apt53/1.jpg",
+    "images/aglantzia/apt53/2.jpg",
+    "images/aglantzia/apt53/3.jpg",
+    "images/aglantzia/apt53/4.jpg",
+    "images/aglantzia/apt53/5.jpg",
+    "images/aglantzia/apt53/6.jpg"
+  ],
+  availableSpots: 1,
+  totalSpots: 1
+}
 ]; 
