@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartments on map &middot; Erasmus Life Nicosia Housing</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="">
+  <style>
+    html, body { height: 100%; }
+    body { display: flex; flex-direction: column; margin: 0; }
+
+    .map-header {
+      padding: 22px 20px 16px;
+      text-align: center;
+      background: white;
+      border-bottom: 1px solid #eee;
+    }
+    .map-header h1 {
+      font-size: 1.6rem;
+      margin: 0 0 6px;
+      color: #1d1d1d;
+    }
+    .map-header p {
+      margin: 0 0 14px;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    .map-filters {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .map-filter {
+      border: 1px solid #ddd;
+      background: white;
+      color: #333;
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .map-filter:hover { background: #f3f3f3; }
+    .map-filter.active {
+      background: #1d1d1d;
+      color: white;
+      border-color: #1d1d1d;
+    }
+
+    #map {
+      flex: 1;
+      min-height: 60vh;
+      width: 100%;
+    }
+
+    /* Airbnb-style price/id bubble pin */
+    .pin-bubble {
+      background: #fff;
+      border: 1.5px solid rgba(0,0,0,0.15);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: #1d1d1d;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      white-space: nowrap;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      cursor: pointer;
+    }
+    .pin-bubble:hover {
+      transform: scale(1.08);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      z-index: 1000;
+    }
+    .pin-bubble.available { border-color: #2e7d32; color: #2e7d32; }
+    .pin-bubble.last      { border-color: #ef6c00; color: #ef6c00; }
+    .pin-bubble.full      { background: #616161; color: white; border-color: #616161; }
+
+    /* Popup */
+    .leaflet-popup-content-wrapper {
+      border-radius: 16px;
+      padding: 0;
+      overflow: hidden;
+    }
+    .leaflet-popup-content {
+      margin: 0;
+      width: 240px !important;
+    }
+    .map-popup {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+    .map-popup img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+    .map-popup-body { padding: 12px 14px 14px; }
+    .map-popup-code {
+      font-size: 0.75rem;
+      color: #888;
+      letter-spacing: 0.5px;
+      margin: 0 0 4px;
+    }
+    .map-popup-title {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+      line-height: 1.25;
+      color: #1d1d1d;
+    }
+    .map-popup-price {
+      margin: 0 0 10px;
+      font-weight: 600;
+      color: #333;
+      font-size: 0.9rem;
+    }
+    .map-popup-btn {
+      display: inline-block;
+      background: #1d1d1d;
+      color: white;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .map-popup-btn:hover { background: #333; }
+
+    .map-empty {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 14px 22px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      font-size: 0.95rem;
+      color: #555;
+      z-index: 500;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="logo.png" alt="Logo" class="nav-logo">
+      <span>Erasmus Life Nicosia Housing</span>
+    </a>
+  </nav>
+
+  <section class="map-header">
+    <h1>Apartments on the map</h1>
+    <p>Click a pin to see the apartment, or filter by area.</p>
+    <div class="map-filters" id="map-filters">
+      <button class="map-filter active" data-area="all">All areas</button>
+      <button class="map-filter" data-area="centre">City Centre</button>
+      <button class="map-filter" data-area="engomi">Engomi</button>
+      <button class="map-filter" data-area="aglantzia">Aglantzia</button>
+    </div>
+  </section>
+
+  <div id="map"></div>
+  <div class="map-empty" id="map-empty">No apartments to show for this area.</div>
+
+  <a href="https://wa.me/35796928282?text=Hi%20I%20am%20interested%20in%20an%20apartment"
+     class="whatsapp-btn"
+     target="_blank"
+     aria-label="Chat on WhatsApp">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp">
+  </a>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script src="apartments.js"></script>
+  <script src="coordinates.js"></script>
+  <script src="script.js"></script>
+  <script>
+  (function () {
+    // Nicosia-wide default view
+    const map = L.map('map', { scrollWheelZoom: true }).setView([35.1721, 33.365], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    let activeArea = 'all';
+    let markers = [];
+
+    function availabilityClass(apt) {
+      if (apt.availableSpots === 0) return 'full';
+      if (apt.availableSpots === 1) return 'last';
+      return 'available';
+    }
+    function availabilityText(apt) {
+      if (apt.availableSpots === 0) return 'Fully booked';
+      if (apt.availableSpots === 1) return 'Last room available';
+      return apt.availableSpots + '/' + apt.totalSpots + ' rooms available';
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function buildPopupHtml(apt) {
+      const code = escapeHtml(apt.apartmentCode || '');
+      const title = escapeHtml(apt.title || '');
+      const price = escapeHtml(apt.price || '');
+      const image = escapeHtml(apt.image || '');
+      const url = 'apartment.html?id=' + encodeURIComponent(apt.id);
+      return (
+        '<a class="map-popup" href="' + url + '">' +
+          '<img src="' + image + '" alt="' + title + '">' +
+          '<div class="map-popup-body">' +
+            '<p class="map-popup-code">' + code + ' &middot; ' + availabilityText(apt) + '</p>' +
+            '<h4 class="map-popup-title">' + title + '</h4>' +
+            '<p class="map-popup-price">' + price + '</p>' +
+            '<span class="map-popup-btn">View apartment &rarr;</span>' +
+          '</div>' +
+        '</a>'
+      );
+    }
+
+    function shortCode(code) {
+      // ELN-001 -> 001
+      const m = /(\d+)\s*$/.exec(code || '');
+      return m ? m[1] : (code || '');
+    }
+
+    function clearMarkers() {
+      markers.forEach(m => map.removeLayer(m));
+      markers = [];
+    }
+
+    function render() {
+      clearMarkers();
+      const list = apartments.filter(a => {
+        if (activeArea === 'all') return true;
+        return Array.isArray(a.areas) && a.areas.includes(activeArea);
+      });
+
+      const bounds = [];
+
+      list.forEach(apt => {
+        const coords = (typeof apartmentCoords !== 'undefined') && apartmentCoords[apt.apartmentCode];
+        if (!coords) return;
+
+        const cls = availabilityClass(apt);
+        const icon = L.divIcon({
+          className: '',
+          html: '<div class="pin-bubble ' + cls + '">' + escapeHtml(shortCode(apt.apartmentCode)) + '</div>',
+          iconSize: null,
+          iconAnchor: [22, 14]
+        });
+
+        const marker = L.marker(coords, { icon: icon, title: apt.apartmentCode + ' - ' + apt.title })
+          .addTo(map)
+          .bindPopup(buildPopupHtml(apt), { maxWidth: 260, closeButton: true });
+
+        markers.push(marker);
+        bounds.push(coords);
+      });
+
+      const empty = document.getElementById('map-empty');
+      if (list.length === 0 || bounds.length === 0) {
+        empty.style.display = 'block';
+      } else {
+        empty.style.display = 'none';
+        if (activeArea !== 'all' && bounds.length > 1) {
+          map.fitBounds(bounds, { padding: [40, 40], maxZoom: 16 });
+        }
+      }
+    }
+
+    // Filter chips
+    document.getElementById('map-filters').addEventListener('click', function (e) {
+      const btn = e.target.closest('.map-filter');
+      if (!btn) return;
+      document.querySelectorAll('.map-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeArea = btn.getAttribute('data-area');
+      render();
+    });
+
+    // Re-render when live availability arrives. script.js calls renderAreaPage()
+    // after fetching the Google Sheet; we redirect that callback to our renderer.
+    window.renderAreaPage = render;
+
+    render();
+  })();
+  </script>
+</body>
+</html>
