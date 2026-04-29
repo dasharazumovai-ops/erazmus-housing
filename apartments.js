@@ -2104,7 +2104,7 @@ id: 43,
 {
 id: 44,
     apartmentCode: "ELN-044",
-    title: "Fully renovated3-bedroom apartment for rent",
+    title: "Fully renovated 3-bedroom apartment for rent",
     areas: ["aglantzia"],
   price: "€350 / month / per room",
   rooms: "3 bedrooms",
