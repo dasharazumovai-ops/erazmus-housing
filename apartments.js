@@ -5,14 +5,14 @@ const apartments = [
   apartmentCode: "ELN-001",
   title: "Modern 3 Bedroom apartment in the centre of Nicosia",
   areas: ["centre"],
-  price: "€375 - €400 / month / per room",
+  price: "€425 - €450 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt1/cover.jpg",
   description: "Modern shared student apartment, 90m².",
   roomDetails: [
-    "Room 1 – Double Bed – €400/month",
-    "Room 2 – Single Bed – €375/month",
-    "Room 3 – Single Bed – €375/month"
+    "Room 1 – Double Bed – €450/month",
+    "Room 2 – Single Bed – €425/month",
+    "Room 3 – Single Bed – €425/month"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, balcony, 2 toilets, 1 bathroom. Utilities (water & electricity) are shared between tenants.",
@@ -45,7 +45,7 @@ const apartments = [
     "images/centre/apt1/23.jpg"
   ],
 
-  availableSpots: 3,
+  availableSpots: 0,
   totalSpots: 3
 },
 {
@@ -845,7 +845,7 @@ id: 19,
   price: "€350 - €400 / month / per room",
   rooms: "4 bedrooms",
   image: "images/centre/apt19/cover.jpg",
-  description: "Convinient location.",
+  description: "Convenient location.",
   roomDetails: [
     "Room 1 – Double Bed – €350/month",
     "Room 2 – Double Bed – €350/month",
