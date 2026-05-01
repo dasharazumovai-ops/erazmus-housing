@@ -435,7 +435,7 @@ id: 10,
 
   sharedSpaces: "Fully equiped kitchen, living area, bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
 
-  location: "https://maps.app.goo.gl/yB4TfWLWw5uDpdj6",
+  location: "https://maps.app.goo.gl/yBk4TfWLWw5uDpdj6",
 
   gallery: [
     "images/centre/apt10/1.jpg",
@@ -456,11 +456,7 @@ id: 10,
     "images/centre/apt10/16.jpg",
     "images/centre/apt10/17.jpg",
     "images/centre/apt10/18.jpg",
-    "images/centre/apt10/19.jpg",
-    "images/centre/apt10/20.jpg",
-    "images/centre/apt10/21.jpg",
-    "images/centre/apt10/22.jpg"
-
+    "images/centre/apt10/19.jpg"
   ],
   availableSpots: 3,
   totalSpots: 3
@@ -481,7 +477,7 @@ id: 11,
 
   sharedSpaces: "Fully equiped kitchen, living area, bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
 
-  location: "https://maps.app.goo.gl/Mop8vH4mb3QQAPC8?g_st=iw",
+  location: "https://maps.app.goo.gl/jMop8vH4mb3QQAPC8?g_st=iw",
 
   gallery: [
     "images/centre/apt11/1.jpg",
@@ -915,10 +911,7 @@ id: 20,
     "images/centre/apt20/11.jpg",
     "images/centre/apt20/12.jpg",
     "images/centre/apt20/13.jpg",
-    "images/centre/apt20/14.jpg",
-    "images/centre/apt20/15.jpg",
-    "images/centre/apt20/16.jpg",
-    "images/centre/apt20/17.jpg"
+    "images/centre/apt20/14.jpg"
     ],
   availableSpots: 2,
   totalSpots: 2
@@ -1069,9 +1062,7 @@ id: 23,
     "images/centre/apt23/21.jpg",
     "images/centre/apt23/22.jpg",
     "images/centre/apt23/23.jpg",
-    "images/centre/apt23/24.jpg",
-    "images/centre/apt23/25.jpg"
-
+    "images/centre/apt23/24.jpg"
   ],
   availableSpots: 4,
   totalSpots: 4
@@ -1242,7 +1233,7 @@ id: 27,
 
   sharedSpaces: "Kitchen, living area, balconies and 1 bathroom. Utilities (water and electricity) are shared between tenants.",
 
-  location: "https://maps.app.goo.gl/uqRBGNVkireoRrK7",
+  location: "https://maps.app.goo.gl/uqRBGRNVkireoRrK7",
 
   gallery: [
     "images/centre/apt27/1.jpg",
@@ -1305,7 +1296,7 @@ id: 28,
 
   sharedSpaces: "Kitchen, living area, balconies and bathroom. Utilities (water and electricity) are shared between tenants.",
 
-  location: "https://maps.app.goo.gl/ZlFwrKpZzBAebcgF7",
+  location: "https://maps.app.goo.gl/ZLFwrKpZzBAebcgF7",
 
   gallery: [
     "images/centre/apt28/1.jpg",
@@ -1698,8 +1689,7 @@ id: 34,
     "images/engomi/apt34/24.jpg",
     "images/engomi/apt34/25.jpg",
     "images/engomi/apt34/26.jpg",
-    "images/engomi/apt34/27.jpg",
-    "images/engomi/apt34/28.jpg"
+    "images/engomi/apt34/27.jpg"
   ],
   availableSpots: 0,
   totalSpots: 5
@@ -2336,9 +2326,7 @@ id: 48,
     "images/aglantzia/apt48/15.jpg",
     "images/aglantzia/apt48/16.jpg",
     "images/aglantzia/apt48/17.jpg",
-    "images/aglantzia/apt48/18.jpg",
-    "images/aglantzia/apt48/19.jpg",
-    "images/aglantzia/apt48/20.jpg"
+    "images/aglantzia/apt48/18.jpg"
   ],
   availableSpots: 2,
   totalSpots: 2
@@ -2592,7 +2580,7 @@ id: 54,
 
   sharedSpaces: "Kitchen, living area and balcony. (Utilities (water and electricity) are shared between tenants).",
 
-  location: "https://maps.app.goo.gl/PUDiQ1uTB5eNSZc7",
+  location: "https://maps.app.goo.gl/PUDiQ1uTB5etNSZc7",
 
   gallery: [
     "images/aglantzia/apt54/1.jpg",
@@ -2699,7 +2687,7 @@ id: 56,
 
   sharedSpaces: "Kitchen, living area, balconies and 2 bathrooms. (Utilities (water and electricity) are shared between tenants).",
 
-  location: "https://maps.app.goo.gl/GGfFa4yWp4y8ifXs6",
+  location: "https://goo.gl/maps/GGfFa4yWp4y8ifXs6",
 
   gallery: [
     "images/aglantzia/apt56/1.jpg",
@@ -2789,7 +2777,7 @@ id: 58,
 
   sharedSpaces: "Kitchen, living area, balconies and bathroom. (Utilities (water and electricity) are shared between tenants).",
 
-  location: "https://maps.app.goo.gl/4ywk3ptiitFoQsAA",
+  location: "https://maps.app.goo.gl/4fywk3ptiitFoQsAA",
 
   gallery: [
     "images/aglantzia/apt58/1.jpg",
@@ -2844,27 +2832,7 @@ id: 59,
     "images/aglantzia/apt59/6.jpg",
     "images/aglantzia/apt59/7.jpg",
     "images/aglantzia/apt59/8.jpg",
-    "images/aglantzia/apt59/9.jpg",
-    "images/aglantzia/apt59/10.jpg",
-    "images/aglantzia/apt59/11.jpg",
-    "images/aglantzia/apt59/12.jpg",
-    "images/aglantzia/apt59/13.jpg",
-    "images/aglantzia/apt59/14.jpg",
-    "images/aglantzia/apt59/15.jpg",
-    "images/aglantzia/apt59/16.jpg",
-    "images/aglantzia/apt59/17.jpg",
-    "images/aglantzia/apt59/18.jpg",
-    "images/aglantzia/apt59/19.jpg",
-    "images/aglantzia/apt59/20.jpg",
-    "images/aglantzia/apt59/21.jpg",
-    "images/aglantzia/apt59/22.jpg",
-    "images/aglantzia/apt59/23.jpg",
-    "images/aglantzia/apt59/24.jpg",
-    "images/aglantzia/apt59/25.jpg",
-    "images/aglantzia/apt59/26.jpg",
-    "images/aglantzia/apt59/27.jpg",
-    "images/aglantzia/apt59/28.jpg",
-    "images/aglantzia/apt59/29.jpg"
+    "images/aglantzia/apt59/9.jpg"
   ],
   availableSpots: 0,
   totalSpots: 1
@@ -2888,7 +2856,7 @@ id: 60,
 
  sharedSpaces: "Kitchen, living area, balcony and 2 bathrooms. (Utilities (water and electricity) are shared between tenants).",
 
-  location: "https://goo.gl/maps/hyRRQean3tQ28Giu7",
+  location: "https://goo.gl/maps/h7RRQean3tQ28Giu7",
 
   gallery: [
     "images/aglantzia/apt60/1.jpg",
@@ -2933,20 +2901,20 @@ id: 61,
   location: "https://maps.app.goo.gl/RtX1aA2N4dg6BKK78",
 
   gallery: [
-    "images/aglantzia/apt53/1.jpg",
-    "images/aglantzia/apt53/2.jpg",
-    "images/aglantzia/apt53/3.jpg",
-    "images/aglantzia/apt53/4.jpg",
-    "images/aglantzia/apt53/5.jpg",
-    "images/aglantzia/apt53/6.jpg",
-    "images/aglantzia/apt53/7.jpg",
-    "images/aglantzia/apt53/8.jpg",
-    "images/aglantzia/apt53/9.jpg",
-    "images/aglantzia/apt53/10.jpg",
-    "images/aglantzia/apt53/11.jpg",
-    "images/aglantzia/apt53/12.jpg",
-    "images/aglantzia/apt53/13.jpg",
-    "images/aglantzia/apt53/14.jpg"
+    "images/aglantzia/apt61/1.jpg",
+    "images/aglantzia/apt61/2.jpg",
+    "images/aglantzia/apt61/3.jpg",
+    "images/aglantzia/apt61/4.jpg",
+    "images/aglantzia/apt61/5.jpg",
+    "images/aglantzia/apt61/6.jpg",
+    "images/aglantzia/apt61/7.jpg",
+    "images/aglantzia/apt61/8.jpg",
+    "images/aglantzia/apt61/9.jpg",
+    "images/aglantzia/apt61/10.jpg",
+    "images/aglantzia/apt61/11.jpg",
+    "images/aglantzia/apt61/12.jpg",
+    "images/aglantzia/apt61/13.jpg",
+    "images/aglantzia/apt61/14.jpg"
   ],
   availableSpots: 0,
   totalSpots: 1
