@@ -1399,7 +1399,7 @@ id: 29,
 {
 id: 30,
   apartmentCode: "ELN-030",
-  title: "EUC Erasmus building - just a few mins from EUC & UNIC",
+  title: "EUC Erasmus building (3 flats available) - just a few mins from EUC & UNIC",
   areas: ["engomi"],
   price: "€350 - €425 / month / per room",
   rooms: "2 and 4 bedroom",
@@ -1827,47 +1827,6 @@ id: 37,
   ],
   availableSpots: 4,
   totalSpots: 4
-},
-{
-id: 38,
-    apartmentCode: "ELN-038",
-    title: "3-Bedroom apartment between the city centre, University of Nicosia and European University Cyprus",
-    areas: ["engomi"],
-  price: "€375 - €400 / month / per room",
-  rooms: "3 bedrooms",
-  image: "images/engomi/apt38/cover.jpg",
-  description: "Comfortable shared apartment for students.",
-  roomDetails: [
-    "Room 1 – Single Bed – €375/month",
-    "Room 2 – Single Bed – €375/month",
-    "Room 3 – Double Bed – €400/month (€475/month for a couple)"
-  ],
-
-  sharedSpaces: "Kitchen, living area, balconies and bathroom. Utilities (water and electricity) are shared between tenants.",
-
-  location:  "https://maps.app.goo.gl/uqRBGRNVkireoRrK7",
-
-  gallery: [
-    "images/engomi/apt38/1.jpg",
-    "images/engomi/apt38/2.jpg",
-    "images/engomi/apt38/3.jpg",
-    "images/engomi/apt38/4.jpg",
-    "images/engomi/apt38/5.jpg",
-    "images/engomi/apt38/6.jpg",
-    "images/engomi/apt38/7.jpg",
-    "images/engomi/apt38/8.jpg",
-    "images/engomi/apt38/9.jpg",
-    "images/engomi/apt38/10.jpg",
-    "images/engomi/apt38/11.jpg",
-    "images/engomi/apt38/12.jpg",
-    "images/engomi/apt38/13.jpg",
-    "images/engomi/apt38/14.jpg",
-    "images/engomi/apt38/15.jpg",
-    "images/engomi/apt38/16.jpg",
-    "images/engomi/apt38/17.jpg"
-  ],
-  availableSpots: 3,
-  totalSpots: 3
 },
 {
 id: 39,
