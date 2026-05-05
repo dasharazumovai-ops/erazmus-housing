@@ -385,7 +385,7 @@ id: 9,
   roomDetails: [
     "Room 1 – Single Bed – €450/month",
     "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month (€550 for couples rentingany room)"
+    "Room 3 – Double Bed – €450/month (€550 for couples)"
   ],
 
   sharedSpaces: "Kitchen, comfortable living area, bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -520,7 +520,7 @@ id: 12,
   roomDetails: [
     "Room 1 – Double Bed – €450/month",
     "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples renting any room)"
+    "Room 3 – Double Bed – €450/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Fully equiped kitchen, living area, bathrooms and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -572,7 +572,7 @@ id: 13,
   roomDetails: [
     "Room 1 – Double Bed – €375/month",
     "Room 2 – Double Bed – €375/month",
-    "Room 3 – Double Bed – (En-suite bathroom) –€450/month (€550/month for couples renting any room)"
+    "Room 3 – Double Bed – En-suite bathroom –€450/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Fully equiped kitchen, cosy living area, 2 bathrooms, 3 toilets and balconies. Utilities (water and electricity) are shared between tenants.",
@@ -624,7 +624,7 @@ id: 14,
   roomDetails: [
     "Room 1 – Double Bed – €450/month",
     "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month (€500/month for couples renting any room)"
+    "Room 3 – Double Bed – €450/month (€500/month for couples)"
   ],
 
   sharedSpaces: "fully renovated kitchen, cosy living area, bathroom and balconies. Utilities (water and electricity) are shared between tenants.",
@@ -669,7 +669,7 @@ id: 15,
   roomDetails: [
     "Room 1 – Double Bed – €450/month",
     "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples renting any room)"
+    "Room 3 – Double Bed – €450/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, 2 toilets, 1 bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -713,7 +713,7 @@ id: 16,
     "Room 1 – Double Bed – €450/month",
     "Room 2 – Double Bed – €450/month",
     "Room 3 – Double Bed – €450/month",
-    "Room 4 – Double Bed – €450/month (€550/month for couples renting any room)"
+    "Room 4 – Double Bed – €450/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, 2 toilets and 1 bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -890,7 +890,7 @@ id: 20,
   description: "Comfortable shared student apartment.",
   roomDetails: [
     "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month (€500/month if the room is shared by 2 people)"
+    "Room 2 – Double Bed – €450/month (€500/month or couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -1589,112 +1589,6 @@ id: 32,
   totalSpots: 3
 },
 {
-id: 33,
-    apartmentCode: "ELN-033",
-    title: "4-Bedroom spacious apartment in between European University Cyprus, University of Nicosia and the city centre",
-    areas: ["engomi"],
-  price: "€450 - €500 / month / per room",
-  rooms: "4 bedrooms",
-  image: "images/engomi/apt33/cover.jpg",
-  description: "Cozy shared apartment for students.",
-  roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month",
-    "Room 4 – Double Bed – En-suite shower – €500/month"
-  ],
-
-  sharedSpaces: "Kitchen, living area, balconies, bathroom and laundry room. Utilities (water and electricity) are shared between tenants.",
-
-  location: "https://goo.gl/maps/SzYghKkL5cCdPfDt8",
-
-  gallery: [
-    "images/engomi/apt33/1.jpg",
-    "images/engomi/apt33/2.jpg",
-    "images/engomi/apt33/3.jpg",
-    "images/engomi/apt33/4.jpg",
-    "images/engomi/apt33/5.jpg",
-    "images/engomi/apt33/6.jpg",
-    "images/engomi/apt33/7.jpg",
-    "images/engomi/apt33/8.jpg",
-    "images/engomi/apt33/9.jpg",
-    "images/engomi/apt33/10.jpg",
-    "images/engomi/apt33/11.jpg",
-    "images/engomi/apt33/12.jpg",
-    "images/engomi/apt33/13.jpg",
-    "images/engomi/apt33/14.jpg",
-    "images/engomi/apt33/15.jpg",
-    "images/engomi/apt33/16.jpg",
-    "images/engomi/apt33/17.jpg",
-    "images/engomi/apt33/18.jpg",
-    "images/engomi/apt33/19.jpg",
-    "images/engomi/apt33/20.jpg",
-    "images/engomi/apt33/21.jpg",
-    "images/engomi/apt33/22.jpg",
-    "images/engomi/apt33/23.jpg",
-    "images/engomi/apt33/24.jpg",
-    "images/engomi/apt33/25.jpg",
-    "images/engomi/apt33/26.jpg",
-    "images/engomi/apt33/27.jpg",
-    "images/engomi/apt33/28.jpg"
-  ],
-  availableSpots: 0,
-  totalSpots: 4
-},
-{
-id: 34,
-    apartmentCode: "ELN-034",
-    title: "5-Bedroom spacious apartment in a great location between the centre, European University Cyprus and University of Nicosia",
-    areas: ["engomi"],
-  price: "€375 - €425 / month / per room",
-  rooms: "5 bedrooms",
-  image: "images/engomi/apt34/cover.jpg",
-  description: "Modern shared apartment for students.",
-  roomDetails: [
-    "Room 1 – Single Bed – €375/month",
-    "Room 2 – Double Bed – €425/month",
-    "Room 3 – Double Bed – €425/month",
-    "Room 4 – Double Bed – €425/month",
-    "Room 5 – Double Bed – €425/month"
-  ],
-
-  sharedSpaces: "Kitchen, living area, balcony, bathroom and laundry room. Utilities (water and electricity) are shared between tenants.",
-
-  location: "https://goo.gl/maps/SzYghKkL5cCdPfDt8",
-
-  gallery: [
-    "images/engomi/apt34/1.jpg",
-    "images/engomi/apt34/2.jpg",
-    "images/engomi/apt34/3.jpg",
-    "images/engomi/apt34/4.jpg",
-    "images/engomi/apt34/5.jpg",
-    "images/engomi/apt34/6.jpg",
-    "images/engomi/apt34/7.jpg",
-    "images/engomi/apt34/8.jpg",
-    "images/engomi/apt34/9.jpg",
-    "images/engomi/apt34/10.jpg",
-    "images/engomi/apt34/11.jpg",
-    "images/engomi/apt34/12.jpg",
-    "images/engomi/apt34/13.jpg",
-    "images/engomi/apt34/14.jpg",
-    "images/engomi/apt34/15.jpg",
-    "images/engomi/apt34/16.jpg",
-    "images/engomi/apt34/17.jpg",
-    "images/engomi/apt34/18.jpg",
-    "images/engomi/apt34/19.jpg",
-    "images/engomi/apt34/20.jpg",
-    "images/engomi/apt34/21.jpg",
-    "images/engomi/apt34/22.jpg",
-    "images/engomi/apt34/23.jpg",
-    "images/engomi/apt34/24.jpg",
-    "images/engomi/apt34/25.jpg",
-    "images/engomi/apt34/26.jpg",
-    "images/engomi/apt34/27.jpg"
-  ],
-  availableSpots: 0,
-  totalSpots: 5
-},
-{
 id: 35,
     apartmentCode: "ELN-035",
     title: "3-Bedroom apartment near University of Nicosia and European University Cyprus",
@@ -1742,47 +1636,6 @@ id: 35,
   ],
   availableSpots: 3,
   totalSpots: 3
-},
-{
-id: 36,
-    apartmentCode: "ELN-036",
-    title: "2-Bedroom raised-groundapartment in a great location between the centre, UNIC and EUC",
-    areas: ["engomi"],
-  price: "€400 - €450 / month / per room",
-  rooms: "2 bedrooms",
-  image: "images/engomi/apt36/cover.jpg",
-  description: "Convenient location for university students.",
-  roomDetails: [
-    "Room 1 – Double Bed – En-suite bathroom – €450/month",
-    "Room 2 – 2 Single Beds – En-suite bathroom – €400/month (€500/month for two people)" 
-  ],
-
-  sharedSpaces: "Kitchen, living area and balcony. Utilities (water and electricity) are shared between tenants.",
-
-  location: "https://goo.gl/maps/SzYghKkL5cCdPfDt8",
-
-  gallery: [
-    "images/engomi/apt36/1.jpg",
-    "images/engomi/apt36/2.jpg",
-    "images/engomi/apt36/3.jpg",
-    "images/engomi/apt36/4.jpg",
-    "images/engomi/apt36/5.jpg",
-    "images/engomi/apt36/6.jpg",
-    "images/engomi/apt36/7.jpg",
-    "images/engomi/apt36/8.jpg",
-    "images/engomi/apt36/9.jpg",
-    "images/engomi/apt36/10.jpg",
-    "images/engomi/apt36/11.jpg",
-    "images/engomi/apt36/12.jpg",
-    "images/engomi/apt36/13.jpg",
-    "images/engomi/apt36/14.jpg",
-    "images/engomi/apt36/15.jpg",
-    "images/engomi/apt36/16.jpg",
-    "images/engomi/apt36/17.jpg",
-    "images/engomi/apt36/18.jpg"
-  ],
-  availableSpots: 0,
-  totalSpots: 2
 },
 {
 id: 37,
