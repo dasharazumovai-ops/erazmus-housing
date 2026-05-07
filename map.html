@@ -80,6 +80,53 @@
     .pin-bubble.last      { border-color: #ef6c00; color: #ef6c00; }
     .pin-bubble.full      { background: #9b2c2c; color: white; border-color: #616161; }
 
+    /* University marker */
+    .uni-bubble {
+      background: #1a56a0;
+      color: white;
+      border: 2px solid #0d3b7a;
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-weight: 700;
+      font-size: 0.78rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      white-space: nowrap;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .uni-bubble:hover {
+      transform: scale(1.08);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    }
+
+    /* City Centre label */
+    .centre-label {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      color: #1a56a0;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+    .centre-label::before { display: none; }
+
+    /* Universities toggle button */
+    .map-filter.uni-toggle {
+      background: #e8f0fb;
+      border-color: #1a56a0;
+      color: #1a56a0;
+    }
+    .map-filter.uni-toggle.active {
+      background: #1a56a0;
+      color: white;
+      border-color: #1a56a0;
+    }
+
     /* Popup */
     .leaflet-popup-content-wrapper {
       border-radius: 16px;
@@ -164,6 +211,7 @@
       <button class="map-filter" data-area="centre">City Centre</button>
       <button class="map-filter" data-area="engomi">Engomi</button>
       <button class="map-filter" data-area="aglantzia">Aglantzia</button>
+      <button class="map-filter uni-toggle" id="uni-toggle">🎓 Universities</button>
     </div>
   </section>
 
@@ -286,7 +334,112 @@
       }
     }
 
-    // Filter chips
+    // ── University markers ──────────────────────────────────────────────
+    // Coordinates sourced from Google Maps / Mapcarta; marked approximate where not verified.
+    const universities = [
+      {
+        name: 'UCY Old Campus',
+        short: 'UCY Old',
+        address: 'Kallipoleos 75, Nicosia 1678',
+        coords: [35.1600034, 33.377012],   // verified via Google Maps
+        verified: true,
+        shuttle: 'UCY New Campus (Aglantzia)'
+      },
+      {
+        name: 'UCY New Campus',
+        short: 'UCY New',
+        address: 'Panepistimiou 1, Aglantzia',
+        coords: [35.14355, 33.41387],      // verified via Mapcarta
+        verified: true
+      },
+      {
+        name: 'European University Cyprus',
+        short: 'EUC',
+        address: '6 Diogenous Str., Egkomi, 2404, Nicosia',
+        coords: [35.1602581, 33.3389850],  // verified via Maptons
+        verified: true
+      },
+      {
+        name: 'University of Nicosia',
+        short: 'UNIC',
+        address: 'Μακεδονίτισσης 46, Nicosia 2417',
+        coords: [35.165864, 33.314453],    // verified via coordinates search
+        verified: true
+      },
+      {
+        name: 'Frederick University',
+        short: 'Frederick',
+        address: 'Gianni Freiderikou 7, Nicosia 1036',
+        coords: [35.1794916, 33.3804358],  // verified via Google Maps
+        verified: true
+      }
+    ];
+
+    // ── City Centre highlight ───────────────────────────────────────────
+    // Centred on Ledra Street [35.1713, 33.3568], radius ~450 m.
+    // Represents the walled old city area.
+    L.circle([35.17303, 33.36444], {
+      radius: 450,
+      color: '#1a56a0',
+      weight: 1.5,
+      dashArray: '6 4',
+      fillColor: '#1a56a0',
+      fillOpacity: 0.06
+    }).addTo(map).bindTooltip('City Centre', {
+      permanent: true,
+      direction: 'center',
+      className: 'centre-label'
+    });
+
+    let uniMarkers = [];
+    let uniVisible = false;
+
+    function renderUniMarkers() {
+      uniMarkers.forEach(m => map.removeLayer(m));
+      uniMarkers = [];
+      if (!uniVisible) return;
+
+      universities.forEach(uni => {
+        const icon = L.divIcon({
+          className: '',
+          html: '<div class="uni-bubble">🎓 ' + uni.short + '</div>',
+          iconSize: null,
+          iconAnchor: [36, 14]
+        });
+
+        const noteHtml = uni.verified
+          ? ''
+          : '<p style="margin:6px 0 0;font-size:0.75rem;color:#888;">⚠ Coordinates approximate</p>';
+
+        const shuttleHtml = uni.shuttle
+          ? '<div style="margin:8px 0 0;padding:6px 8px;background:#e8f5e9;border-radius:6px;font-size:0.8rem;color:#2e7d32;">' +
+              '🚌 <strong>Free shuttle</strong> to ' + uni.shuttle +
+            '</div>'
+          : '';
+
+        const popup =
+          '<div style="padding:10px 12px;min-width:180px;">' +
+            '<strong style="font-size:0.95rem;">' + uni.name + '</strong>' +
+            '<p style="margin:4px 0 0;font-size:0.82rem;color:#555;">' + uni.address + '</p>' +
+            shuttleHtml +
+            noteHtml +
+          '</div>';
+
+        const m = L.marker(uni.coords, { icon: icon, title: uni.name })
+          .addTo(map)
+          .bindPopup(popup, { maxWidth: 240, closeButton: true });
+
+        uniMarkers.push(m);
+      });
+    }
+
+    document.getElementById('uni-toggle').addEventListener('click', function () {
+      uniVisible = !uniVisible;
+      this.classList.toggle('active', uniVisible);
+      renderUniMarkers();
+    });
+
+    // ── Filter chips ────────────────────────────────────────────────────
     document.getElementById('map-filters').addEventListener('click', function (e) {
       const btn = e.target.closest('.map-filter');
       if (!btn) return;
