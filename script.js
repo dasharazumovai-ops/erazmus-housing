@@ -1,5 +1,5 @@
 async function loadAvailabilityFromSheet() {
-  const csvUrl = "https://api.allorigins.win/raw?url=https://docs.google.com/spreadsheets/d/e/2PACX-1vRKk4VqVA_zVfwQ7nuh-_DiX_TBGW9sr68TZrt0QDn052ql8eBw93AgbG8QpIBPSIGSiKqaDD7Jxct2/pub?output=csv";
+  const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRKk4VqVA_zVfwQ7nuh-_DiX_TBGW9sr68TZrt0QDn052ql8eBw93AgbG8QpIBPSIGSiKqaDD7Jxct2/pub?gid=0&single=true&output=csv";
 
   const cacheKey = "eln-availability-cache";
   const cacheTimeKey = "eln-availability-cache-time";
@@ -32,17 +32,66 @@ async function loadAvailabilityFromSheet() {
     console.error("Error loading availability from Google Sheets:", error);
   }
 }
+function parseCSVRow(row) {
+  const cols = [];
+  let cur = '', inQ = false;
+  for (let i = 0; i < row.length; i++) {
+    const c = row[i];
+    if (c === '"') { inQ = !inQ; }
+    else if (c === ',' && !inQ) { cols.push(cur.trim()); cur = ''; }
+    else { cur += c; }
+  }
+  cols.push(cur.trim());
+  return cols;
+}
+
 function applyAvailabilityData(csvText) {
-  const rows = csvText.trim().split("\n").slice(1);
+  const rows = csvText.trim().split("\n").slice(1); // skip header row
 
+  // Group rows by apartment ID
+  const grouped = {};
   rows.forEach(row => {
-    const [id, availableSpots, totalSpots] = row.split(",");
+    const cols = parseCSVRow(row);
+    if (cols.length < 3) return;
+    const id            = cols[0].trim();
+    const availSpots    = Number(cols[1]);
+    const totalSpots    = Number(cols[2]);
+    const room          = (cols[3] || '').trim();
+    const bedType       = (cols[4] || '').trim();
+    const notes         = (cols[5] || '').trim();
+    const price         = Number(cols[6]) || 0;
+    const couplesPrice  = Number(cols[7]) || 0;
+    if (!id) return;
+    if (!grouped[id]) grouped[id] = { availSpots, totalSpots, rooms: [] };
+    if (room) grouped[id].rooms.push({ room, bedType, notes, price, couplesPrice });
+  });
 
-    const apartment = apartments.find(a => a.apartmentCode === id.trim());
+  Object.entries(grouped).forEach(([id, data]) => {
+    const apt = apartments.find(a => a.apartmentCode === id);
+    if (!apt) return;
 
-    if (apartment) {
-      apartment.availableSpots = Number(availableSpots);
-      apartment.totalSpots = Number(totalSpots);
+    apt.availableSpots = data.availSpots;
+    apt.totalSpots     = data.totalSpots;
+
+    if (data.rooms.length > 0) {
+      // Rebuild roomDetails from sheet
+      apt.roomDetails = data.rooms.map(rm => {
+        let s = rm.room;
+        if (rm.bedType) s += ' – ' + rm.bedType;
+        if (rm.notes)   s += ' – ' + rm.notes;
+        s += ' – €' + rm.price + '/month';
+        if (rm.couplesPrice) s += ' (€' + rm.couplesPrice + '/month for couples)';
+        return s;
+      });
+
+      // Rebuild price summary
+      const prices = data.rooms.map(rm => rm.price).filter(p => p > 0);
+      if (prices.length) {
+        const min = Math.min(...prices), max = Math.max(...prices);
+        apt.price = min === max
+          ? '€' + min + ' / month / per room'
+          : '€' + min + ' - €' + max + ' / month / per room';
+      }
     }
   });
 }
