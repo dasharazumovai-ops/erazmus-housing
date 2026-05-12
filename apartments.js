@@ -95,8 +95,8 @@ description: "Modern shared student apartment.",
    description: "Modern shared student apartment.",
    roomDetails: [
     "Room 1 – Double Bed – €450/month",
-    "Room 2 – Single Bed – €450/month",
-    "Room 3 – Single Bed – €450/month"
+    "Room 2 – Double Bed – €450/month",
+    "Room 3 – Double Bed – €450/month"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, balcony, bathroom(s). Utilities (water & electricity) are shared between tenants.",
