@@ -839,17 +839,16 @@ id: 18,
 {
 id: 19,
     apartmentCode: "ELN-019",
-    title: "4-Bedroom maisonette in the city centre",
+    title: "3-Bedroom maisonette in the city centre",
     areas: ["centre"],
-  price: "€350 - €450 / month / per room",
-  rooms: "4 bedrooms",
+  price: "€400 - €450 / month / per room",
+  rooms: "3 bedrooms",
   image: "images/centre/apt19/cover.jpg",
   description: "Convenient location.",
   roomDetails: [
     "Room 1 – Double Bed – €400/month",
     "Room 2 – Double Bed – €400/month",
-    "Room 3 – Double Bed – €350/month",
-    "Room 4 – Double Bed – €450/month (€550/month for couples)"
+    "Room 3 – Double Bed – €450/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, 2 bathroom and balconies. Utilities (water and electricity) are shared between tenants.",
