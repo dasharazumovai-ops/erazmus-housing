@@ -872,10 +872,24 @@ id: 19,
     "images/centre/apt19/14.jpg",
     "images/centre/apt19/15.jpg",
     "images/centre/apt19/16.jpg",
-    "images/centre/apt19/17.jpg"
+    "images/centre/apt19/17.jpg",
+    "images/centre/apt19/18.jpg",
+    "images/centre/apt19/19.jpg",
+    "images/centre/apt19/20.jpg",
+    "images/centre/apt19/21.jpg",
+    "images/centre/apt19/22.jpg",
+    "images/centre/apt19/23.jpg",
+    "images/centre/apt19/24.jpg",
+    "images/centre/apt19/25.jpg",
+    "images/centre/apt19/26.jpg",
+    "images/centre/apt19/27.jpg",
+    "images/centre/apt19/28.jpg",
+    "images/centre/apt19/29.jpg",
+    "images/centre/apt19/30.jpg",
+    "images/centre/apt19/31.jpg"
     ],
-  availableSpots: 4,
-  totalSpots: 4
+  availableSpots: 3,
+  totalSpots: 3
 },
 {
 id: 20,
