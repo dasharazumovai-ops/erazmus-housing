@@ -839,7 +839,7 @@ id: 18,
 {
 id: 19,
     apartmentCode: "ELN-019",
-    title: "3-Bedroom maisonette in the city centre",
+    title: "3-Bedroom apartment in the city centre",
     areas: ["centre"],
   price: "€400 - €450 / month / per room",
   rooms: "3 bedrooms",
@@ -2720,7 +2720,7 @@ id: 61,
     "images/aglantzia/apt61/13.jpg",
     "images/aglantzia/apt61/14.jpg"
   ],
-  availableSpots: 0,
+  availableSpots: 1,
   totalSpots: 1
 },
 {
