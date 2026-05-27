@@ -2749,7 +2749,7 @@ id: 62,
     "images/aglantzia/apt53/5.jpg",
     "images/aglantzia/apt53/6.jpg"
   ],
-  availableSpots: 0,
+  availableSpots: 1,
   totalSpots: 1
 }
 ]; 
