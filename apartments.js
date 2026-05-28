@@ -2247,8 +2247,8 @@ id: 51,
   description: "Student apartment in a convenient location.",
 
   roomDetails: [
-    "Room 1 – Double Bed – €350/month",
-    "Room 2 – Double Bed – €350/month",
+    "Room 1 – Single Bed – €350/month",
+    "Room 2 – Single Bed – €350/month",
     "Room 3 – Double Bed – €375/month",
     "Room 4 – 2 Single Beds – €400/month (€500/month for couples)"
   ],
