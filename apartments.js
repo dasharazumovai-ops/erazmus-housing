@@ -1281,7 +1281,7 @@ id: 27,
 {
 id: 28,
     apartmentCode: "ELN-028",
-    title: "The biggest Erazmus building in Cyprus!",
+    title: "The biggest Erasmus building in Cyprus!",
     areas: ["centre"],
   price: "€350 - €425 / month / per room",
   rooms: "3 and 4 bedroom",
