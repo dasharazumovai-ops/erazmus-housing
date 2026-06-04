@@ -48,35 +48,47 @@ body {
   background: white;
 }
 .hero-search-wrapper {
-  margin: 20px auto 0 auto;
+  margin: 0 auto;
+  padding: 28px 16px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0 16px;
 }
 
 .bedroom-filters {
   display: flex;
   gap: 8px;
-  margin-top: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .bedroom-chip {
-  padding: 6px 16px;
+  padding: 10px 22px;
   border-radius: 999px;
-  border: 1.5px solid rgba(255,255,255,0.6);
-  background: rgba(255,255,255,0.18);
+  border: none;
+  background: #2456d3;
   color: white;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.88rem;
+  font-weight: 700;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.2s ease;
+  box-shadow: 0 6px 12px rgba(36,86,211,0.3);
+  transition: all 0.15s ease;
+  position: relative;
+  top: 0;
 }
 
 .bedroom-chip:hover {
-  background: rgba(255,255,255,0.35);
+  background: #1a3fa8;
+  box-shadow: 0 2px 0px #1a3fa8, 0 4px 8px rgba(36,86,211,0.3);
+  top: 2px;
+}
+
+.bedroom-chip:active {
+  box-shadow: none;
+  top: 4px;
 }
 
 .search-box {
