@@ -96,15 +96,78 @@ function applyAvailabilityData(csvText) {
   });
 }
 
+function renderApartmentCards(filteredApartments) {
+  return filteredApartments.map(apartment => `
+    <div class="apartment-card">
+      <div class="image-wrapper">
+        <img src="${apartment.image}" alt="${apartment.title}">
+        <span class="availability-badge ${
+          apartment.availableSpots === 0
+            ? "status-full"
+            : apartment.availableSpots === 1
+            ? "status-last"
+            : "status-available"
+        }">
+          ${
+            apartment.availableSpots === 0
+              ? "Fully booked"
+              : apartment.availableSpots === 1
+              ? "Last room available"
+              : apartment.availableSpots + "/" + apartment.totalSpots + " rooms available"
+          }
+        </span>
+      </div>
+
+      <div class="apartment-card-content">
+        <p class="apartment-code">${apartment.apartmentCode}</p>
+        <h3>${apartment.title}</h3>
+        <p class="price">${apartment.price}</p>
+        <p>${apartment.rooms}</p>
+        <p>${apartment.description}</p>
+        <a href="apartment.html?id=${apartment.id}" class="details-btn">View details</a>
+      </div>
+    </div>
+  `).join("");
+}
+
+function sortByAvailability(list) {
+  return list.sort((a, b) => {
+    const rank = apt => {
+      if (apt.availableSpots === apt.totalSpots) return 0;
+      if (apt.availableSpots > 0) return 1;
+      return 2;
+    };
+    return rank(a) - rank(b);
+  });
+}
+
 function renderAreaPage() {
   const params = new URLSearchParams(window.location.search);
   const selectedArea = params.get("area");
+  const selectedBeds = params.get("beds");
 
   const areaTitle = document.getElementById("area-title");
   const areaSubtitle = document.getElementById("area-subtitle");
   const apartmentList = document.getElementById("apartment-list");
 
-  if (selectedArea && areaTitle && apartmentList) {
+  if (!areaTitle || !apartmentList) return;
+
+  // Bedroom search mode
+  if (selectedBeds) {
+    const num = parseInt(selectedBeds);
+    const filtered = sortByAvailability(
+      apartments.filter(a => (a.rooms || "").startsWith(num + " bedroom"))
+    );
+    areaTitle.textContent = `${num}-Bedroom Apartments`;
+    areaSubtitle.textContent = `${filtered.length} apartment${filtered.length !== 1 ? "s" : ""} found`;
+    apartmentList.innerHTML = filtered.length
+      ? renderApartmentCards(filtered)
+      : "<p>No apartments found.</p>";
+    return;
+  }
+
+  // Area filter mode
+  if (selectedArea) {
     const areaNames = {
       centre: "City Centre",
       engomi: "Engomi",
@@ -114,55 +177,13 @@ function renderAreaPage() {
     areaTitle.textContent = areaNames[selectedArea] || "Apartments";
     areaSubtitle.textContent = `Available apartments in ${areaNames[selectedArea] || "this area"}`;
 
-    const filteredApartments = apartments.filter(apartment =>
-      apartment.areas && apartment.areas.includes(selectedArea)
+    const filtered = sortByAvailability(
+      apartments.filter(a => a.areas && a.areas.includes(selectedArea))
     );
 
-    filteredApartments.sort((a, b) => {
-      const getAvailabilityRank = (apartment) => {
-        if (apartment.availableSpots === apartment.totalSpots) return 0;
-        if (apartment.availableSpots > 0) return 1;
-        return 2;
-      };
-
-      return getAvailabilityRank(a) - getAvailabilityRank(b);
-    });
-
-    if (filteredApartments.length === 0) {
-      apartmentList.innerHTML = "<p>No apartments found for this area yet.</p>";
-    } else {
-      apartmentList.innerHTML = filteredApartments.map(apartment => `
-        <div class="apartment-card">
-          <div class="image-wrapper">
-            <img src="${apartment.image}" alt="${apartment.title}">
-            <span class="availability-badge ${
-              apartment.availableSpots === 0
-                ? "status-full"
-                : apartment.availableSpots === 1
-                ? "status-last"
-                : "status-available"
-            }">
-              ${
-                apartment.availableSpots === 0
-                  ? "Fully booked"
-                  : apartment.availableSpots === 1
-                  ? "Last room available"
-                  : apartment.availableSpots + "/" + apartment.totalSpots + " rooms available"
-              }
-            </span>
-          </div>
-
-          <div class="apartment-card-content">
-            <p class="apartment-code">${apartment.apartmentCode}</p>
-            <h3>${apartment.title}</h3>
-            <p class="price">${apartment.price}</p>
-            <p>${apartment.rooms}</p>
-            <p>${apartment.description}</p>
-            <a href="apartment.html?id=${apartment.id}" class="details-btn">View details</a>
-          </div>
-        </div>
-      `).join("");
-    }
+    apartmentList.innerHTML = filtered.length
+      ? renderApartmentCards(filtered)
+      : "<p>No apartments found for this area yet.</p>";
   }
 }
 
@@ -260,42 +281,75 @@ function initGlobalSearch() {
     }).slice(0, 8);
   }
 
-  function renderSuggestions(matches) {
+  function renderSuggestions(matches, bedroomQuery) {
     const hasInput = searchInput.value.trim().length > 0;
-    if (!matches.length || !hasInput) {
+    if (!hasInput) {
       suggestionsBox.innerHTML = "";
       suggestionsBox.classList.remove("active");
       return;
     }
 
-    suggestionsBox.innerHTML = matches.map(apartment => `
+    // For bedroom searches, count total matches (not capped)
+    const totalBedroomMatches = bedroomQuery !== null
+      ? apartments.filter(a => (a.rooms || "").startsWith(bedroomQuery + " bedroom")).length
+      : 0;
+
+    if (!matches.length && totalBedroomMatches === 0) {
+      suggestionsBox.innerHTML = "";
+      suggestionsBox.classList.remove("active");
+      return;
+    }
+
+    let html = matches.map(apartment => `
       <div class="search-suggestion-item" data-id="${apartment.id}">
         <div class="search-suggestion-code">${apartment.apartmentCode} <span class="search-suggestion-beds">${apartment.rooms}</span></div>
         <div class="search-suggestion-title">${apartment.title}</div>
       </div>
     `).join("");
 
+    if (bedroomQuery !== null && totalBedroomMatches > 0) {
+      html += `
+        <div class="search-suggestion-item search-view-all" data-beds="${bedroomQuery}">
+          View all ${totalBedroomMatches} ${bedroomQuery}-bedroom apartments &rarr;
+        </div>
+      `;
+    }
+
+    suggestionsBox.innerHTML = html;
     suggestionsBox.classList.add("active");
 
-    suggestionsBox.querySelectorAll(".search-suggestion-item").forEach(item => {
+    suggestionsBox.querySelectorAll(".search-suggestion-item[data-id]").forEach(item => {
       item.addEventListener("click", () => {
         const apartmentId = item.getAttribute("data-id");
         window.location.href = `apartment.html?id=${apartmentId}`;
       });
     });
+
+    const viewAllItem = suggestionsBox.querySelector(".search-view-all");
+    if (viewAllItem) {
+      viewAllItem.addEventListener("click", () => {
+        const beds = viewAllItem.getAttribute("data-beds");
+        window.location.href = `area.html?beds=${beds}`;
+      });
+    }
   }
 
   function updateSuggestions() {
+    const bedroomQuery = parseBedroomQuery(searchInput.value);
     const matches = getMatches(searchInput.value);
-    renderSuggestions(matches);
+    renderSuggestions(matches, bedroomQuery);
   }
 
   searchInput.addEventListener("input", updateSuggestions);
 
   searchInput.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
+      const bedroomQuery = parseBedroomQuery(searchInput.value);
+      if (bedroomQuery !== null) {
+        window.location.href = `area.html?beds=${bedroomQuery}`;
+        return;
+      }
       const matches = getMatches(searchInput.value);
-
       if (matches.length > 0) {
         window.location.href = `apartment.html?id=${matches[0].id}`;
       } else {
