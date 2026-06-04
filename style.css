@@ -50,9 +50,33 @@ body {
 .hero-search-wrapper {
   margin: 20px auto 0 auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   padding: 0 16px;
+}
+
+.bedroom-filters {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.bedroom-chip {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.18);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.bedroom-chip:hover {
+  background: rgba(255,255,255,0.35);
 }
 
 .search-box {
