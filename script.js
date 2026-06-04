@@ -260,7 +260,7 @@ function initGlobalSearch() {
     const normalized = normalizeSearch(value);
     const bedroomQuery = parseBedroomQuery(value);
 
-    if (!raw && activeBedrooms === null) return [];
+    if (!raw) return [];
 
     return apartments.filter(apartment => {
       const code = (apartment.apartmentCode || "").toUpperCase();
