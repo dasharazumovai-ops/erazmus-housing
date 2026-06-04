@@ -119,6 +119,14 @@ body {
   color: #333;
 }
 
+.search-suggestion-beds {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #888;
+  margin-left: 6px;
+}
+
+
 @media (max-width: 600px) {
   .search-box {
     max-width: 280px;

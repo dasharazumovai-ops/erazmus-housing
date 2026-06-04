@@ -224,27 +224,45 @@ function initGlobalSearch() {
     return raw;
   }
 
+  // Detect if the user is typing a bedroom query like "3 bed", "3 bedroom", "3 bedrooms"
+  function parseBedroomQuery(value) {
+    const match = value.trim().match(/^(\d)\s*(bed|beds|bedroom|bedrooms)?$/i);
+    if (!match) return null;
+    // Require at least "X bed" — a bare digit is reserved for code search
+    if (!match[2]) return null;
+    const num = parseInt(match[1]);
+    return (num >= 1 && num <= 5) ? num : null;
+  }
+
   function getMatches(value) {
     const raw = value.trim().toUpperCase();
     const normalized = normalizeSearch(value);
+    const bedroomQuery = parseBedroomQuery(value);
 
-    if (!raw) return [];
+    if (!raw && activeBedrooms === null) return [];
 
     return apartments.filter(apartment => {
       const code = (apartment.apartmentCode || "").toUpperCase();
       const numericPart = code.replace("ELN-", "");
 
-      return (
+      // If the user typed a bedroom query, match on rooms field
+      const codeMatch = bedroomQuery !== null || !raw || (
         code.includes(normalized) ||
         code.includes(raw) ||
         numericPart === raw ||
         numericPart === raw.padStart(3, "0")
       );
-    }).slice(0, 5);
+
+      const bedroomMatch = bedroomQuery === null ||
+        (apartment.rooms || "").startsWith(bedroomQuery + " bedroom");
+
+      return codeMatch && bedroomMatch;
+    }).slice(0, 8);
   }
 
   function renderSuggestions(matches) {
-    if (!matches.length) {
+    const hasInput = searchInput.value.trim().length > 0;
+    if (!matches.length || !hasInput) {
       suggestionsBox.innerHTML = "";
       suggestionsBox.classList.remove("active");
       return;
@@ -252,7 +270,7 @@ function initGlobalSearch() {
 
     suggestionsBox.innerHTML = matches.map(apartment => `
       <div class="search-suggestion-item" data-id="${apartment.id}">
-        <div class="search-suggestion-code">${apartment.apartmentCode}</div>
+        <div class="search-suggestion-code">${apartment.apartmentCode} <span class="search-suggestion-beds">${apartment.rooms}</span></div>
         <div class="search-suggestion-title">${apartment.title}</div>
       </div>
     `).join("");
@@ -267,10 +285,12 @@ function initGlobalSearch() {
     });
   }
 
-  searchInput.addEventListener("input", function () {
+  function updateSuggestions() {
     const matches = getMatches(searchInput.value);
     renderSuggestions(matches);
-  });
+  }
+
+  searchInput.addEventListener("input", updateSuggestions);
 
   searchInput.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
