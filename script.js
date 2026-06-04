@@ -405,15 +405,13 @@ function initExploreScroll() {
 document.addEventListener("DOMContentLoaded", function () {
   initGlobalSearch();
   initExploreScroll();
-  initExploreFade();
 
-document.querySelectorAll(".explore-card").forEach(card => {
-  card.addEventListener("click", () => {
-    document.querySelectorAll(".explore-card").forEach(c => {
-      if (c !== card) c.classList.remove("open");
+  document.querySelectorAll(".explore-card").forEach(card => {
+    card.addEventListener("click", () => {
+      document.querySelectorAll(".explore-card").forEach(c => {
+        if (c !== card) c.classList.remove("open");
+      });
+      card.classList.toggle("open");
     });
-    card.classList.toggle("open");
   });
-});
-
 });
