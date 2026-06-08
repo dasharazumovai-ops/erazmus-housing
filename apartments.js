@@ -2751,5 +2751,46 @@ id: 62,
   ],
   availableSpots: 1,
   totalSpots: 1
+},
+{
+id: 63,
+    apartmentCode: "ELN-063",
+    title: "1-Bedroom House in the City Center",
+    areas: ["centre"],
+  price: "€550 / month",
+  rooms: "1 bedroom",
+  image: "images/centre/apt63/cover.jpg",
+  description: "1-bedroom house in the city centre. Utilities are not included in the price.",
+  roomDetails: [
+    "Room 1 – Double Bed, Desk – €550/month (€650/month for couples)"
+  ],
+
+  sharedSpaces: "Kitchen, shower and bathroom. Utilities (water and electricity) are not included in the rent.",
+
+  location: "https://maps.app.goo.gl/M1AqG5DFT8wESVAQ7",
+
+  gallery: [
+    "images/centre/apt63/1.jpg",
+    "images/centre/apt63/2.jpg",
+    "images/centre/apt63/3.jpg",
+    "images/centre/apt63/4.jpg",
+    "images/centre/apt63/5.jpg",
+    "images/centre/apt63/6.jpg",
+    "images/centre/apt63/7.jpg",
+    "images/centre/apt63/8.jpg",
+    "images/centre/apt63/9.jpg",
+    "images/centre/apt63/10.jpg",
+    "images/centre/apt63/11.jpg",
+    "images/centre/apt63/12.jpg",
+    "images/centre/apt63/13.jpg",
+    "images/centre/apt63/14.jpg",
+    "images/centre/apt63/15.jpg",
+    "images/centre/apt63/16.jpg",
+    "images/centre/apt63/17.jpg",
+    "images/centre/apt63/18.jpg",
+    "images/centre/apt63/19.jpg"
+  ],
+  availableSpots: 1,
+  totalSpots: 1
 }
 ]; 
