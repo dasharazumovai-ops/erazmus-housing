@@ -2767,7 +2767,7 @@ id: 63,
 
   sharedSpaces: "Kitchen, shower and bathroom. Utilities (water and electricity) are not included in the rent.",
 
-  location: "https://maps.app.goo.gl/M1AqG5DFT8wESVAQ7",
+  location: "https://maps.app.goo.gl/H9vAXVJswZ85iHyH6",
 
   gallery: [
     "images/centre/apt63/1.jpg",
