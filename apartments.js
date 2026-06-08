@@ -2767,7 +2767,7 @@ id: 63,
 
   sharedSpaces: "Kitchen, shower and bathroom. Utilities (water and electricity) are not included in the rent.",
 
-  location: "https://maps.app.goo.gl/H9vAXVJswZ85iHyH6",
+  location: "https://maps.app.goo.gl/H9vAXVJswZ85iHyH6?",
 
   gallery: [
     "images/centre/apt63/1.jpg",
@@ -2787,8 +2787,7 @@ id: 63,
     "images/centre/apt63/15.jpg",
     "images/centre/apt63/16.jpg",
     "images/centre/apt63/17.jpg",
-    "images/centre/apt63/18.jpg",
-    "images/centre/apt63/19.jpg"
+    "images/centre/apt63/18.jpg"
   ],
   availableSpots: 1,
   totalSpots: 1
