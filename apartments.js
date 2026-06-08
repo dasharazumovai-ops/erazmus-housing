@@ -2563,7 +2563,7 @@ id: 57,
     "images/aglantzia/apt57/19.jpg",
     "images/aglantzia/apt57/20.jpg"
   ],
-  availableSpots: 0,
+  availableSpots: 3,
   totalSpots: 3
 },
 {
