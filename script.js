@@ -156,7 +156,10 @@ function renderAreaPage() {
   if (selectedBeds) {
     const num = parseInt(selectedBeds);
     const filtered = sortByAvailability(
-      apartments.filter(a => (a.rooms || "").startsWith(num + " bedroom"))
+      apartments.filter(a => {
+        const r = a.rooms || "";
+        return r.startsWith(num + " bedroom") || r.includes("and " + num + " bedroom") || r.includes(num + " and ");
+      })
     );
     areaTitle.textContent = `${num}-Bedroom Apartments`;
     areaSubtitle.textContent = `${filtered.length} apartment${filtered.length !== 1 ? "s" : ""} found`;
@@ -274,8 +277,10 @@ function initGlobalSearch() {
         numericPart === raw.padStart(3, "0")
       );
 
-      const bedroomMatch = bedroomQuery === null ||
-        (apartment.rooms || "").startsWith(bedroomQuery + " bedroom");
+      const bedroomMatch = bedroomQuery === null || (() => {
+        const r = apartment.rooms || "";
+        return r.startsWith(bedroomQuery + " bedroom") || r.includes("and " + bedroomQuery + " bedroom") || r.includes(bedroomQuery + " and ");
+      })();
 
       return codeMatch && bedroomMatch;
     }).slice(0, 8);
@@ -291,7 +296,10 @@ function initGlobalSearch() {
 
     // For bedroom searches, count total matches (not capped)
     const totalBedroomMatches = bedroomQuery !== null
-      ? apartments.filter(a => (a.rooms || "").startsWith(bedroomQuery + " bedroom")).length
+      ? apartments.filter(a => {
+          const r = a.rooms || "";
+          return r.startsWith(bedroomQuery + " bedroom") || r.includes("and " + bedroomQuery + " bedroom") || r.includes(bedroomQuery + " and ");
+        }).length
       : 0;
 
     if (!matches.length && totalBedroomMatches === 0) {
