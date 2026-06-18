@@ -141,6 +141,36 @@ function sortByAvailability(list) {
   });
 }
 
+// Lowest numeric price found in an apartment's price string (handles both
+// "€400 / month / per room" and "€425 - €450 / month / per room" formats).
+// Used as the representative value when sorting listings by price.
+function getApartmentSortPrice(apartment) {
+  const matches = String(apartment.price || "").match(/\d+(\.\d+)?/g);
+  if (!matches || !matches.length) return null;
+  return Math.min(...matches.map(Number));
+}
+
+function sortByPrice(list, direction) {
+  return list.sort((a, b) => {
+    const priceA = getApartmentSortPrice(a);
+    const priceB = getApartmentSortPrice(b);
+
+    // Listings with no readable price always sort last, regardless of direction.
+    if (priceA === null && priceB === null) return 0;
+    if (priceA === null) return 1;
+    if (priceB === null) return -1;
+
+    return direction === "desc" ? priceB - priceA : priceA - priceB;
+  });
+}
+
+// Current price-sort selection: "default" | "asc" | "desc".
+// Initialised from the ?sort= URL parameter so a sorted view can be shared/bookmarked.
+let currentSort = (function () {
+  const value = new URLSearchParams(window.location.search).get("sort");
+  return value === "asc" || value === "desc" ? value : "default";
+})();
+
 function renderAreaPage() {
   const params = new URLSearchParams(window.location.search);
   const selectedArea = params.get("area");
@@ -152,25 +182,28 @@ function renderAreaPage() {
 
   if (!areaTitle || !apartmentList) return;
 
-  // Bedroom search mode
+  let filtered;
+  let emptyMessage = "No apartments found.";
+
+  // Bedroom search mode (always spans every area)
   if (selectedBeds) {
     const num = parseInt(selectedBeds);
-    const filtered = sortByAvailability(
-      apartments.filter(a => {
-        const r = a.rooms || "";
-        return r.startsWith(num + " bedroom") || r.includes("and " + num + " bedroom") || r.includes(num + " and ");
-      })
-    );
+    filtered = apartments.filter(a => {
+      const r = a.rooms || "";
+      return r.startsWith(num + " bedroom") || r.includes("and " + num + " bedroom") || r.includes(num + " and ");
+    });
     areaTitle.textContent = `${num}-Bedroom Apartments`;
     areaSubtitle.textContent = `${filtered.length} apartment${filtered.length !== 1 ? "s" : ""} found`;
-    apartmentList.innerHTML = filtered.length
-      ? renderApartmentCards(filtered)
-      : "<p>No apartments found.</p>";
-    return;
-  }
+
+  // View-all mode: every apartment, from every area
+  } else if (selectedArea === "all") {
+    filtered = apartments.slice();
+    areaTitle.textContent = "All Apartments";
+    areaSubtitle.textContent = `${filtered.length} apartment${filtered.length !== 1 ? "s" : ""} available`;
+    emptyMessage = "No apartments found yet.";
 
   // Area filter mode
-  if (selectedArea) {
+  } else if (selectedArea) {
     const areaNames = {
       centre: "City Centre",
       engomi: "Engomi",
@@ -179,15 +212,90 @@ function renderAreaPage() {
 
     areaTitle.textContent = areaNames[selectedArea] || "Apartments";
     areaSubtitle.textContent = `Available apartments in ${areaNames[selectedArea] || "this area"}`;
+    emptyMessage = "No apartments found for this area yet.";
 
-    const filtered = sortByAvailability(
-      apartments.filter(a => a.areas && a.areas.includes(selectedArea))
-    );
+    filtered = apartments.filter(a => a.areas && a.areas.includes(selectedArea));
 
-    apartmentList.innerHTML = filtered.length
-      ? renderApartmentCards(filtered)
-      : "<p>No apartments found for this area yet.</p>";
+  } else {
+    return;
   }
+
+  const sorted = currentSort === "default"
+    ? sortByAvailability(filtered)
+    : sortByPrice(filtered, currentSort);
+
+  apartmentList.innerHTML = sorted.length
+    ? renderApartmentCards(sorted)
+    : `<p>${emptyMessage}</p>`;
+
+  updatePriceSortUI();
+}
+
+function initPriceSortControl() {
+  const btn = document.getElementById("price-sort-btn");
+  const menu = document.getElementById("price-sort-menu");
+
+  if (!btn || !menu) return;
+
+  function closeMenu() {
+    menu.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+  }
+
+  function openMenu() {
+    menu.classList.add("open");
+    btn.setAttribute("aria-expanded", "true");
+  }
+
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (menu.classList.contains("open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  menu.querySelectorAll(".price-sort-option").forEach(option => {
+    option.addEventListener("click", function () {
+      currentSort = option.getAttribute("data-sort");
+
+      const url = new URL(window.location.href);
+      if (currentSort === "default") {
+        url.searchParams.delete("sort");
+      } else {
+        url.searchParams.set("sort", currentSort);
+      }
+      window.history.replaceState({}, "", url);
+
+      closeMenu();
+      renderAreaPage();
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".filter-bar")) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMenu();
+  });
+}
+
+function updatePriceSortUI() {
+  const btn = document.getElementById("price-sort-btn");
+  const menu = document.getElementById("price-sort-menu");
+  if (!btn || !menu) return;
+
+  menu.querySelectorAll(".price-sort-option").forEach(option => {
+    const isActive = option.getAttribute("data-sort") === currentSort;
+    option.classList.toggle("active", isActive);
+    option.setAttribute("aria-checked", isActive ? "true" : "false");
+  });
+
+  btn.classList.toggle("is-active", currentSort !== "default");
 }
 
 function toggleFAQ() {
@@ -227,6 +335,7 @@ function toggleMenu() {
   }
 }
 
+initPriceSortControl();
 renderAreaPage();
 loadAvailabilityFromSheet();
 

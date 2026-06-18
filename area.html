@@ -21,6 +21,34 @@
     <a href="map.html" class="area-map-link" id="area-map-link">View all apartments on map &rarr;</a>
   </section>
 
+  <div class="filter-bar-wrap">
+    <div class="filter-bar">
+      <button
+        id="price-sort-btn"
+        class="price-sort-btn"
+        type="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="price-sort-menu"
+        aria-label="Sort apartments by price"
+      >
+        <svg viewBox="0 0 24 24" class="price-sort-icon" aria-hidden="true">
+          <path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <circle cx="9" cy="6" r="2" fill="currentColor"/>
+          <circle cx="15" cy="12" r="2" fill="currentColor"/>
+          <circle cx="12" cy="18" r="2" fill="currentColor"/>
+        </svg>
+        <span id="price-sort-label">Sort by price</span>
+      </button>
+
+      <div id="price-sort-menu" class="price-sort-menu" role="menu">
+        <button class="price-sort-option active" type="button" role="menuitemradio" aria-checked="true" data-sort="default">Default</button>
+        <button class="price-sort-option" type="button" role="menuitemradio" aria-checked="false" data-sort="asc">Price: Low to High</button>
+        <button class="price-sort-option" type="button" role="menuitemradio" aria-checked="false" data-sort="desc">Price: High to Low</button>
+      </div>
+    </div>
+  </div>
+
   <main class="listings-section">
     <div id="apartment-list" class="apartment-grid"></div>
   </main>

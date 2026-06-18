@@ -215,6 +215,15 @@ body {
   transform: translateY(-2px);
 }
 
+.hero-btn-all {
+  background: #2456d3;
+  color: #ffffff;
+}
+
+.hero-btn-all:hover {
+  background: #1c47b0;
+}
+
 .hero-map-link {
   display: inline-block;
   margin-top: 18px;
@@ -354,6 +363,117 @@ body {
 .area-hero p {
   font-size: 1.05rem;
   color: #666;
+}
+
+/* Sticky price-sort filter bar (area pages + "All Apartments" view) */
+.filter-bar-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #eef0f5;
+}
+
+.filter-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.price-sort-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #2456d3;
+  border: 1.5px solid #2456d3;
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.price-sort-btn:hover {
+  background: #eef4ff;
+  transform: translateY(-1px);
+}
+
+.price-sort-btn.is-active {
+  background: #2456d3;
+  color: #ffffff;
+}
+
+.price-sort-icon {
+  width: 18px;
+  height: 18px;
+  color: currentColor;
+  flex-shrink: 0;
+}
+
+.price-sort-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 20px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  padding: 8px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+  z-index: 50;
+}
+
+.price-sort-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.price-sort-option {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.price-sort-option:hover {
+  background: #f5f8ff;
+}
+
+.price-sort-option.active {
+  background: #eef4ff;
+  color: #2456d3;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .filter-bar {
+    justify-content: center;
+    padding: 10px 16px;
+  }
+
+  .price-sort-menu {
+    right: 16px;
+    left: 16px;
+    min-width: 0;
+  }
 }
 
 .listings-section {
