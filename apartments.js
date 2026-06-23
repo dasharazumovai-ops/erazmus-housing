@@ -2791,5 +2791,84 @@ id: 63,
   ],
   availableSpots: 1,
   totalSpots: 1
+},
+{
+  id: 64,
+  apartmentCode: "ELN-064",
+  title: "2-Bedroom apartment for rent in Aglantzia",
+  areas: ["aglantzia"],
+  price: "€400 - €450 / month / per room",
+  rooms: "2 bedrooms",
+  image: "images/aglantzia/apt64/cover.jpg",
+  description: "Fully furnished, shared apartment for students.",
+  roomDetails: [
+    "Room 1 – Single Bed – €400/month",
+    "Room 2 – Double Bed – €450/month"
+  ],
+
+  sharedSpaces: "Kitchen, living area, balcony and bathroom. Utilities (water and electricity) are shared between tenants.",
+
+  location: "https://share.google/aMPECjV9aDkTlrUEM",
+
+  gallery: [
+    "images/aglantzia/apt64/1.jpg",
+    "images/aglantzia/apt64/2.jpg",
+    "images/aglantzia/apt64/3.jpg",
+    "images/aglantzia/apt64/4.jpg",
+    "images/aglantzia/apt64/5.jpg",
+    "images/aglantzia/apt64/6.jpg",
+    "images/aglantzia/apt64/7.jpg",
+    "images/aglantzia/apt64/8.jpg",
+    "images/aglantzia/apt64/9.jpg",
+    "images/aglantzia/apt64/10.jpg",
+    "images/aglantzia/apt64/11.jpg",
+    "images/aglantzia/apt64/12.jpg"
+  ],
+  availableSpots: 2,
+  totalSpots: 2
+},
+{
+  id: 65,
+  apartmentCode: "ELN-065",
+  title: "4-Bedroom apartment for rent in the centre of Nicosia (4th floor)",
+  areas: ["centre"],
+  price: "€350 - €380 / month / per room",
+  rooms: "4 bedrooms",
+  image: "images/centre/apt65/cover.jpg",
+  description: "Fully equipped and furnished apartment for students, in a prime central location.",
+  roomDetails: [
+    "Room 1 – Double Bed – €380/month",
+    "Room 2 – Single Bed – €350/month",
+    "Room 3 – Single Bed – €350/month",
+    "Room 4 – Single Bed – €350/month"
+  ],
+
+  sharedSpaces: "Fully equipped kitchen, comfortable living area, balcony. Utilities (electricity & water) are shared between tenants.",
+
+  location: "https://maps.app.goo.gl/ENPikt2BeLKTomYDA?g_st=ac",
+
+  gallery: [
+    "images/centre/apt65/1.jpg",
+    "images/centre/apt65/2.jpg",
+    "images/centre/apt65/3.jpg",
+    "images/centre/apt65/4.jpg",
+    "images/centre/apt65/5.jpg",
+    "images/centre/apt65/6.jpg",
+    "images/centre/apt65/7.jpg",
+    "images/centre/apt65/8.jpg",
+    "images/centre/apt65/9.jpg",
+    "images/centre/apt65/10.jpg",
+    "images/centre/apt65/11.jpg",
+    "images/centre/apt65/12.jpg",
+    "images/centre/apt65/13.jpg",
+    "images/centre/apt65/14.jpg",
+    "images/centre/apt65/15.jpg",
+    "images/centre/apt65/16.jpg",
+    "images/centre/apt65/17.jpg",
+    "images/centre/apt65/18.jpg",
+    "images/centre/apt65/19.jpg"
+  ],
+  availableSpots: 4,
+  totalSpots: 4
 }
 ]; 
