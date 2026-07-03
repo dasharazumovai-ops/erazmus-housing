@@ -583,16 +583,16 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.18);
 }
 
-.status-available {
-  background: #2e7d32;
+.status-fall {
+  background: #e8720c;
 }
 
-.status-last {
-  background: #ef6c00;
+.status-spring {
+  background: #7b2cbf;
 }
 
-.status-full {
-  background: #e20000;
+.status-unavailable {
+  background: #757575;
 }
 .details-page {
   padding: 40px 20px;
@@ -649,6 +649,21 @@ body {
   border-radius: 999px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.details-availability.status-fall {
+  background: #e8720c;
+  color: white;
+}
+
+.details-availability.status-spring {
+  background: #7b2cbf;
+  color: white;
+}
+
+.details-availability.status-unavailable {
+  background: #757575;
+  color: white;
 }
 
 .details-text {

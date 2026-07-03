@@ -76,9 +76,9 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.25);
       z-index: 1000;
     }
-    .pin-bubble.available { border-color: #2e7d32; color: #2e7d32; }
-    .pin-bubble.last      { border-color: #ef6c00; color: #ef6c00; }
-    .pin-bubble.full      { background: #9b2c2c; color: white; border-color: #616161; }
+    .pin-bubble.fall        { border-color: #e8720c; color: #e8720c; }
+    .pin-bubble.spring      { border-color: #7b2cbf; color: #7b2cbf; }
+    .pin-bubble.unavailable { border-color: #757575; color: #757575; }
 
     /* University marker */
     .uni-bubble {
@@ -245,14 +245,10 @@
     let markers = [];
 
     function availabilityClass(apt) {
-      if (apt.availableSpots === 0) return 'full';
-      if (apt.availableSpots === 1) return 'last';
-      return 'available';
+      return getSemesterBadge(apt).cls.replace('status-', '');
     }
     function availabilityText(apt) {
-      if (apt.availableSpots === 0) return 'Fully booked';
-      if (apt.availableSpots === 1) return 'Last room available';
-      return apt.availableSpots + '/' + apt.totalSpots + ' rooms available';
+      return getSemesterBadge(apt).text;
     }
 
     function escapeHtml(s) {

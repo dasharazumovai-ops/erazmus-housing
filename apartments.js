@@ -45,8 +45,7 @@ const apartments = [
     "images/centre/apt1/23.jpg"
   ],
 
-  availableSpots: 0,
-  totalSpots: 3
+  semester: "unavailable"
 },
 {
   id: 2,
@@ -81,8 +80,7 @@ description: "Modern shared student apartment.",
     "images/centre/apt2/11.jpg",
     "images/centre/apt2/12.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
   {
     id: 3,
@@ -121,8 +119,7 @@ description: "Modern shared student apartment.",
     "images/centre/apt3/15.jpg",
     "images/centre/apt3/16.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
     id: 4,
@@ -172,8 +169,7 @@ description: "Modern shared student apartment.",
     "images/centre/apt4/26.jpg"
     
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 5,
@@ -225,8 +221,7 @@ id: 5,
     "images/centre/apt5/28.jpg"
     
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 6,
@@ -270,8 +265,7 @@ id: 6,
     "images/centre/apt6/20.jpg",
     "images/centre/apt6/21.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 7,
@@ -312,8 +306,7 @@ id: 7,
     "images/centre/apt7/18.jpg"
     
   ],
-  availableSpots: 2,
-  totalSpots: 2
+  semester: "spring"
 },
 {
 id: 8,
@@ -369,8 +362,7 @@ id: 8,
     "images/centre/apt8/32.jpg",
     "images/centre/apt8/33.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 9,
@@ -414,8 +406,7 @@ id: 9,
     "images/centre/apt9/20.jpg",
     "images/centre/apt9/21.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "fall"
 },
 {
 id: 10,
@@ -457,8 +448,7 @@ id: 10,
     "images/centre/apt10/18.jpg",
     "images/centre/apt10/19.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 11,
@@ -504,8 +494,7 @@ id: 11,
    
 
   ],
-  availableSpots: 2,
-  totalSpots: 2
+  semester: "spring"
 },
 {
 id: 12,
@@ -556,8 +545,7 @@ id: 12,
     "images/centre/apt12/28.jpg"
 
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 13,
@@ -608,8 +596,7 @@ id: 13,
     "images/centre/apt13/27.jpg"
 
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 14,
@@ -653,8 +640,7 @@ id: 14,
     "images/centre/apt14/20.jpg"
 
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 15,
@@ -696,8 +682,7 @@ id: 15,
     "images/centre/apt15/18.jpg"
    
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "fall"
 },
 {
 id: 16,
@@ -758,8 +743,7 @@ id: 16,
     "images/centre/apt16/37.jpg"
 
   ],
-  availableSpots: 4,
-  totalSpots: 4
+  semester: "fall"
 },
 {
 id: 17,
@@ -795,8 +779,7 @@ id: 17,
     "images/centre/apt17/12.jpg",
     "images/centre/apt17/13.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 18,
@@ -833,8 +816,7 @@ id: 18,
     "images/centre/apt18/13.jpg",
     "images/centre/apt18/14.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 19,
@@ -888,8 +870,7 @@ id: 19,
     "images/centre/apt19/30.jpg",
     "images/centre/apt19/31.jpg"
     ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 20,
@@ -925,8 +906,7 @@ id: 20,
     "images/centre/apt20/13.jpg",
     "images/centre/apt20/14.jpg"
     ],
-  availableSpots: 2,
-  totalSpots: 2
+  semester: "spring"
 },
 {
 id: 21,
@@ -977,8 +957,7 @@ id: 21,
     "images/centre/apt21/25.jpg"
 
   ],
-  availableSpots: 10,
-  totalSpots: 10
+  semester: "spring"
 },
 {
 id: 22,
@@ -1026,8 +1005,7 @@ id: 22,
     "images/centre/apt22/25.jpg"
 
   ],
-  availableSpots: 2,
-  totalSpots: 2
+  semester: "spring"
 },
 {
 id: 23,
@@ -1075,8 +1053,7 @@ id: 23,
     "images/centre/apt23/23.jpg",
     "images/centre/apt23/24.jpg"
   ],
-  availableSpots: 4,
-  totalSpots: 4
+  semester: "spring"
 },
 {
 id: 24,
@@ -1130,8 +1107,7 @@ id: 24,
     "images/centre/apt24/28.jpg"
 
   ],
-  availableSpots: 5,
-  totalSpots: 5
+  semester: "fall"
 },
 {
 id: 25,
@@ -1174,8 +1150,7 @@ id: 25,
     "images/centre/apt25/20.jpg"
 
   ],
-  availableSpots: 0,
-  totalSpots: 2
+  semester: "unavailable"
 },
 {
 id: 26,
@@ -1223,8 +1198,7 @@ id: 26,
     "images/centre/apt26/24.jpg"
 
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 27,
@@ -1275,8 +1249,7 @@ id: 27,
     "images/centre/apt27/27.jpg"
 
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 28,
@@ -1345,8 +1318,7 @@ id: 28,
     "images/centre/apt28/40.jpg"
 
   ],
-  availableSpots: 100,
-  totalSpots: 100
+  semester: "fall"
 },
 {
 id: 29,
@@ -1397,8 +1369,7 @@ id: 29,
     "images/engomi/apt29/27.jpg"
 
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "fall"
 },
 {
 id: 30,
@@ -1487,8 +1458,7 @@ id: 30,
     "images/engomi/apt30/62.jpg"
 
   ],
-  availableSpots: 10,
-  totalSpots: 10
+  semester: "fall"
 },
 {
 id: 31,
@@ -1530,8 +1500,7 @@ id: 31,
     "images/engomi/apt31/17.jpg"
     
   ],
-  availableSpots: 4,
-  totalSpots: 4
+  semester: "spring"
 },
 {
 id: 32,
@@ -1586,8 +1555,7 @@ id: 32,
     "images/engomi/apt32/31.jpg",
     "images/engomi/apt32/32.jpg"
   ],
-  availableSpots: 0,
-  totalSpots: 3
+  semester: "unavailable"
 },
 {
 id: 35,
@@ -1635,8 +1603,7 @@ id: 35,
     "images/engomi/apt35/24.jpg",
     "images/engomi/apt35/25.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "fall"
 },
 {
 id: 37,
@@ -1678,8 +1645,7 @@ id: 37,
     "images/engomi/apt37/17.jpg",
     "images/engomi/apt37/18.jpg"
   ],
-  availableSpots: 4,
-  totalSpots: 4
+  semester: "fall"
 },
 {
 id: 39,
@@ -1735,8 +1701,7 @@ id: 39,
     "images/engomi/apt39/32.jpg",
     "images/engomi/apt39/33.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 40,
@@ -1776,8 +1741,7 @@ id: 40,
     "images/engomi/apt40/16.jpg",
     "images/engomi/apt40/17.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "fall"
 },
 {
 id: 41,
@@ -1817,8 +1781,7 @@ id: 41,
     "images/engomi/apt41/16.jpg",
     "images/engomi/apt41/17.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 42,
@@ -1866,8 +1829,7 @@ id: 42,
     "images/engomi/apt42/24.jpg",
     "images/engomi/apt42/25.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 43,
@@ -1898,8 +1860,7 @@ id: 43,
     "images/aglantzia/apt43/8.jpg",
     "images/aglantzia/apt43/9.jpg"
   ],
-  availableSpots: 2,
-  totalSpots: 2
+  semester: "fall"
 },
 {
 id: 44,
@@ -1949,8 +1910,7 @@ id: 44,
     "images/aglantzia/apt44/26.jpg",
     "images/aglantzia/apt44/27.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 45,
@@ -1991,8 +1951,7 @@ id: 45,
     "images/aglantzia/apt45/17.jpg",
     "images/aglantzia/apt45/18.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 46,
@@ -2042,8 +2001,7 @@ id: 46,
     "images/aglantzia/apt46/26.jpg",
     "images/aglantzia/apt46/27.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 47,
@@ -2096,8 +2054,7 @@ id: 47,
     "images/aglantzia/apt47/28.jpg",
     "images/aglantzia/apt47/29.jpg"
   ],
-  availableSpots: 4,
-  totalSpots: 4
+  semester: "fall"
 },
 {
 id: 48,
@@ -2138,8 +2095,7 @@ id: 48,
     "images/aglantzia/apt48/17.jpg",
     "images/aglantzia/apt48/18.jpg"
   ],
-  availableSpots: 2,
-  totalSpots: 2
+  semester: "spring"
 },
 {
 id: 49,
@@ -2195,8 +2151,7 @@ id: 49,
     "images/aglantzia/apt49/30.jpg",
     "images/aglantzia/apt49/31.jpg"
   ],
-  availableSpots: 4,
-  totalSpots: 4
+  semester: "fall"
 },
 {
 id: 50,
@@ -2233,8 +2188,7 @@ id: 50,
     "images/aglantzia/apt50/12.jpg",
     "images/aglantzia/apt50/13.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 51,
@@ -2285,8 +2239,7 @@ id: 51,
     "images/aglantzia/apt51/25.jpg",
     "images/aglantzia/apt51/26.jpg"
   ],
-  availableSpots: 4,
-  totalSpots: 4
+  semester: "spring"
 },
 {
 id: 52,
@@ -2333,8 +2286,7 @@ id: 52,
     "images/aglantzia/apt52/22.jpg",
     "images/aglantzia/apt52/23.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "spring"
 },
 {
 id: 53,
@@ -2367,8 +2319,7 @@ id: 53,
     "images/aglantzia/apt53/10.jpg",
     "images/aglantzia/apt53/11.jpg"
   ],
-  availableSpots: 0,
-  totalSpots: 1
+  semester: "unavailable"
 },
 {
 id: 54,
@@ -2414,8 +2365,7 @@ id: 54,
     "images/aglantzia/apt54/22.jpg",
     "images/aglantzia/apt54/23.jpg"
   ],
-  availableSpots: 2,
-  totalSpots: 2
+  semester: "unavailable"
 },
 {
 id: 55,
@@ -2472,8 +2422,7 @@ id: 55,
     "images/aglantzia/apt55/32.jpg",
     "images/aglantzia/apt55/33.jpg"
   ],
-  availableSpots: 0,
-  totalSpots: 3
+  semester: "unavailable"
 },
 {
 id: 56,
@@ -2518,8 +2467,7 @@ id: 56,
     "images/aglantzia/apt56/19.jpg",
     "images/aglantzia/apt56/20.jpg"
   ],
-  availableSpots: 4,
-  totalSpots: 4
+  semester: "fall"
 },
 {
 id: 57,
@@ -2563,8 +2511,7 @@ id: 57,
     "images/aglantzia/apt57/19.jpg",
     "images/aglantzia/apt57/20.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "fall"
 },
 {
 id: 58,
@@ -2608,8 +2555,7 @@ id: 58,
     "images/aglantzia/apt58/19.jpg",
     "images/aglantzia/apt58/20.jpg"
   ],
-  availableSpots: 3,
-  totalSpots: 3
+  semester: "fall"
 },
 {
 id: 59,
@@ -2640,8 +2586,7 @@ id: 59,
     "images/aglantzia/apt59/8.jpg",
     "images/aglantzia/apt59/9.jpg"
   ],
-  availableSpots: 0,
-  totalSpots: 1
+  semester: "unavailable"
 },
 {
 id: 60,
@@ -2683,8 +2628,7 @@ id: 60,
     "images/aglantzia/apt60/17.jpg",
     "images/aglantzia/apt60/18.jpg"
   ],
-  availableSpots: 0,
-  totalSpots: 3
+  semester: "unavailable"
 },
 {
 id: 61,
@@ -2720,8 +2664,7 @@ id: 61,
     "images/aglantzia/apt61/13.jpg",
     "images/aglantzia/apt61/14.jpg"
   ],
-  availableSpots: 1,
-  totalSpots: 1
+  semester: "spring"
 },
 {
 id: 62,
@@ -2749,8 +2692,7 @@ id: 62,
     "images/aglantzia/apt53/5.jpg",
     "images/aglantzia/apt53/6.jpg"
   ],
-  availableSpots: 1,
-  totalSpots: 1
+  semester: "fall"
 },
 {
 id: 63,
@@ -2789,8 +2731,7 @@ id: 63,
     "images/centre/apt63/17.jpg",
     "images/centre/apt63/18.jpg"
   ],
-  availableSpots: 1,
-  totalSpots: 1
+  semester: "fall"
 },
 {
   id: 64,
@@ -2824,8 +2765,7 @@ id: 63,
     "images/aglantzia/apt64/11.jpg",
     "images/aglantzia/apt64/12.jpg"
   ],
-  availableSpots: 2,
-  totalSpots: 2
+  semester: "fall"
 },
 {
   id: 65,
@@ -2875,7 +2815,6 @@ id: 63,
     "images/centre/apt65/25.jpg",
     "images/centre/apt65/26.jpg"
   ],
-  availableSpots: 4,
-  totalSpots: 4
+  semester: "spring"
 }
 ]; 

@@ -78,12 +78,9 @@
     if (!apartment) {
       detailsContainer.innerHTML = "<p>Apartment not found.</p>";
     } else {
-      const availabilityText =
-        apartment.availableSpots === 0
-          ? "Not Available"
-          : apartment.availableSpots === 1
-          ? "Last room available"
-          : apartment.availableSpots + "/" + apartment.totalSpots + " rooms available";
+      const badge = getSemesterBadge(apartment);
+      const availabilityText = badge.text;
+      const availabilityClass = badge.cls;
 
       const roomList = apartment.roomDetails
         ? `<ul class="room-list">${apartment.roomDetails.map(room => `<li>${room}</li>`).join("")}</ul>`
@@ -119,7 +116,7 @@
           <h1>${apartment.title}</h1>
           <p class="details-price">${apartment.price}</p>
           <p class="details-meta">${apartment.rooms} </p>
-          <p class="details-availability">${availabilityText}</p>
+          <p class="details-availability ${availabilityClass}">${availabilityText}</p>
           <p class="details-text">${apartment.description}</p>
 
           ${roomList}

@@ -45,24 +45,38 @@ function parseCSVRow(row) {
   return cols;
 }
 
+// Normalizes whatever text appears in the sheet's semester/season column
+// into the three values the site understands: "fall", "spring", or
+// "unavailable". Anything unrecognized or blank is ignored, leaving the
+// apartment's existing semester value untouched.
+function normalizeSemester(value) {
+  const v = (value || '').trim().toLowerCase();
+  if (!v) return null;
+  if (v.startsWith('fall') || v.startsWith('autumn')) return 'fall';
+  if (v.startsWith('spring')) return 'spring';
+  if (v.startsWith('unavailable') || v.startsWith('not available') || v.startsWith('none')) return 'unavailable';
+  return null;
+}
+
 function applyAvailabilityData(csvText) {
   const rows = csvText.trim().split("\n").slice(1); // skip header row
 
   // Group rows by apartment ID
+  // Sheet columns: apartment_id, room, bed_type, notes, price, couples_price, semester
   const grouped = {};
   rows.forEach(row => {
     const cols = parseCSVRow(row);
-    if (cols.length < 3) return;
+    if (cols.length < 2) return;
     const id            = cols[0].trim();
-    const availSpots    = Number(cols[1]);
-    const totalSpots    = Number(cols[2]);
-    const room          = (cols[3] || '').trim();
-    const bedType       = (cols[4] || '').trim();
-    const notes         = (cols[5] || '').trim();
-    const price         = Number(cols[6]) || 0;
-    const couplesPrice  = Number(cols[7]) || 0;
+    const room          = (cols[1] || '').trim();
+    const bedType       = (cols[2] || '').trim();
+    const notes         = (cols[3] || '').trim();
+    const price         = Number(cols[4]) || 0;
+    const couplesPrice  = Number(cols[5]) || 0;
+    const semester      = normalizeSemester(cols[6]);
     if (!id) return;
-    if (!grouped[id]) grouped[id] = { availSpots, totalSpots, rooms: [] };
+    if (!grouped[id]) grouped[id] = { semester, rooms: [] };
+    if (!grouped[id].semester) grouped[id].semester = semester;
     if (room) grouped[id].rooms.push({ room, bedType, notes, price, couplesPrice });
   });
 
@@ -70,8 +84,7 @@ function applyAvailabilityData(csvText) {
     const apt = apartments.find(a => a.apartmentCode === id);
     if (!apt) return;
 
-    apt.availableSpots = data.availSpots;
-    apt.totalSpots     = data.totalSpots;
+    if (data.semester) apt.semester = data.semester;
 
     if (data.rooms.length > 0) {
       // Rebuild roomDetails from sheet
@@ -96,25 +109,27 @@ function applyAvailabilityData(csvText) {
   });
 }
 
+// Single source of truth for the semester/availability badge, shared by the
+// listing cards, the detail page, and the map popups.
+function getSemesterBadge(apartment) {
+  if (apartment.semester === "unavailable") {
+    return { cls: "status-unavailable", text: "Not available" };
+  }
+  if (apartment.semester === "fall") {
+    return { cls: "status-fall", text: "Available for fall semester" };
+  }
+  return { cls: "status-spring", text: "Available for spring semester" };
+}
+
 function renderApartmentCards(filteredApartments) {
-  return filteredApartments.map(apartment => `
+  return filteredApartments.map(apartment => {
+    const badge = getSemesterBadge(apartment);
+    return `
     <div class="apartment-card">
       <div class="image-wrapper">
         <img src="${apartment.image}" alt="${apartment.title}">
-        <span class="availability-badge ${
-          apartment.availableSpots === 0
-            ? "status-full"
-            : apartment.availableSpots === 1
-            ? "status-last"
-            : "status-available"
-        }">
-          ${
-            apartment.availableSpots === 0
-              ? "Fully booked"
-              : apartment.availableSpots === 1
-              ? "Last room available"
-              : apartment.availableSpots + "/" + apartment.totalSpots + " rooms available"
-          }
+        <span class="availability-badge ${badge.cls}">
+          ${badge.text}
         </span>
       </div>
 
@@ -127,18 +142,16 @@ function renderApartmentCards(filteredApartments) {
         <a href="apartment.html?id=${apartment.id}" class="details-btn">View details</a>
       </div>
     </div>
-  `).join("");
+  `;
+  }).join("");
 }
 
+// Default ordering: fall-semester apartments first, then spring, then the
+// permanently unavailable ones last. Ties keep their existing relative order
+// (Array.prototype.sort is stable).
 function sortByAvailability(list) {
-  return list.sort((a, b) => {
-    const rank = apt => {
-      if (apt.availableSpots === apt.totalSpots) return 0;
-      if (apt.availableSpots > 0) return 1;
-      return 2;
-    };
-    return rank(a) - rank(b);
-  });
+  const rank = { fall: 0, spring: 1, unavailable: 2 };
+  return list.sort((a, b) => (rank[a.semester] ?? 1) - (rank[b.semester] ?? 1));
 }
 
 // Lowest numeric price found in an apartment's price string (handles both
