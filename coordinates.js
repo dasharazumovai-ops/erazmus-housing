@@ -36,7 +36,7 @@ const apartmentCoords = {
 "ELN-030": [35.152788, 33.327795],
 "ELN-031": [35.16444, 33.32436],
 "ELN-032": [35.165524, 33.338327],
-"ELN-033": [35.161935, 33.33911],
+"ELN-033": [35.1710, 33.3620], // UNVERIFIED — rough centre-area estimate, apartment moved to Mnasiadou 21, Nicosia. Replace with real coordinates.
 "ELN-034": [35.16797, 33.332936],
 "ELN-035": [35.15061, 33.34117],
 "ELN-036": [35.161726, 33.33921],

@@ -92,8 +92,12 @@ function applyAvailabilityData(csvText) {
         let s = rm.room;
         if (rm.bedType) s += ' – ' + rm.bedType;
         if (rm.notes)   s += ' – ' + rm.notes;
-        s += ' – €' + rm.price + '/month';
-        if (rm.couplesPrice) s += ' (€' + rm.couplesPrice + '/month for couples)';
+        // Rooms with no price (e.g. marked not available) skip the price segment
+        // instead of showing a misleading "€0/month".
+        if (rm.price > 0) {
+          s += ' – €' + rm.price + '/month';
+          if (rm.couplesPrice) s += ' (€' + rm.couplesPrice + '/month for couples)';
+        }
         return s;
       });
 
@@ -116,9 +120,9 @@ function getSemesterBadge(apartment) {
     return { cls: "status-unavailable", text: "Not available" };
   }
   if (apartment.semester === "fall") {
-    return { cls: "status-fall", text: "Available for fall semester" };
+    return { cls: "status-fall", text: "Available for autumn semester 2026" };
   }
-  return { cls: "status-spring", text: "Available for spring semester" };
+  return { cls: "status-spring", text: "Available for spring semester 2027" };
 }
 
 function renderApartmentCards(filteredApartments) {

@@ -76,9 +76,34 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.25);
       z-index: 1000;
     }
-    .pin-bubble.fall        { border-color: #e8720c; color: #e8720c; }
-    .pin-bubble.spring      { border-color: #7b2cbf; color: #7b2cbf; }
-    .pin-bubble.unavailable { border-color: #757575; color: #757575; }
+    .pin-bubble.fall        { background: #e8720c; border-color: #e8720c; color: #fff; }
+    .pin-bubble.spring      { background: #7b2cbf; border-color: #7b2cbf; color: #fff; }
+    .pin-bubble.unavailable { background: #757575; border-color: #757575; color: #fff; }
+
+    /* Map legend for the semester colors */
+    .map-legend {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: #555;
+    }
+    .map-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .map-legend .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .map-legend .dot.fall        { background: #e8720c; }
+    .map-legend .dot.spring      { background: #7b2cbf; }
+    .map-legend .dot.unavailable { background: #757575; }
 
     /* University marker */
     .uni-bubble {
@@ -212,6 +237,11 @@
       <button class="map-filter" data-area="engomi">Engomi</button>
       <button class="map-filter" data-area="aglantzia">Aglantzia</button>
       <button class="map-filter uni-toggle" id="uni-toggle">🎓 Universities</button>
+    </div>
+    <div class="map-legend">
+      <span><span class="dot fall"></span>Available for autumn semester 2026</span>
+      <span><span class="dot spring"></span>Available for spring semester 2027</span>
+      <span><span class="dot unavailable"></span>Not available</span>
     </div>
   </section>
 
