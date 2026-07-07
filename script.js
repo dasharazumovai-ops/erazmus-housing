@@ -120,7 +120,7 @@ function getSemesterBadge(apartment) {
     return { cls: "status-unavailable", text: "Not available" };
   }
   if (apartment.semester === "fall") {
-    return { cls: "status-fall", text: "Available for autumn semester 2026" };
+    return { cls: "status-fall", text: "Available for fall semester 2026" };
   }
   return { cls: "status-spring", text: "Available for spring semester 2027" };
 }

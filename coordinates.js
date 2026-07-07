@@ -66,4 +66,5 @@ const apartmentCoords = {
 "ELN-061": [35.161526, 33.375071],
 "ELN-062": [35.161326, 33.375071],
 "ELN-063": [35.164375, 33.372148],
+"ELN-064": [35.149125, 33.398912], // Leoforos Kyrineias 37, Platy/Aglantzia, Nicosia 2114
 };

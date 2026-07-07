@@ -75,6 +75,7 @@
     const apartment = apartments.find(item => item.id === apartmentId);
     const detailsContainer = document.getElementById("apartment-details");
 
+    function renderApartmentDetails() {
     if (!apartment) {
       detailsContainer.innerHTML = "<p>Apartment not found.</p>";
     } else {
@@ -125,6 +126,15 @@
         </div>
       `;
     }
+    }
+
+    renderApartmentDetails();
+
+    // Re-render when live availability arrives. script.js calls renderAreaPage()
+    // after fetching the Google Sheet; we redirect that callback to our renderer
+    // so the badge/description here doesn't go stale relative to the listing
+    // cards (same pattern used in map.html).
+    window.renderAreaPage = renderApartmentDetails;
 
     function openImage(src) {
       const viewer = document.getElementById("imageViewer");

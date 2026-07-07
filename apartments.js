@@ -2508,12 +2508,12 @@ id: 56,
 {
 id: 57,
     apartmentCode: "ELN-057",
-    title: "3-Bedroom apartment in the city centre",
+    title: "3-Bedroom apartment in the city centre (Only for studens staying the whole academic year)",
     areas: ["centre"],
   price: "€300 / month / per room",
   rooms: "3 bedrooms",
   image: "images/aglantzia/apt57/cover.jpg",
-  description: "Comfortable student shared apartment.",
+  description: "Comfortable student shared apartment. Please note that this apartment can only be booked for the entire academic year.",
 
   roomDetails: [
     "Room 1 – Double Bed – €300/month",
