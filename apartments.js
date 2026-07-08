@@ -1896,7 +1896,7 @@ id: 43,
     "images/aglantzia/apt43/8.jpg",
     "images/aglantzia/apt43/9.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 44,
@@ -2801,7 +2801,7 @@ id: 63,
     "images/aglantzia/apt64/11.jpg",
     "images/aglantzia/apt64/12.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
   id: 65,
@@ -2851,6 +2851,6 @@ id: 63,
     "images/centre/apt65/25.jpg",
     "images/centre/apt65/26.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 }
 ]; 

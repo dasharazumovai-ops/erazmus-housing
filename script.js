@@ -10,6 +10,12 @@ async function loadAvailabilityFromSheet() {
 
   if (cachedData) {
     applyAvailabilityData(cachedData);
+    // Repaint immediately so the sheet's value overrides the hardcoded
+    // fall/spring default even when we serve from cache and skip the network
+    // fetch below. Without this the cards kept showing the apartments.js
+    // default while the detail/map views (which read the data after this
+    // point) showed the sheet value, causing the two to disagree.
+    renderAreaPage();
   }
 
   const shouldRefresh =
