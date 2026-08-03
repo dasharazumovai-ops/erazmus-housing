@@ -2808,7 +2808,7 @@ id: 63,
   apartmentCode: "ELN-065",
   title: "4-Bedroom apartment for rent in the centre of Nicosia (4th floor)",
   areas: ["centre"],
-  price: "€350 - €380 / month / per room",
+  price: "€ 350 - €380 / month / per room",
   rooms: "4 bedrooms",
   image: "images/centre/apt65/cover.jpg",
   description: "Fully equipped and furnished apartment for students, in a prime central location.",
@@ -2850,6 +2850,47 @@ id: 63,
     "images/centre/apt65/24.jpg",
     "images/centre/apt65/25.jpg",
     "images/centre/apt65/26.jpg"
+  ],
+  semester: "spring"
+},
+{
+  id: 66,
+  apartmentCode: "ELN-066",
+  title: "2-Bedroom apartment for rent close to the University of Cyprus",
+  areas: ["aglantzia"],
+  price: "€450 / month / per room",
+  rooms: "2 bedrooms",
+  image: "images/aglantzia/apt66/cover.jpg",
+  description: "Cozy fully renovated student shared apartment.",
+  roomDetails: [
+    "Room 1 – Double Bed – €450/month",
+    "Room 2 – Double Bed – €450/month",
+  ],
+
+  sharedSpaces: "Fully equipped kitchen, comfortable living area, balcony and bathroom. Utilities (electricity & water) are shared between tenants.",
+
+  location: "https://maps.app.goo.gl/TjTrCuhW8JeEd1fi8?g_st=aw",
+
+  gallery: [
+    "images/aglantzia/apt66/1.jpg",
+    "images/aglantzia/apt66/2.jpg",
+    "images/aglantzia/apt66/3.jpg",
+    "images/aglantzia/apt66/4.jpg",
+    "images/aglantzia/apt66/5.jpg",
+    "images/aglantzia/apt66/6.jpg",
+    "images/aglantzia/apt66/7.jpg",
+    "images/aglantzia/apt66/8.jpg",
+    "images/aglantzia/apt66/9.jpg",
+    "images/aglantzia/apt66/10.jpg",
+    "images/aglantzia/apt66/11.jpg",
+    "images/aglantzia/apt66/12.jpg",
+     "images/aglantzia/apt66/13.jpg",
+    "images/aglantzia/apt66/14.jpg",
+    "images/aglantzia/apt66/15.jpg",
+    "images/aglantzia/apt66/16.jpg",
+    "images/aglantzia/apt66/17.jpg"
+    
+    
   ],
   semester: "spring"
 }
