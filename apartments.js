@@ -2892,6 +2892,6 @@ id: 63,
     
     
   ],
-  semester: "spring"
+  semester: "fall"
 }
 ]; 
