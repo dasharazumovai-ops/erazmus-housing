@@ -2869,7 +2869,7 @@ id: 63,
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, balcony and bathroom. Utilities (electricity & water) are shared between tenants.",
 
-  location: "https://maps.app.goo.gl/TjTrCuhW8JeEd1fi8?g_st=aw",
+  location: "https://maps.app.goo.gl/2TNvtV8RFibQ2Z57?g_st=ic",
 
   gallery: [
     "images/aglantzia/apt66/1.jpg",
