@@ -1690,7 +1690,7 @@ id: 38,
   areas: ["centre"],
   price: "€400 / month / per room",
   rooms: "3 bedrooms",
-  image: "images/engomi/apt38/cover.jpg",
+  image: "images/centre/apt38/cover.jpg",
   description: "Spacious fully equipped and renovated apartment close to the City Centre.",
   roomDetails: [
     "Room 1 – Double Bed – €400/month",
