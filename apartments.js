@@ -1684,6 +1684,38 @@ id: 37,
   semester: "fall"
 },
 {
+id: 38,
+  apartmentCode: "ELN-038",
+  title: "Fully renovated 3-bedroom apartment",
+  areas: ["centre"],
+  price: "€400 / month / per room",
+  rooms: "3 bedrooms",
+  image: "images/engomi/apt38/cover.jpg",
+  description: "Spacious fully equipped and renovated apartment close to the City Centre.",
+  roomDetails: [
+    "Room 1 – Double Bed – €400/month",
+    "Room 2 – Double Bed – €400/month",
+    "Room 3 – Double Bed – €400/month",
+  ],
+
+  sharedSpaces: "Kitchen, living area and balcony. Utilities (water and electricity) are shared between tenants.",
+
+  location: "https://maps.app.goo.gl/PYx298TzsomDgcTZA?g_st=ic",
+
+  gallery: [
+    "images/engomi/apt38/1.jpg",
+    "images/engomi/apt38/2.jpg",
+    "images/engomi/apt38/3.jpg",
+    "images/engomi/apt38/4.jpg",
+    "images/engomi/apt38/5.jpg",
+    "images/engomi/apt38/6.jpg",
+    "images/engomi/apt38/7.jpg",
+    "images/engomi/apt38/8.jpg",
+    "images/engomi/apt38/9.jpg"
+  ],
+  semester: "fall"
+},
+{
 id: 39,
     apartmentCode: "ELN-039",
     title: "ERASMUS building near UNIC - flat 2",
