@@ -1264,10 +1264,10 @@ id: 28,
     "Room 1 – Double Bed – €375/month",
     "Room 2 – Double Bed – €375/month",
     "Room 3 – Double Bed – En-suite shower – €425/month",
-    "Room 4 – Single Bed – €350/month",
-    "Room 5 – Double Bed – €375/month",
-    "Room 6 – Double Bed – €375/month",
-    "Room 7 – Double Bed – En-suite shower – €425/month"
+    "Room 1 – Single Bed – €350/month",
+    "Room 2 – Double Bed – €375/month",
+    "Room 3 – Double Bed – €375/month",
+    "Room 4 – Double Bed – En-suite shower – €425/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies and bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1382,10 +1382,10 @@ id: 30,
   roomDetails: [
     "Room 1 – Double Bed – €450/month",
     "Room 2 – Double Bed – €450/month",
-    "Room 3 – Single Bed – €450/month",
-    "Room 4 – Double Bed – €450/month",
-    "Room 5 – Double Bed – €450/month",
-    "Room 6 – Double Bed – €450/month"
+    "Room 1 – Single Bed – €450/month",
+    "Room 2 – Double Bed – €450/month",
+    "Room 3 – Double Bed – €450/month",
+    "Room 4 – Double Bed – €450/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balcony/patio and bathrooms. Utilities (water and electricity) are shared between tenants.",
