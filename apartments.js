@@ -1703,15 +1703,15 @@ id: 38,
   location: "https://maps.app.goo.gl/PYx298TzsomDgcTZA?g_st=ic",
 
   gallery: [
-    "images/engomi/apt38/1.jpg",
-    "images/engomi/apt38/2.jpg",
-    "images/engomi/apt38/3.jpg",
-    "images/engomi/apt38/4.jpg",
-    "images/engomi/apt38/5.jpg",
-    "images/engomi/apt38/6.jpg",
-    "images/engomi/apt38/7.jpg",
-    "images/engomi/apt38/8.jpg",
-    "images/engomi/apt38/9.jpg"
+    "images/centre/apt38/1.jpg",
+    "images/centre/apt38/2.jpg",
+    "images/centre/apt38/3.jpg",
+    "images/centre/apt38/4.jpg",
+    "images/centre/apt38/5.jpg",
+    "images/centre/apt38/6.jpg",
+    "images/centre/apt38/7.jpg",
+    "images/centre/apt38/8.jpg",
+    "images/centre/apt38/9.jpg"
   ],
   semester: "fall"
 },
