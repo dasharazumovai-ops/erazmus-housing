@@ -1926,7 +1926,11 @@ id: 43,
     "images/aglantzia/apt43/6.jpg",
     "images/aglantzia/apt43/7.jpg",
     "images/aglantzia/apt43/8.jpg",
-    "images/aglantzia/apt43/9.jpg"
+    "images/aglantzia/apt43/9.jpg",
+    "images/aglantzia/apt43/10.jpg",
+    "images/aglantzia/apt43/11.jpg",
+    "images/aglantzia/apt43/12.jpg",
+    "images/aglantzia/apt43/13.jpg"
   ],
   semester: "spring"
 },
