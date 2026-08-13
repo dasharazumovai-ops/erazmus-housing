@@ -1322,7 +1322,7 @@ id: 28,
 {
 id: 29,
   apartmentCode: "ELN-029",
-  title: "Luxury 3-bedroom apartment near University of Nicosia",
+  title: "Luxury 3-bedroom apartment close to the University of Nicosia",
   areas: ["engomi"],
   price: "€450 / month / per room",
   rooms: "3 bedrooms",
