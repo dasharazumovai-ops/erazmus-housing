@@ -2479,7 +2479,7 @@ id: 56,
     "Room 4 – Double Bed – €375/month"
   ],
 
-  sharedSpaces: "Kitchen, living area, balconies and 2 bathrooms. (Utilities (water and electricity) are shared between tenants).",
+  sharedSpaces: "Kitchen, living area, balconies and two bathrooms. (Utilities (water and electricity) are shared between tenants).",
 
   location: "https://goo.gl/maps/GGfFa4yWp4y8ifXs6",
 
