@@ -2498,12 +2498,7 @@ id: 56,
     "images/aglantzia/apt56/12.jpg",
     "images/aglantzia/apt56/13.jpg",
     "images/aglantzia/apt56/14.jpg",
-    "images/aglantzia/apt56/15.jpg",
-    "images/aglantzia/apt56/16.jpg",
-    "images/aglantzia/apt56/17.jpg",
-    "images/aglantzia/apt56/18.jpg",
-    "images/aglantzia/apt56/19.jpg",
-    "images/aglantzia/apt56/20.jpg"
+    "images/aglantzia/apt56/15.jpg"
   ],
   semester: "fall"
 },
