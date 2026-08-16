@@ -1382,7 +1382,7 @@ id: 30,
   roomDetails: [
     "Room 1 – Double Bed – €450/month",
     "Room 2 – Double Bed – €450/month",
-    "Room 3 – DoubleBed – €450/month",
+    "Room 3 – Double Bed – €450/month",
     "Room 4 – Double Bed – €450/month"
   ],
 
@@ -1558,6 +1558,61 @@ id: 33,
   ],
   semester: "fall"
 },
+{ 
+id: 34,
+  apartmentCode: "ELN-034",
+  title: "ground floor four bedroom apartment with new furniture and kitchen appliances, a new AC unit in every room, and beautiful outdoor space with a comfortable seating and barbecue area",
+  areas: ["engomi"],
+  price: "€450 / month / per room",
+  rooms: "4 bedrooms",
+  image: "images/engomi/apt34/cover.jpg",
+  description: "Fully renovated apartment with brand new furniture, kitchen tools, AC in every room and a beautiful outdoor space.",
+  roomDetails: [
+    "Room 1 – Double Bed – €450/month",
+    "Room 2 – Double Bed – €450/month",
+    "Room 3 – Double Bed – €450/month",
+    "Room 4 – Double Bed – €450/month"
+  ],
+
+  sharedSpaces: "Kitchen, living area, balcony/patio and bathrooms. Utilities (water and electricity) are shared between tenants.",
+
+  location: "https://maps.app.goo.gl/ukddwDqF44MVTubTA",
+
+  gallery: [
+    "images/engomi/apt30/1.jpg",
+    "images/engomi/apt30/2.jpg",
+    "images/engomi/apt30/3.jpg",
+    "images/engomi/apt30/4.jpg",
+    "images/engomi/apt30/5.jpg",
+    "images/engomi/apt30/6.jpg",
+    "images/engomi/apt30/7.jpg",
+    "images/engomi/apt30/8.jpg",
+    "images/engomi/apt30/9.jpg",
+    "images/engomi/apt30/10.jpg",
+    "images/engomi/apt30/11.jpg",
+    "images/engomi/apt30/12.jpg",
+    "images/engomi/apt30/13.jpg",
+    "images/engomi/apt30/14.jpg",
+    "images/engomi/apt30/15.jpg",
+    "images/engomi/apt30/16.jpg",
+    "images/engomi/apt30/17.jpg",
+    "images/engomi/apt30/18.jpg",
+    "images/engomi/apt30/19.jpg",
+    "images/engomi/apt30/20.jpg",
+    "images/engomi/apt30/21.jpg",
+    "images/engomi/apt30/22.jpg",
+    "images/engomi/apt30/23.jpg",
+    "images/engomi/apt30/24.jpg",
+    "images/engomi/apt30/25.jpg",
+    "images/engomi/apt30/26.jpg",
+    "images/engomi/apt30/27.jpg",
+    "images/engomi/apt30/28.jpg",
+    "images/engomi/apt30/29.jpg"
+
+  ],
+  semester: "fall"
+
+},  
 {
 id: 35,
     apartmentCode: "ELN-035",
