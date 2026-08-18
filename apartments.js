@@ -1662,6 +1662,47 @@ id: 35,
   semester: "fall"
 },
 {
+id: 36,
+  apartmentCode: "ELN-036",
+  title: "Fully renovated 2-bedroom apartment in EUC erasmus building with new kitchen appliances, a new AC unit in every room, and beautiful outdoor space with a comfortable seating and barbecue area",
+  areas: ["engomi"],
+  price: "€450 / month / per room",
+  rooms: "2 bedrooms",
+  image: "images/engomi/apt36/cover.jpg",
+  description: "Fully renovated apartment with brand new furniture, kitchen tools, AC in every room and a comfortable outdoor space.",
+  roomDetails: [
+    "Room 1 – Double Bed – €450/month",
+    "Room 2 – Double Bed – €450/month"
+  ],
+
+  sharedSpaces: "Kitchen, living area, balcony/patio and bathroom. Utilities (water and electricity) are shared between tenants.",
+
+  location: "https://maps.app.goo.gl/ukddwDqF44MVTubTA",
+
+  gallery: [
+    "images/engomi/apt36/1.jpg",
+    "images/engomi/apt36/2.jpg",
+    "images/engomi/apt36/3.jpg",
+    "images/engomi/apt36/4.jpg",
+    "images/engomi/apt36/5.jpg",
+    "images/engomi/apt36/6.jpg",
+    "images/engomi/apt36/7.jpg",
+    "images/engomi/apt36/8.jpg",
+    "images/engomi/apt36/9.jpg",
+    "images/engomi/apt36/10.jpg",
+    "images/engomi/apt36/11.jpg",
+    "images/engomi/apt36/12.jpg",
+    "images/engomi/apt36/13.jpg",
+    "images/engomi/apt36/14.jpg",
+    "images/engomi/apt36/15.jpg",
+    "images/engomi/apt36/16.jpg",
+    "images/engomi/apt36/17.jpg"
+
+  ],
+  semester: "spring"
+
+},  
+{
 id: 37,
   apartmentCode: "ELN-037",
   title: "ERASMUS building near UNIC - flat 1",
