@@ -28,7 +28,7 @@ const apartmentCoords = {
 "ELN-022": [35.177137, 33.377248],
 "ELN-023": [35.158341, 33.369614],
 "ELN-024": [35.158408, 33.356677],
-"ELN-025": [35.178346, 33.386272],
+"ELN-025": [35.170646, 33.365220], // same building as ELN-028 (Erasmus building, different flat type), slight offset so pin is visible
 "ELN-026": [35.17694, 33.38681],
 "ELN-027": [35.175980, 33.34847],
 "ELN-028": [35.170446, 33.365220],
