@@ -1002,15 +1002,7 @@ id: 22,
     "images/centre/apt22/14.jpg",
     "images/centre/apt22/15.jpg",
     "images/centre/apt22/16.jpg",
-    "images/centre/apt22/17.jpg",
-    "images/centre/apt22/18.jpg",
-    "images/centre/apt22/19.jpg",
-    "images/centre/apt22/20.jpg",
-    "images/centre/apt22/21.jpg",
-    "images/centre/apt22/22.jpg",
-    "images/centre/apt22/23.jpg",
-    "images/centre/apt22/24.jpg",
-    "images/centre/apt22/25.jpg"
+    "images/centre/apt22/17.jpg"
 
   ],
   semester: "spring"
@@ -1879,7 +1871,7 @@ id: 40,
   roomDetails: [
     "Room 1 – Double Bed – €400/month",
     "Room 2 – Double Bed – €400/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples)"
+    "Room 3 – Double Bed – En-suite shower – €450/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Fully equipped kitchen, living area, balconies and bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1903,7 +1895,20 @@ id: 40,
     "images/engomi/apt40/14.jpg",
     "images/engomi/apt40/15.jpg",
     "images/engomi/apt40/16.jpg",
-    "images/engomi/apt40/17.jpg"
+    "images/engomi/apt40/17.jpg",
+    "images/engomi/apt40/18.jpg",
+    "images/engomi/apt40/19.jpg",
+    "images/engomi/apt40/20.jpg",
+    "images/engomi/apt40/21.jpg",
+    "images/engomi/apt40/22.jpg",
+    "images/engomi/apt40/23.jpg",
+    "images/engomi/apt40/24.jpg",
+    "images/engomi/apt40/25.jpg",
+    "images/engomi/apt40/26.jpg",
+    "images/engomi/apt40/27.jpg",
+    "images/engomi/apt40/28.jpg",
+    "images/engomi/apt40/29.jpg"
+
   ],
   semester: "fall"
 },
@@ -2008,11 +2013,7 @@ id: 43,
     "images/aglantzia/apt43/7.jpg",
     "images/aglantzia/apt43/8.jpg",
     "images/aglantzia/apt43/9.jpg",
-    "images/aglantzia/apt43/10.jpg",
-    "images/aglantzia/apt43/11.jpg",
-    "images/aglantzia/apt43/12.jpg",
-    "images/aglantzia/apt43/13.jpg",
-    "images/aglantzia/apt43/14.jpg"
+    "images/aglantzia/apt43/10.jpg"
   ],
   semester: "spring"
 },
