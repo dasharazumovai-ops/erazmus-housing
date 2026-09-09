@@ -1470,3 +1470,83 @@ html {
   .contact-social-link { font-size: 0.88rem; padding: 10px 16px; }
   .contact-card { min-width: unset; width: 100%; }
 }
+/*  PARTNERS SECTION  */
+.partners-section {
+  padding: 70px 20px 80px;
+  background: #f5f8ff;
+}
+
+.partners-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.partners-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.partners-header h2 {
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+  color: #15357a;
+}
+
+.partners-header p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 120px;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-logo:hover,
+.partner-logo:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(35%);
+  opacity: 0.85;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.partner-logo:hover img,
+.partner-logo:focus-visible img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .partners-section { padding: 50px 16px 60px; }
+  .partners-header h2 { font-size: 1.7rem; }
+  .partner-logo {
+    width: 140px;
+    height: 90px;
+    padding: 14px;
+  }
+  .partners-grid { gap: 16px; }
+}

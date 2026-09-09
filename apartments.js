@@ -1275,7 +1275,7 @@ id: 27,
 },
 {
 id: 28,
-    apartmentCode: "ELN-028",
+    apartmentCode: "ELN-067",
     title: "The biggest Erasmus building in Cyprus!",
     areas: ["centre"],
   price: "€350 - €425 / month / per room",
