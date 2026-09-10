@@ -1,3 +1,26 @@
+/*
+ * ---------------------------------------------------------------------
+ * This website's DESIGN, layout, and code (HTML/CSS/JS) were created by
+ * D. R. as freelance work. D. R. retains authorship/copyright of the
+ * design and code, unless a separate written agreement transfers it.
+ * (This notice does not claim ownership of the apartment listings or
+ * other business content, which belongs to the organisation.)
+ * Do not remove this notice or the console credit below.
+ * ---------------------------------------------------------------------
+ */
+(function () {
+  try {
+    console.log(
+      "%cDesign by D. R.",
+      "font-size:14px;font-weight:bold;"
+    );
+    console.log(
+      "This site's design and code were built by D. R. (freelance). " +
+      "Authorship notice embedded " + new Date().toISOString().slice(0, 10) + "."
+    );
+  } catch (e) {}
+})();
+
 async function loadAvailabilityFromSheet() {
   const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRKk4VqVA_zVfwQ7nuh-_DiX_TBGW9sr68TZrt0QDn052ql8eBw93AgbG8QpIBPSIGSiKqaDD7Jxct2/pub?gid=0&single=true&output=csv";
 
