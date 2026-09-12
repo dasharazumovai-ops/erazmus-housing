@@ -368,7 +368,12 @@ id: 8,
     "images/centre/apt8/30.jpg",
     "images/centre/apt8/31.jpg",
     "images/centre/apt8/32.jpg",
-    "images/centre/apt8/33.jpg"
+    "images/centre/apt8/33.jpg",
+    "images/centre/apt8/34.jpg",
+    "images/centre/apt8/35.jpg",
+    "images/centre/apt8/36.jpg",
+    "images/centre/apt8/37.jpg",
+
   ],
   semester: "spring"
 },
@@ -495,10 +500,7 @@ id: 11,
     "images/centre/apt11/16.jpg",
     "images/centre/apt11/17.jpg",
     "images/centre/apt11/18.jpg",
-    "images/centre/apt11/19.jpg",
-    "images/centre/apt11/20.jpg",
-    "images/centre/apt11/21.jpg",
-    "images/centre/apt11/22.jpg"
+    "images/centre/apt11/19.jpg"
    
 
   ],
@@ -687,7 +689,9 @@ id: 15,
     "images/centre/apt15/15.jpg",
     "images/centre/apt15/16.jpg",
     "images/centre/apt15/17.jpg",
-    "images/centre/apt15/18.jpg"
+    "images/centre/apt15/18.jpg",
+    "images/centre/apt15/19.jpg",
+    "images/centre/apt15/20.jpg"
    
   ],
   semester: "fall"
