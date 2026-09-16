@@ -21,127 +21,6 @@
   } catch (e) {}
 })();
 
-async function loadAvailabilityFromSheet() {
-  const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRKk4VqVA_zVfwQ7nuh-_DiX_TBGW9sr68TZrt0QDn052ql8eBw93AgbG8QpIBPSIGSiKqaDD7Jxct2/pub?gid=0&single=true&output=csv";
-
-  const cacheKey = "eln-availability-cache";
-  const cacheTimeKey = "eln-availability-cache-time";
-  const cacheDuration = 3 * 60 * 60 * 1000; // 6 hours
-
-  const cachedData = localStorage.getItem(cacheKey);
-  const cachedTime = localStorage.getItem(cacheTimeKey);
-
-  if (cachedData) {
-    applyAvailabilityData(cachedData);
-    // Repaint immediately so the sheet's value overrides the hardcoded
-    // fall/spring default even when we serve from cache and skip the network
-    // fetch below. Without this the cards kept showing the apartments.js
-    // default while the detail/map views (which read the data after this
-    // point) showed the sheet value, causing the two to disagree.
-    renderAreaPage();
-  }
-
-  const shouldRefresh =
-    !cachedTime || Date.now() - Number(cachedTime) > cacheDuration;
-
-  if (!shouldRefresh) {
-    return;
-  }
-
-  try {
-    const response = await fetch(csvUrl);
-    const csvText = await response.text();
-
-    localStorage.setItem(cacheKey, csvText);
-    localStorage.setItem(cacheTimeKey, Date.now().toString());
-
-    applyAvailabilityData(csvText);
-    renderAreaPage();
-  } catch (error) {
-    console.error("Error loading availability from Google Sheets:", error);
-  }
-}
-function parseCSVRow(row) {
-  const cols = [];
-  let cur = '', inQ = false;
-  for (let i = 0; i < row.length; i++) {
-    const c = row[i];
-    if (c === '"') { inQ = !inQ; }
-    else if (c === ',' && !inQ) { cols.push(cur.trim()); cur = ''; }
-    else { cur += c; }
-  }
-  cols.push(cur.trim());
-  return cols;
-}
-
-// Normalizes whatever text appears in the sheet's semester/season column
-// into the three values the site understands: "fall", "spring", or
-// "unavailable". Anything unrecognized or blank is ignored, leaving the
-// apartment's existing semester value untouched.
-function normalizeSemester(value) {
-  const v = (value || '').trim().toLowerCase();
-  if (!v) return null;
-  if (v.startsWith('fall') || v.startsWith('autumn')) return 'fall';
-  if (v.startsWith('spring')) return 'spring';
-  if (v.startsWith('unavailable') || v.startsWith('not available') || v.startsWith('none')) return 'unavailable';
-  return null;
-}
-
-function applyAvailabilityData(csvText) {
-  const rows = csvText.trim().split("\n").slice(1); // skip header row
-
-  // Group rows by apartment ID
-  // Sheet columns: apartment_id, room, bed_type, notes, price, couples_price, semester
-  const grouped = {};
-  rows.forEach(row => {
-    const cols = parseCSVRow(row);
-    if (cols.length < 2) return;
-    const id            = cols[0].trim();
-    const room          = (cols[1] || '').trim();
-    const bedType       = (cols[2] || '').trim();
-    const notes         = (cols[3] || '').trim();
-    const price         = Number(cols[4]) || 0;
-    const couplesPrice  = Number(cols[5]) || 0;
-    const semester      = normalizeSemester(cols[6]);
-    if (!id) return;
-    if (!grouped[id]) grouped[id] = { semester, rooms: [] };
-    if (!grouped[id].semester) grouped[id].semester = semester;
-    if (room) grouped[id].rooms.push({ room, bedType, notes, price, couplesPrice });
-  });
-
-  Object.entries(grouped).forEach(([id, data]) => {
-    const apt = apartments.find(a => a.apartmentCode === id);
-    if (!apt) return;
-
-    if (data.semester) apt.semester = data.semester;
-
-    if (data.rooms.length > 0) {
-      // Rebuild roomDetails from sheet
-      apt.roomDetails = data.rooms.map(rm => {
-        let s = rm.room;
-        if (rm.bedType) s += ' – ' + rm.bedType;
-        if (rm.notes)   s += ' – ' + rm.notes;
-        // Rooms with no price (e.g. marked not available) skip the price segment
-        // instead of showing a misleading "€0/month".
-        if (rm.price > 0) {
-          s += ' – €' + rm.price + '/month';
-          if (rm.couplesPrice) s += ' (€' + rm.couplesPrice + '/month for couples)';
-        }
-        return s;
-      });
-
-      // Rebuild price summary
-      const prices = data.rooms.map(rm => rm.price).filter(p => p > 0);
-      if (prices.length) {
-        const min = Math.min(...prices), max = Math.max(...prices);
-        apt.price = min === max
-          ? '€' + min + ' / month / per room'
-          : '€' + min + ' - €' + max + ' / month / per room';
-      }
-    }
-  });
-}
-
 // Single source of truth for the semester/availability badge, shared by the
 // listing cards, the detail page, and the map popups.
 function getSemesterBadge(apartment) {
@@ -383,7 +262,6 @@ function toggleMenu() {
 
 initPriceSortControl();
 renderAreaPage();
-loadAvailabilityFromSheet();
 
 function initGlobalSearch() {
   const searchInput = document.getElementById("global-search");

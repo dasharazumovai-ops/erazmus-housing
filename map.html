@@ -485,8 +485,9 @@
       render();
     });
 
-    // Re-render when live availability arrives. script.js calls renderAreaPage()
-    // after fetching the Google Sheet; we redirect that callback to our renderer.
+    // Kept for compatibility with script.js, which still exposes renderAreaPage()
+    // as a hook (no longer triggered by a live fetch — pricing/availability now
+    // lives directly in apartments.js).
     window.renderAreaPage = render;
 
     render();

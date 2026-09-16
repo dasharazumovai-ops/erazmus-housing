@@ -52,14 +52,14 @@ const apartments = [
 apartmentCode: "ELN-002",
 title: "Renovated 3-Bedroom apartment in the Centre of Nicosia",
 areas: ["centre"],
-price: "€400 / month / per room",
+price: "€375 / month / per room",
 rooms: "3 bedrooms",
 image: "images/centre/apt2/cover.jpg",
 description: "Modern shared student apartment.",
   roomDetails: [
-    "Room 1 – Double Bed – €400/month",
-    "Room 2 – Double Bed – €400/month",
-    "Room 3 – Double Bed – €400/month"
+    "Room 1 – Double Bed – €375/month",
+    "Room 2 – Double Bed – €375/month",
+    "Room 3 – Double Bed – €375/month"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, balcony, 1 bathroom. Utilities (water & electricity) are shared between tenants.",
@@ -87,14 +87,14 @@ description: "Modern shared student apartment.",
    apartmentCode: "ELN-003",
    title: "Renovated 3-Bedroom Apartment, in the centre of Nicosia (Flat 101)",
    areas: ["centre"],
-   price: "€450 / month / per room",
+   price: "€400 / month / per room",
    rooms: "3 bedrooms",
    image: "images/centre/apt3/cover.jpg",
    description: "Modern shared student apartment.",
    roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month"
+    "Room 1 – Double Bed – €400/month",
+    "Room 2 – Double Bed – €400/month",
+    "Room 3 – Double Bed – €400/month"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, balcony, bathroom(s). Utilities (water & electricity) are shared between tenants.",
@@ -126,14 +126,14 @@ description: "Modern shared student apartment.",
     apartmentCode: "ELN-004",
     title: "3-Bedroom Apartment - 7th floor with breathtaking views of Nicosia",
     areas: ["centre","engomi"],
-  price: "€450 / month / per room",
+  price: "€400 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt4/cover.jpg",
   description: "Prime location - right next to European university with fully renovated kitchen and bathroom, all double bedrooms.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples)"
+    "Room 1 – Double Bed – €400/month",
+    "Room 2 – Double Bed – €400/month",
+    "Room 3 – Double Bed – €400/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, covered balcony, bathroom. Utilities (water & electricity) shared between tenants.",
@@ -176,14 +176,14 @@ id: 5,
     apartmentCode: "ELN-005",
     title: "3-Bedroom Apartment in the heart of Nicosia",
     areas: ["centre"],
-  price: "€450 / month / per room",
+  price: "€375 - €400 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt5/cover.jpg",
   description: "Overlooking one of the most iconic streets in the city and just steps away from shops, cafes, and all key amenities.",
   roomDetails: [
-    "Room 1 – Single Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples)"
+    "Room 1 – Single Bed – €375/month",
+    "Room 2 – Double Bed – €400/month",
+    "Room 3 – Double Bed – €400/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, 2 balconies, 1 bathroom & 2 toilets. Utilities (water & electricity) are shared between tenants.",
@@ -228,14 +228,14 @@ id: 6,
     apartmentCode: "ELN-006",
     title: "Renovated 3-Bedroom house near Frederick University",
     areas: ["centre"],
-  price: "€400 / month / per room",
+  price: "€375 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt6/cover.jpg",
   description: "Convenient location near the university.",
   roomDetails: [
-    "Room 1 – Double Bed – €400/month",
-    "Room 2 – Double Bed – €400/month",
-    "Room 3 – Double Bed – €400/month"
+    "Room 1 – Double Bed – €375/month",
+    "Room 2 – Double Bed – €375/month",
+    "Room 3 – Double Bed – €375/month"
   ],
 
   sharedSpaces: "Fully equipped kitchen, cozy living area, bathroom and private patio. Utilities (water, electricity, internet, garbage & cleaning fees) are shared between tenants.",
@@ -382,14 +382,14 @@ id: 9,
     apartmentCode: "ELN-009",
     title: "Modern 3-Bedroom Apartment located in the heart of the Nicosia (Girls Only)",
     areas: ["centre"],
-  price: "€450 / month / per room",
+  price: "€400 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt9/cover.jpg",
   description: "Located in the city centre - close to shops, cafes, and all key amenities. Please note that only girls are allowed to rent this flat.",
   roomDetails: [
-    "Room 1 – Single Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples)"
+    "Room 1 – Single Bed – €400/month",
+    "Room 2 – Double Bed – €400/month",
+    "Room 3 – Double Bed – €400/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, comfortable living area, bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -419,21 +419,21 @@ id: 9,
     "images/centre/apt9/20.jpg",
     "images/centre/apt9/21.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 10,
     apartmentCode: "ELN-010",
     title: "3-Bedroom apartment near the city centre & Frederick University",
     areas: ["centre"],
-  price: "€400 / month / per room",
+  price: "€350 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt10/cover.jpg",
   description: "Located in the city centre - close to shops, cafes, and all key amenities.",
   roomDetails: [
-    "Room 1 – Double Bed – €400/month",
-    "Room 2 – Double Bed – €400/month",
-    "Room 3 – Double Bed – €400/month"
+    "Room 1 – Double Bed – €350/month",
+    "Room 2 – Double Bed – €350/month",
+    "Room 3 – Double Bed – €350/month"
   ],
 
   sharedSpaces: "Fully equiped kitchen, living area, bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -468,13 +468,13 @@ id: 11,
     apartmentCode: "ELN-011",
     title: "2-Bedroom apartment in the city centre",
     areas: ["centre"],
-  price: "€450 / month / per room",
+  price: "€400 / month / per room",
   rooms: "2 bedrooms",
   image: "images/centre/apt11/cover.jpg",
   description: "Right in the city centre - close to shops, cafes, and all key amenities.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month"
+    "Room 1 – Double Bed – €400/month",
+    "Room 2 – Double Bed – €400/month"
   ],
 
   sharedSpaces: "Fully equiped kitchen, living area, bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -511,14 +511,14 @@ id: 12,
     apartmentCode: "ELN-012",
     title: "3-Bedroom apartment in the heart of the city centre",
     areas: ["centre"],
-  price: "€450 / month / per room",
+  price: "€350 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt12/cover.jpg",
   description: "Right in the city centre - close to shops, cafes, and all key amenities.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples)"
+    "Room 1 – Double Bed – €350/month",
+    "Room 2 – Double Bed – €350/month",
+    "Room 3 – Double Bed – €350/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Fully equiped kitchen, living area, bathrooms and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -657,14 +657,14 @@ id: 15,
     apartmentCode: "ELN-015",
     title: "3-Bedroom maisonette with pool in the city centre (5th floor)",
     areas: ["centre"],
-  price: "€450 / month / per room",
+  price: "€400 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt15/cover.jpg",
   description: "Enjoy city living with acceareas to a pool.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples)"
+    "Room 1 – Double Bed – €400/month",
+    "Room 2 – Double Bed – €400/month",
+    "Room 3 – Double Bed – €400/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, 2 toilets, 1 bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -694,22 +694,22 @@ id: 15,
     "images/centre/apt15/20.jpg"
    
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 16,
     apartmentCode: "ELN-016",
     title: "Spacious 4-bedroom apartment for rent in Nicosia city centre",
     areas: ["centre"],
-  price: "€450 / month / per room",
+  price: "€350 / month / per room",
   rooms: "4 bedrooms",
   image: "images/centre/apt16/cover.jpg",
   description: "Prime location.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month",
-    "Room 4 – Double Bed – €450/month (€550/month for couples)"
+    "Room 1 – Double Bed – €350/month",
+    "Room 2 – Double Bed – €350/month",
+    "Room 3 – Double Bed – €350/month",
+    "Room 4 – Double Bed – €350/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, 2 toilets and 1 bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -755,7 +755,7 @@ id: 16,
     "images/centre/apt16/37.jpg"
 
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 17,
@@ -835,14 +835,14 @@ id: 19,
     apartmentCode: "ELN-019",
     title: "3-Bedroom apartment in the city centre",
     areas: ["centre"],
-  price: "€400 - €450 / month / per room",
+  price: "€375 - €425 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt19/cover.jpg",
   description: "Convenient location.",
   roomDetails: [
-    "Room 1 – Double Bed – €400/month",
-    "Room 2 – Double Bed – €400/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples)"
+    "Room 1 – Double Bed – €375/month",
+    "Room 2 – Double Bed – €375/month",
+    "Room 3 – Double Bed – €425/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, 2 bathroom and balconies. Utilities (water and electricity) are shared between tenants.",
@@ -889,13 +889,13 @@ id: 20,
     apartmentCode: "ELN-020",
     title: "Cosy 2 -bedroom apartment in the centre of Nicosia",
     areas: ["centre"],
-  price: "€450 / month / per room",
+  price: "€400 / month / per room",
   rooms: "2 bedrooms",
   image: "images/centre/apt20/cover.jpg",
   description: "Comfortable shared student apartment.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month (€500/month for couples)"
+    "Room 1 – Double Bed – €400/month",
+    "Room 2 – Double Bed – €400/month (€500/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -976,13 +976,13 @@ id: 22,
     apartmentCode: "ELN-022",
     title: "2-Bedroom house close to Frederick University Cyprus",
     areas: ["centre"],
-  price: "€400 - €450 / month / per room",
+  price: "€350 - €400 / month / per room",
   rooms: "2 bedrooms",
   image: "images/centre/apt22/cover.jpg",
   description: "Conviniently located next to the University",
   roomDetails: [
-    "Room 1 – Single Bed – €400/month",
-    "Room 2 – Double Bed – €450/month"
+    "Room 1 – Single Bed – €350/month",
+    "Room 2 – Double Bed – €400/month"
   ],
 
   sharedSpaces: "Kitchen, living area, bathroom, patio. Utilities (water, electricity, garbage & cleaning fees) are shared between tenants.",
@@ -1022,7 +1022,7 @@ id: 23,
   description: "Modern and light shared apartment for students.",
   roomDetails: [
     "Room 1 – Double Bed – €375/month",
-    "Room 2 – Double Bed – €378/month",
+    "Room 2 – Double Bed – €375/month",
     "Room 3 – Double Bed – €375/month",
     "Room 4 – Double Bed – En-suite shower – €425/month (€525/month for couples)"
   ],
@@ -1064,16 +1064,16 @@ id: 24,
     apartmentCode: "ELN-024",
     title: "5-Bedroom apartment with pool in the city centre",
     areas: ["centre"],
-  price: "€450 - €500 / month / per room",
+  price: "€350 - €400 / month / per room",
   rooms: "5 bedrooms",
   image: "images/centre/apt24/cover.jpg",
   description: "Amazing view from the 5th floor. Fully equipped and furnished. 5 or 10 month contracts",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month",
-    "Room 4 – Double Bed – €450/month",
-    "Room 5 – King Bed – €500/month (€600/month for couples)"
+    "Room 1 – Double Bed – €350/month",
+    "Room 2 – Double Bed – €350/month",
+    "Room 3 – Double Bed – €350/month",
+    "Room 4 – Double Bed – €350/month",
+    "Room 5 – King Bed – €400/month (€600/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies, 2 toilets and 1 bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1111,7 +1111,7 @@ id: 24,
     "images/centre/apt24/28.jpg"
 
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 25,
@@ -1125,8 +1125,7 @@ id: 25,
   roomDetails: [
     "Room 1 – Double Bed – €375/month",
     "Room 2 – Double Bed – €375/month",
-    "Room 3 – Double Bed – En-suite shower – €425/month",
-    
+    "Room 3 – Double Bed – En-suite shower – €425/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies and bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1183,14 +1182,14 @@ id: 26,
     apartmentCode: "ELN-026",
     title: "3-Bedroom apartment near city centre and Frederick University Cyprus",
     areas: ["centre"],
-  price: "€350 - €400 / month / per room",
+  price: "€325 - €375 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt26/cover.jpg",
   description: "Modern shared student apartment.",
   roomDetails: [
-    "Room 1 – Single Bed – €350/month",
-    "Room 2 – Queen Bed – €375/month",
-    "Room 3 – Double Bed – €400/month"
+    "Room 1 – Single Bed – €325/month",
+    "Room 2 – Queen Bed – €350/month",
+    "Room 3 – Double Bed – €375/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies, 2 toilets and 1 bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1231,14 +1230,14 @@ id: 27,
     apartmentCode: "ELN-027",
     title: "3-Bedroom apartment between the city centre, University of Nicosia and European University Cyprus",
     areas: ["centre"],
-  price: "€375 - €400 / month / per room",
+  price: "€350 - €375 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt27/cover.jpg",
   description: "Modern and light shared apartment for students.",
   roomDetails: [
-    "Room 1 – Single Bed – €375/month",
-    "Room 2 – Single Bed – €375/month",
-    "Room 3 – Double Bed – €400/month (€500/month for couples)"
+    "Room 1 – Single Bed – €350/month",
+    "Room 2 – Single Bed – €350/month",
+    "Room 3 – Double Bed – €375/month (€500/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies and 1 bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1287,11 +1286,10 @@ id: 28,
   image: "images/centre/apt28/cover.jpg",
   description: "More than 20 simmilar flats for 100 erasmus students in one building that are fully renovated and are right in the heart of the city centre.",
   roomDetails: [
-    
     "Room 1 – Single Bed – €350/month",
     "Room 2 – Double Bed – €375/month",
     "Room 3 – Double Bed – €375/month",
-    "Room 4 – Double Bed – En-suite shower – €425/month"
+    "Room 7 – Double Bed – En-suite shower – €425/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies and bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1348,14 +1346,14 @@ id: 29,
   apartmentCode: "ELN-029",
   title: "Luxury 3-bedroom apartment close to the University of Nicosia",
   areas: ["engomi"],
-  price: "€450 / month / per room",
+  price: "€375 / month / per room",
   rooms: "3 bedrooms",
   image: "images/engomi/apt29/cover.jpg",
   description: "Perfect for erasmus students - walking distance from UNIC. Includes extra appliencees: dishwasher, dryer, toaster, mircowave & more.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples)"
+    "Room 1 – Double Bed – €375/month",
+    "Room 2 – Double Bed – €375/month",
+    "Room 3 – Double Bed – €375/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, balcony and 1 bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1392,7 +1390,7 @@ id: 29,
     "images/engomi/apt29/27.jpg"
 
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 30,
@@ -1406,7 +1404,7 @@ id: 30,
   roomDetails: [
     "Room 1 – Double Bed – €450/month",
     "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month",
+    "Room 3 – Single Bed – €450/month",
     "Room 4 – Double Bed – €450/month"
   ],
 
@@ -1642,14 +1640,14 @@ id: 35,
     apartmentCode: "ELN-035",
     title: "3-Bedroom apartment near University of Nicosia and European University Cyprus",
     areas: ["engomi"],
-  price: "€400 - €450 / month / per room",
+  price: "€350 - €375 / month / per room",
   rooms: "3 bedrooms",
   image: "images/engomi/apt35/cover.jpg",
   description: "Comfortableshared apartment for students.",
   roomDetails: [
-    "Room 1 – Single Bed – €400/month",
-    "Room 2 – Single Bed – €400/month",
-    "Room 3 – Double Bed – €450/month (€550/month for couples)"
+    "Room 1 – Single Bed – €350/month",
+    "Room 2 – Single Bed – €350/month",
+    "Room 3 – Double Bed – €375/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, balcony, 2 toilets and 1 bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1683,7 +1681,7 @@ id: 35,
     "images/engomi/apt35/24.jpg",
     "images/engomi/apt35/25.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 36,
@@ -1731,15 +1729,15 @@ id: 37,
   apartmentCode: "ELN-037",
   title: "ERASMUS building near UNIC - flat 1",
   areas: ["engomi"],
-  price: "€375 / month / per room",
+  price: "€350 / month / per room",
   rooms: "4 bedrooms",
   image: "images/engomi/apt37/cover.jpg",
   description: "Spacious ground floor apartment with a huge balcony! just a short walk from the University of Nicosia.",
   roomDetails: [
-    "Room 1 – Double Bed – €375/month (€450/month for couples)",
-    "Room 2 – Double Bed – €375/month (€450/month for couples)",
-    "Room 3 – Double Bed – €375/month (€450/month for couples)",
-    "Room 4 – Double Bed – €375/month (€450/month for couples)"
+    "Room 1 – Double Bed – €350/month (€450/month for couples)",
+    "Room 2 – Double Bed – €350/month (€450/month for couples)",
+    "Room 3 – Double Bed – €350/month (€450/month for couples)",
+    "Room 4 – Double Bed – €350/month (€450/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area and balcony. Utilities (water and electricity) are shared between tenants.",
@@ -1773,7 +1771,7 @@ id: 37,
     "images/engomi/apt37/24.jpg",
     "images/engomi/apt37/25.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 38,
@@ -1805,21 +1803,21 @@ id: 38,
     "images/centre/apt38/8.jpg",
     "images/centre/apt38/9.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 39,
     apartmentCode: "ELN-039",
     title: "ERASMUS building near UNIC - flat 2",
     areas: ["engomi"],
-  price: "€375 - €450 / month / per room",
+  price: "€375 - €425 / month / per room",
   rooms: "3 bedrooms",
   image: "images/engomi/apt39/cover.jpg",
   description: "Spacious 3-bedroom apartment within walking distance from the University of Nicosia.",
   roomDetails: [
     "Room 1 – Double Bed – €375/month",
     "Room 2 – Double Bed – €375/month",
-    "Room 3 – Double Bed – En-suite bathroom – €450/month"
+    "Room 3 – Double Bed – En-suite bathroom – €425/month"
   ],
 
   sharedSpaces: "Fully equipped kitchen, cozyliving area, balconies and bathroom(s). Utilities (water and electricity) are shared between tenants.",
@@ -1868,14 +1866,14 @@ id: 40,
     apartmentCode: "ELN-040",
     title: "3-Bedroom apartment near University of Nicosia",
     areas: ["engomi"],
-  price: "€400 - €450 / month / per room",
+  price: "€375 - €425 / month / per room",
   rooms: "3 bedrooms",
   image: "images/engomi/apt40/cover.jpg",
   description: "Perfect for Erasmus students - great location near to UNIC.",
   roomDetails: [
-    "Room 1 – Double Bed – €400/month",
-    "Room 2 – Double Bed – €400/month",
-    "Room 3 – Double Bed – En-suite shower – €450/month (€550/month for couples)"
+    "Room 1 – Double Bed – €375/month",
+    "Room 2 – Double Bed – €375/month",
+    "Room 3 – Double Bed – En-suite bathroom – €425/month (€550/month for couples)"
   ],
 
   sharedSpaces: "Fully equipped kitchen, living area, balconies and bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1914,21 +1912,21 @@ id: 40,
     "images/engomi/apt40/29.jpg"
 
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 41,
     apartmentCode: "ELN-041",
     title: "3-Bedroom apartment near University of Nicosia",
     areas: ["engomi"],
-  price: "€375 / month / per room",
+  price: "€350 - €375 / month / per room",
   rooms: "3 bedrooms",
   image: "images/engomi/apt41/cover.jpg",
   description: "Perfect for Erasmus students - great location close to UNIC.",
   roomDetails: [
     "Room 1 – Double Bed – €375/month",
     "Room 2 – Double Bed – €375/month",
-    "Room 3 – Single Bed – €375/month"
+    "Room 3 – Single Bed – €350/month"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, balconies and bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -1961,13 +1959,13 @@ id: 42,
     apartmentCode: "ELN-042",
     title: "3-Bedroom apartment near University of Nicosia",
     areas: ["engomi"],
-  price: "€400 - €450 / month / per room",
+  price: "€375 - €450 / month / per room",
   rooms: "3 bedrooms",
   image: "images/engomi/apt42/cover.jpg",
   description: "Convenient location for erasmus students, close to UNIC.",
   roomDetails: [
-    "Room 1 – Double Bed – €400/month",
-    "Room 2 – Double Bed – €400/month",
+    "Room 1 – Double Bed – €375/month",
+    "Room 2 – Double Bed – €375/month",
     "Room 3 – Double Bed – En-suite bathroom – €450/month (€550/month for couples)"
   ],
 
@@ -1994,13 +1992,13 @@ id: 43,
     apartmentCode: "ELN-043",
     title: "Luxury 2-bedroom apartment for rent",
     areas: ["aglantzia"],
-  price: "€450 / month / per room",
+  price: "€400 / month / per room",
   rooms: "2 bedrooms",
   image: "images/aglantzia/apt43/cover.jpg",
   description: "Fully equipped and furnished apartment for students.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month"
+    "Room 1 – Double Bed – €400/month",
+    "Room 2 – Double Bed – €400/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balcony and bathrooms. Utilities (water and electricity) are shared between tenants.",
@@ -2026,14 +2024,14 @@ id: 44,
     apartmentCode: "ELN-044",
     title: "Fully renovated 3-bedroom apartment for rent",
     areas: ["aglantzia","center"],
-  price: "€400 / month / per room",
+  price: "€375 / month / per room",
   rooms: "3 bedrooms",
   image: "images/aglantzia/apt44/cover.jpg",
   description: "Brand new furniture and appliances - move in ready.",
   roomDetails: [
-    "Room 1 – €400/month",
-    "Room 2 – €400/month",
-    "Room 3 – €400/month"
+    "Room 1 – €375/month",
+    "Room 2 – €375/month",
+    "Room 3 – €375/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balcony and bathrooms. Utilities (water and electricity) are shared between tenants.",
@@ -2117,14 +2115,14 @@ id: 46,
     apartmentCode: "ELN-046",
     title: "Modern 3-bedroom apartment in the city centre",
     areas: ["centre"],
-  price: "€400 / month / per room",
+  price: "€375 / month / per room",
   rooms: "3 bedrooms",
   image: "images/aglantzia/apt46/cover.jpg",
   description: "Fully equipped and furnished shared student apartment.",
   roomDetails: [
-    "Room 1 – Double Bed – €400/month",
-    "Room 2 – Double Bed – €400/month",
-    "Room 3 – Double Bed – €400/month"
+    "Room 1 – Double Bed – €375/month",
+    "Room 2 – Double Bed – €375/month",
+    "Room 3 – Double Bed – €375/month"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, balcony and bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -2167,15 +2165,15 @@ id: 47,
     apartmentCode: "ELN-047",
     title: "4-Bedroom apartment conveniently located for students",
     areas: ["aglantzia"],
-  price: "€375 - €450 / month / per room",
+  price: "€325 - €400 / month / per room",
   rooms: "4 bedrooms",
   image: "images/aglantzia/apt47/cover.jpg",
   description: "Fully equipped and furnished apartment for students.",
   roomDetails: [
-    "Room 1 – Double Bed – €375/month",
-    "Room 2 – Double Bed – €375/month",
-    "Room 3 – Double Bed – En-suite & separate entrance – €450/month",
-    "Room 4 – Double Bed – En-suite & separate entrance – €450/month"
+    "Room 1 – Double Bed – €325/month",
+    "Room 2 – Double Bed – €325/month",
+    "Room 3 – Double Bed – En-suite & separate entrance – €400/month",
+    "Room 4 – Double Bed – En-suite & separate entrance – €400/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies and bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -2213,21 +2211,21 @@ id: 47,
     "images/aglantzia/apt47/28.jpg",
     "images/aglantzia/apt47/29.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 48,
     apartmentCode: "ELN-048",
     title: "2-Bedroom renovated & fully furnished apartment in Nicosia city centre",
     areas: ["centre"],
-  price: "€400 - €450 / month / per room",
+  price: "€375 - €425 / month / per room",
   rooms: "2 bedrooms",
   image: "images/aglantzia/apt48/cover.jpg",
   description: "Cosy shared apartment for students",
 
   roomDetails: [
-    "Room 1 – Single Bed – €400/month",
-    "Room 2 – Double Bed – €450/month"
+    "Room 1 – Single Bed – €375/month",
+    "Room 2 – Double Bed – €425/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balcony and bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -2261,16 +2259,16 @@ id: 49,
     apartmentCode: "ELN-049",
     title: "4-Bedroom apartment between the city centre and the University of Cyprus",
     areas: ["aglantzia"],
-  price: "€375 - €400 / month / per room",
+  price: "€300 - €325 / month / per room",
   rooms: "4 bedrooms",
   image: "images/aglantzia/apt49/cover.jpg",
   description: "Fully equipped & furnished apartment for students",
 
   roomDetails: [
-    "Room 1 – Double Bed – €375/month",
-    "Room 2 – Double Bed – €375/month",
-    "Room 3 – Double Bed – €375/month",
-    "Room 4 – Double Bed – Large room + closet – €400/month (€500/month for couples)"
+    "Room 1 – Double Bed – €300/month",
+    "Room 2 – Double Bed – €300/month",
+    "Room 3 – Double Bed – €300/month",
+    "Room 4 – Double Bed – Large room + closet – €325/month (€425/month for couples)"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies and 2 bathrooms (Internet included). Utilities (water and electricity) are shared between tenants.",
@@ -2287,22 +2285,22 @@ id: 49,
     "images/aglantzia/apt49/7.jpg",
     "images/aglantzia/apt49/8.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 50,
     apartmentCode: "ELN-050",
     title: "Modern 3-bedroom apartment in the city centre",
     areas: ["centre"],
-  price: "€450 / month / per room",
+  price: "€400 / month / per room",
   rooms: "3 bedrooms",
   image: "images/aglantzia/apt50/cover.jpg",
   description: "Fully equipped & furnished apartment for students",
 
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month"
+    "Room 1 – Double Bed – €400/month",
+    "Room 2 – Double Bed – €400/month",
+    "Room 3 – Double Bed – €400/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies, bathroom and 2 toilets (Internet included). Utilities (water and electricity) are shared between tenants.",
@@ -2382,15 +2380,15 @@ id: 52,
     apartmentCode: "ELN-052",
     title: "3-Bedroom apartment near the University of Nicosia old campus & the city centre",
     areas: ["centre"],
-  price: "€450 / month / per room",
+  price: "€400 / month / per room",
   rooms: "3 bedrooms",
   image: "images/aglantzia/apt52/cover.jpg",
   description: "Fully equipped & furnished apartment for students (free shuttle to the new campus).",
 
   roomDetails: [
-    "Room 1 – €450/month",
-    "Room 2 – €450/month",
-    "Room 3 – €450/month"
+    "Room 1 – €400/month",
+    "Room 2 – €400/month",
+    "Room 3 – €400/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balcony 2 toillets and 1 bathroom. Utilities (water and electricity) are shared between tenants.",
@@ -2565,16 +2563,16 @@ id: 56,
     apartmentCode: "ELN-056",
     title: "Very nice and big 4-bedroom apartment between University of Cyprus and the city centre",
     areas: ["aglantzia"],
-  price: "€375 / month / per room",
+  price: "€325 / month / per room",
   rooms: "4 bedrooms",
   image: "images/aglantzia/apt56/cover.jpg",
   description: "Fully furnished student apartment in a convenient location.",
 
   roomDetails: [
-    "Room 1 – Double Bed – €375/month",
-    "Room 2 – Double Bed – €375/month",
-    "Room 3 – Double Bed – €375/month",
-    "Room 4 – Double Bed – €375/month"
+    "Room 1 – Double Bed – €325/month",
+    "Room 2 – Double Bed – €325/month",
+    "Room 3 – Double Bed – €325/month",
+    "Room 4 – Double Bed – €325/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies and two bathrooms. (Utilities (water and electricity) are shared between tenants).",
@@ -2599,7 +2597,7 @@ id: 56,
     "images/aglantzia/apt56/15.jpg",
     "images/aglantzia/apt56/16.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 57,
@@ -2643,22 +2641,22 @@ id: 57,
     "images/aglantzia/apt57/19.jpg",
     "images/aglantzia/apt57/20.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 58,
     apartmentCode: "ELN-058",
     title: "3-Bedroom apartment near the University of Cuprus",
     areas: ["aglantzia"],
-  price: "€375 - €425 / month / per room",
+  price: "€300 - €350 / month / per room",
   rooms: "3 bedrooms",
   image: "images/aglantzia/apt58/cover.jpg",
   description: "Located close to the university which is perfect for erasmus students.",
 
   roomDetails: [
-    "Room 1 – Double Bed – €375/month",
-    "Room 2 – Double Bed – Private balcony – €375/month",
-    "Room 3 – Double Bed – En-suite shower – €425/month"
+    "Room 1 – Double Bed – €300/month",
+    "Room 2 – Double Bed – Private balcony – €325/month",
+    "Room 3 – Double Bed – En-suite shower – €350/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balconies and bathroom. (Utilities (water and electricity) are shared between tenants).",
@@ -2687,7 +2685,7 @@ id: 58,
     "images/aglantzia/apt58/19.jpg",
     "images/aglantzia/apt58/20.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 59,
@@ -2824,7 +2822,7 @@ id: 62,
     "images/aglantzia/apt53/5.jpg",
     "images/aglantzia/apt53/6.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 63,
@@ -2863,7 +2861,7 @@ id: 63,
     "images/centre/apt63/17.jpg",
     "images/centre/apt63/18.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
   id: 64,
@@ -2904,7 +2902,7 @@ id: 63,
   apartmentCode: "ELN-065",
   title: "4-Bedroom apartment for rent in the centre of Nicosia (4th floor)",
   areas: ["centre"],
-  price: "€ 350 - €380 / month / per room",
+  price: "€350 - €380 / month / per room",
   rooms: "4 bedrooms",
   image: "images/centre/apt65/cover.jpg",
   description: "Fully equipped and furnished apartment for students, in a prime central location.",
@@ -2954,13 +2952,14 @@ id: 63,
   apartmentCode: "ELN-066",
   title: "2-Bedroom apartment for rent close to the University of Cyprus",
   areas: ["centre"],
-  price: "€450 / month / per room",
+  price: "€400 / month / per room",
   rooms: "2 bedrooms",
   image: "images/aglantzia/apt66/cover.jpg",
   description: "Cozy fully renovated student shared apartment.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
+    "Room 1 – Double Bed – €400/month",
+    "Room 2 – Double Bed – €400/month",
+    "Room 3 – Double Bed – €400/month"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, balcony and bathroom. Utilities (electricity & water) are shared between tenants.",
@@ -2988,6 +2987,6 @@ id: 63,
     
     
   ],
-  semester: "fall"
+  semester: "spring"
 }
 ]; 
