@@ -1397,15 +1397,15 @@ id: 30,
   apartmentCode: "ELN-030",
   title: "EUC Erasmus building first floor 4-bedroom - just a few mins from EUC & UNIC",
   areas: ["engomi"],
-  price: "€450 / month / per room",
+  price: "€350 / month / per room",
   rooms: "4 bedrooms",
   image: "images/engomi/apt30/cover.jpg",
   description: "Fully renovated apartment with brand new furniture, kitchen tools, AC in every room and a beautiful outdoor space with sitting & BBQ area.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Single Bed – €450/month",
-    "Room 4 – Double Bed – €450/month"
+    "Room 1 – Double Bed – €350/month",
+    "Room 2 – Double Bed – €350/month",
+    "Room 3 – Single Bed – €350/month",
+    "Room 4 – Double Bed – €350/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balcony/patio and bathrooms. Utilities (water and electricity) are shared between tenants.",
@@ -1438,13 +1438,10 @@ id: 30,
     "images/engomi/apt30/23.jpg",
     "images/engomi/apt30/24.jpg",
     "images/engomi/apt30/25.jpg",
-    "images/engomi/apt30/26.jpg",
-    "images/engomi/apt30/27.jpg",
-    "images/engomi/apt30/28.jpg",
-    "images/engomi/apt30/29.jpg"
-
+    "images/engomi/apt30/26.jpg"
+            
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 31,
@@ -1585,15 +1582,15 @@ id: 34,
   apartmentCode: "ELN-034",
   title: "ground floor four bedroom apartment with new furniture and kitchen appliances, a new AC unit in every room, and beautiful outdoor space with a comfortable seating and barbecue area",
   areas: ["engomi"],
-  price: "€450 / month / per room",
+  price: "€350 / month / per room",
   rooms: "4 bedrooms",
   image: "images/engomi/apt34/cover.jpg",
   description: "Fully renovated apartment with brand new furniture, kitchen tools, AC in every room and a comfortable outdoor space.",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
-    "Room 2 – Double Bed – €450/month",
-    "Room 3 – Double Bed – €450/month",
-    "Room 4 – Double Bed – €450/month"
+    "Room 1 – Double Bed – €350/month",
+    "Room 2 – Double Bed – €350/month",
+    "Room 3 – Double Bed – €350/month",
+    "Room 4 – Double Bed – €350/month"
   ],
 
   sharedSpaces: "Kitchen, living area, balcony/patio and bathrooms. Utilities (water and electricity) are shared between tenants.",
