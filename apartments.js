@@ -1175,7 +1175,7 @@ id: 25,
     "images/centre/apt28/40.jpg"
 
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 26,
@@ -1339,7 +1339,7 @@ id: 28,
     "images/centre/apt28/40.jpg"
 
   ],
-  semester: "fall"
+  semester: "spring"
 },
 {
 id: 29,
@@ -1575,7 +1575,7 @@ id: 33,
     "images/centre/apt33/13.jpg",
     "images/centre/apt33/14.jpg"
   ],
-  semester: "fall"
+  semester: "spring"
 },
 { 
 id: 34,
@@ -1629,7 +1629,7 @@ id: 34,
     "images/engomi/apt34/29.jpg"
 
   ],
-  semester: "fall"
+  semester: "spring"
 
 },  
 {
