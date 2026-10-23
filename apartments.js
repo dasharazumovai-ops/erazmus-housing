@@ -2952,7 +2952,7 @@ id: 63,
   price: "€400 / month / per room",
   rooms: "2 bedrooms",
   image: "images/aglantzia/apt66/cover.jpg",
-  description: "Cozy fully renovated student shared apartment.",
+  description: "Cozy fully renovated two-bedroom apartment for students.",
   roomDetails: [
     "Room 1 – Double Bed – €400/month",
     "Room 2 – Double Bed – €400/month",
