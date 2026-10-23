@@ -2955,8 +2955,7 @@ id: 63,
   description: "Cozy fully renovated two-bedroom apartment for students.",
   roomDetails: [
     "Room 1 – Double Bed – €400/month",
-    "Room 2 – Double Bed – €400/month",
-    "Room 3 – Double Bed – €400/month"
+    "Room 2 – Double Bed – €400/month"
   ],
 
   sharedSpaces: "Fully equipped kitchen, comfortable living area, balcony and bathroom. Utilities (electricity & water) are shared between tenants.",
