@@ -388,8 +388,8 @@ id: 9,
   description: "Located in the city centre - close to shops, cafes, and all key amenities. Please note that only girls are allowed to rent this flat.",
   roomDetails: [
     "Room 1 – Single Bed – €400/month",
-    "Room 2 – Double Bed – €400/month",
-    "Room 3 – Double Bed – €400/month (€550/month for couples)"
+    "Room 2 – Single Bed – €400/month",
+    "Room 3 – Double Bed – €450/month"
   ],
 
   sharedSpaces: "Kitchen, comfortable living area, bathroom and balcony. Utilities (water and electricity) are shared between tenants.",
