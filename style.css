@@ -1563,3 +1563,32 @@ html {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+
+.faq-cta {
+  margin-top: 28px;
+  padding: 20px;
+  background: #f5f8ff;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.faq-cta p {
+  margin: 0 0 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.faq-cta-btn {
+  background: #2456d3;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.faq-cta-btn:hover {
+  background: #1a3fa8;
+}

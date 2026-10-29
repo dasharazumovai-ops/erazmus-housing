@@ -67,6 +67,29 @@
         <summary>Do all apartments include the same features?</summary>
         <p>No, features vary by apartment, so please check each listing carefully.</p>
       </details>
+
+      <details>
+        <summary>How much are the monthly bills?</summary>
+        <ul>
+          <li><strong>Electricity:</strong> €20 to €100 (depends heavily on usage)</li>
+          <li><strong>Water:</strong> around €10</li>
+          <li><strong>Internet:</strong> around €10</li>
+        </ul>
+        <p>Please note that electricity costs can sometimes be significantly higher based on consumption. In Cyprus there is only one electricity provider (a monopoly), which also affects pricing.</p>
+      </details>
+
+      <details>
+        <summary>Are bills included in the rent?</summary>
+        <p>No, bills are not included in the rent.</p>
+      </details>
+
+      <details>
+        <summary>Can I have a video call to view an apartment?</summary>
+        <p>We do not normally provide video calls for apartment viewings. We manage over 100 apartments (300 rooms) and communicate with more than 500 Erasmus students each semester, so it is not possible to arrange individual video calls for everyone interested in a room.</p>
+        <p>Starting this semester, we offer an optional video-call viewing service. If you would like a live video tour of a flat, we can arrange for a staff member to visit the property and conduct a video call for a fee of €100.</p>
+        <p>That said, we believe this service is unnecessary for most students. We are the largest Erasmus housing provider in Cyprus, and we provide extensive photo galleries for every room and apartment. So far, our photos have been sufficient for students to make their accommodation decisions, and we have not previously received requests that required video call viewings.</p>
+        <p>Thank you for your understanding, and we are always happy to answer any questions about our apartments and rooms.</p>
+      </details>
     </div>
   </div>
 
@@ -133,6 +156,11 @@
           ${roomList}
           ${sharedSpaces}
           ${locationLink}
+
+          <div class="faq-cta">
+            <p>Have a question about booking or the apartment?</p>
+            <button type="button" class="faq-cta-btn" onclick="toggleFAQ()">Click here to see our frequently asked questions</button>
+          </div>
         </div>
       `;
     }
