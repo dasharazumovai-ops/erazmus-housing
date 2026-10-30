@@ -387,8 +387,8 @@ id: 9,
   image: "images/centre/apt9/cover.jpg",
   description: "Located in the city centre - close to shops, cafes, and all key amenities. Please note that only girls are allowed to rent this flat.",
   roomDetails: [
-    "Room 1 – Single Bed – €400/month",
-    "Room 2 – Single Bed – €400/month",
+    "Room 1 – Queen Bed – €400/month",
+    "Room 2 – Queen Bed – €400/month",
     "Room 3 – Double Bed – €450/month"
   ],
 
