@@ -5,12 +5,12 @@ const apartments = [
   apartmentCode: "ELN-001",
   title: "Modern 3 Bedroom apartment in the centre of Nicosia",
   areas: ["centre"],
-  price: "€425 - €450 / month / per room",
+  price: "€425 - €475 / month / per room",
   rooms: "3 bedrooms",
   image: "images/centre/apt1/cover.jpg",
   description: "Modern shared student apartment, 90m².",
   roomDetails: [
-    "Room 1 – Double Bed – €450/month",
+    "Room 1 – Double Bed – €475/month",
     "Room 2 – Single Bed – €425/month",
     "Room 3 – Single Bed – €425/month"
   ],
